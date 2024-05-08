@@ -77,9 +77,6 @@ body {
 
   section {
     padding-left: rem(267);
-    &:not(:last-child) {
-      margin-bottom: rem(125);
-    }
   }
 }
 

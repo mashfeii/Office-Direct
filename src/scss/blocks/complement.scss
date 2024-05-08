@@ -1,5 +1,19 @@
 .complete {
+  position: relative;
+  padding-top: rem(127);
   padding-bottom: rem(148);
+
+  &::before {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 55%;
+    height: 100%;
+    @extend %bg-con;
+    background-image: url("@img/complete/background.png");
+  }
 
   &__container {
   }
