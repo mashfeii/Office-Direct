@@ -77,11 +77,8 @@ body {
 
   section {
     padding-left: rem(267);
-  }
-
-  @media (min-width: $pc) {
-    section .container {
-      padding-left: rem(115);
+    &:not(:last-child) {
+      margin-bottom: rem(125);
     }
   }
 }
@@ -97,6 +94,10 @@ body {
     }
     @if ($containerPadding > 0) {
       padding: 0 rem(math.div($containerPadding, 2));
+    }
+    @media (min-width: em(1600)) {
+      padding-left: rem(115);
+      padding-right: rem(15);
     }
   }
 } @else {

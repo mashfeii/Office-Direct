@@ -40,7 +40,7 @@
 
         transition: opacity 0.32s ease-in-out;
       }
-      @include adaptiveValue("font-size", 16, 13);
+      @include adaptiveValue("font-size", 16, 12);
       letter-spacing: -0.04em;
 
       @media (any-hover: hover) {
