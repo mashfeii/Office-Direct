@@ -1,0 +1,91 @@
+.hero {
+  display: flex;
+  min-height: rem(768);
+  height: 100vh;
+  padding-top: rem(75);
+  padding-bottom: rem(95);
+
+  @extend %bg-cov;
+
+  &__container {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    color: var(--clr-white);
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    gap: rem(6);
+
+    margin-bottom: auto;
+  }
+
+  &__button {
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: rem(20);
+  }
+
+  &__content {
+    max-width: rem(870);
+
+    @include adaptiveValue("font-size", 26, 18);
+    line-height: 150%;
+    letter-spacing: -0.02em;
+
+    svg {
+      width: rem(24);
+      height: rem(24);
+      fill: var(--clr-white);
+    }
+  }
+
+  &__title {
+    font-weight: 600;
+    @include adaptiveValue("font-size", 76, 48);
+    line-height: 100%;
+    letter-spacing: -0.05em;
+
+    &:not(:last-child) {
+      margin-bottom: rem(30);
+    }
+  }
+
+  &__slide {
+    button {
+      animation-name: floating;
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+
+      display: inline-flex;
+      align-items: center;
+      gap: rem(10);
+    }
+    button svg {
+      flex: 0 0 rem(24);
+      width: rem(24);
+      height: rem(24);
+      fill: var(--clr-white);
+      stroke: transparent;
+    }
+  }
+}
+
+@keyframes floating {
+  0% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(0, 5px);
+  }
+  100% {
+    transform: translate(0, -0px);
+  }
+}

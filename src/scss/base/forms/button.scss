@@ -1,0 +1,64 @@
+//<BUTTONS (a.btn+tab)>
+// Снипет (HTML): btn
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  svg {
+    flex: 0 0 rem(24);
+    width: rem(24);
+    height: rem(24);
+  }
+
+  gap: rem(8);
+  padding: rem(11) rem(16) rem(13);
+  border-radius: rem(8);
+  background-color: var(--clr-green);
+  color: var(--clr-white);
+  font-weight: 600;
+
+  @include adaptiveValue("font-size", 15, 12);
+  background-color: var(--clr-green);
+  border-radius: 8px;
+
+  transition: background-color 0.32s ease-in-out;
+
+  svg {
+    flex: 0 0 rem(20);
+    width: rem(20);
+    height: rem(20);
+    fill: var(--clr-white);
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      background-color: #4e8f2d;
+    }
+  }
+  &._fw {
+    width: 100%;
+  }
+  &.button_rounded {
+    border-radius: rem(35);
+  }
+  &.button_blue {
+    background-color: var(--clr-blue);
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: #1647a9;
+      }
+    }
+  }
+  &.button_black {
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(5px);
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.6);
+      }
+    }
+  }
+}
