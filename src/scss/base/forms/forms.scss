@@ -54,11 +54,12 @@
     color: rgba(0, 0, 0, 0.2);
   }
 
+  span label {
+    cursor: pointer;
+  }
+
   span input {
-    position: absolute;
-    width: 0;
-    height: 0;
-    opacity: 0;
+    display: none;
     & + label {
       display: block;
       padding: rem(9) rem(20);
@@ -93,7 +94,7 @@
 
 // <CHECK>
 // Снипет (HTML): chk
-// @import "checkbox";
+@import "checkbox";
 
 // <RADIO>
 // Снипет (HTML): opt

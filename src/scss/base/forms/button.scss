@@ -14,7 +14,7 @@
   }
 
   gap: rem(7);
-  padding: rem(11) rem(15) rem(12);
+  padding: rem(18) rem(28) rem(23);
   border-radius: rem(8);
   background-color: var(--clr-green);
   color: var(--clr-white);
@@ -22,7 +22,7 @@
   font-weight: 600;
   line-height: 100%;
   letter-spacing: -0.02em;
-  @include adaptiveValue("font-size", 15, 12);
+  @include adaptiveValue("font-size", 18, 15);
 
   transition: background-color 0.32s ease-in-out;
 
@@ -40,6 +40,10 @@
   }
   &._fw {
     width: 100%;
+  }
+  &.button_small {
+    padding: rem(11) rem(15) rem(12);
+    @include adaptiveValue("font-size", 15, 12);
   }
   &.button_rounded {
     border-radius: rem(35);
