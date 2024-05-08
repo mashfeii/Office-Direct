@@ -13,16 +13,16 @@
     height: rem(24);
   }
 
-  gap: rem(8);
-  padding: rem(11) rem(16) rem(13);
+  gap: rem(7);
+  padding: rem(11) rem(15) rem(12);
   border-radius: rem(8);
   background-color: var(--clr-green);
   color: var(--clr-white);
-  font-weight: 600;
 
+  font-weight: 600;
+  line-height: 100%;
+  letter-spacing: -0.02em;
   @include adaptiveValue("font-size", 15, 12);
-  background-color: var(--clr-green);
-  border-radius: 8px;
 
   transition: background-color 0.32s ease-in-out;
 

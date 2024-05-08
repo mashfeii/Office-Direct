@@ -6,6 +6,15 @@
       &:not(:last-child) {
         margin-bottom: rem(2);
       }
+
+      .header__menu & {
+        &:first-child {
+          margin-bottom: rem(15);
+        }
+        &:last-child {
+          margin-top: rem(16);
+        }
+      }
     }
     > ul > li:hover ul {
       // transform: translateY(0);
@@ -16,6 +25,7 @@
     > ul > li > a {
       display: flex;
       align-items: center;
+      gap: rem(14);
       padding: rem(8) rem(7);
       transition:
         background-color 0.32s ease-in-out,
@@ -24,19 +34,11 @@
 
       .menu__icon {
         flex: 0 0 rem(28);
+        width: rem(28);
         height: rem(28);
+        fill: var(--clr-black);
 
-        svg {
-          width: rem(28);
-          height: rem(28);
-          fill: var(--clr-black);
-
-          transition: opacity 0.32s ease-in-out;
-        }
-
-        &:not(:last-child) {
-          margin-right: rem(14);
-        }
+        transition: opacity 0.32s ease-in-out;
       }
       @include adaptiveValue("font-size", 16, 13);
       letter-spacing: -0.04em;
@@ -44,7 +46,7 @@
       @media (any-hover: hover) {
         &:hover {
           background-color: rgba(218, 214, 207, 0.45);
-          svg {
+          .menu__icon {
             opacity: 0.8;
           }
         }
