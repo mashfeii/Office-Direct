@@ -1,3 +1,10 @@
 [hidden] {
-   display: none;
+  display: none;
+}
+
+.title {
+  font-weight: 600;
+  @include adaptiveValue("font-size", 55, 24);
+  line-height: 100%;
+  letter-spacing: -0.03em;
 }

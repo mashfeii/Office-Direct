@@ -1,0 +1,24 @@
+.complete {
+  padding-bottom: rem(148);
+
+  &__container {
+  }
+
+  &__title {
+    max-width: rem(630);
+    &:not(:last-child) {
+      margin-bottom: rem(36);
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: rem(30);
+  }
+}
+.form {
+  &__button {
+    margin-top: rem(5);
+  }
+}
