@@ -1,0 +1,86 @@
+.page {
+  &__feedback {
+    &:not(:last-child) {
+      margin-bottom: rem(125);
+    }
+  }
+}
+.feedback {
+  margin-top: rem(-290);
+  padding-top: rem(274);
+  padding-bottom: rem(50);
+  @extend %bg-cov;
+  background-image: url("@img/feedback/background.png");
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: rem(30);
+  }
+
+  &__content {
+    max-width: rem(768);
+    color: var(--clr-white);
+  }
+
+  &__title {
+    @include adaptiveValue("font-size", 60, 28);
+
+    &:not(:last-child) {
+      margin-bottom: rem(11);
+    }
+    svg {
+      width: rem(55);
+      height: rem(65);
+      display: inline-block;
+      vertical-align: bottom;
+      fill: var(--clr-white);
+    }
+  }
+
+  &__description {
+    font-weight: 400;
+    @include adaptiveValue("font-size", 24, 18);
+    line-height: 140%;
+
+    &:not(:last-child) {
+      margin-bottom: rem(29);
+    }
+  }
+
+  &__form {
+    display: flex;
+    gap: rem(8);
+  }
+
+  &__input {
+    padding: 0 rem(26) 0 rem(56);
+    height: rem(68);
+    background-color: #0b378d;
+    border-radius: rem(8);
+
+    font-weight: 400;
+    @include adaptiveValue("fotn-size", 18, 14);
+    line-height: 100%;
+    letter-spacing: -0.03em;
+    color: rgba(255, 255, 255, 0.5);
+
+    background-repeat: no-repeat;
+    background-position: 26px 47%;
+    background-size: rem(20) rem(20);
+    background-image: url("@img/email.svg");
+
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.5);
+    }
+  }
+
+  &__button {
+    padding-top: rem(25);
+    padding-bottom: rem(25);
+  }
+
+  &__image {
+  }
+}

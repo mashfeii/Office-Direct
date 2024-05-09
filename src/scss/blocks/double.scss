@@ -24,6 +24,11 @@
     .description {
       flex: 1 1 auto;
     }
+
+    &_gradient {
+      background: linear-gradient(161.95deg, #cbc3b5 54.06%, #e6dfd4 98.48%);
+      color: #4d413b;
+    }
   }
 
   &__title {
