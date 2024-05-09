@@ -7,4 +7,80 @@
   @include adaptiveValue("font-size", 55, 24);
   line-height: 100%;
   letter-spacing: -0.03em;
+
+  &.title_gradient {
+    background: -webkit-linear-gradient(top, rgba(23, 23, 23, 0.9), rgba(23, 23, 23, 0.3));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  img {
+    vertical-align: middle;
+  }
+}
+
+.description {
+  font-weight: 400;
+  @include adaptiveValue("font-size", 18, 14);
+  line-height: 140%;
+  color: rgba(23, 23, 23, 0.7);
+}
+
+.page {
+  &__double {
+    &:not(:last-child) {
+      margin-bottom: rem(135);
+    }
+  }
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: rem(20);
+}
+
+.grid-5 {
+  grid-column: span 5;
+}
+.grid-7 {
+  grid-column: span 7;
+}
+.grid-9 {
+  grid-column: span 9;
+}
+
+.infinite-line {
+  display: flex;
+  gap: rem(28);
+  @extend %ml;
+
+  @media (min-width: em(1600)) {
+    padding-left: rem(60);
+  }
+
+  > * {
+    flex: 0 0 rem(1100);
+  }
+}
+.subtitle {
+  @include adaptiveValue("font-size", 30, 20);
+  line-height: 110%;
+  letter-spacing: -0.03em;
+}
+.card {
+  img {
+    object-fit: cover;
+    min-height: rem(408);
+    border-radius: rem(5);
+    &:not(:last-child) {
+      margin-bottom: rem(23);
+    }
+  }
+
+  &__title {
+    &:not(:last-child) {
+      margin-bottom: rem(7);
+    }
+  }
 }

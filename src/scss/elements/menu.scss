@@ -42,6 +42,7 @@
       }
       @include adaptiveValue("font-size", 16, 12);
       letter-spacing: -0.04em;
+      color: rgba(0, 0, 0, 0.6);
 
       @media (any-hover: hover) {
         &:hover {

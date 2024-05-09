@@ -2,6 +2,7 @@
 // Снипет (HTML): btn
 
 .button {
+  cursor: pointer;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -24,13 +25,19 @@
   letter-spacing: -0.02em;
   @include adaptiveValue("font-size", 18, 15);
 
-  transition: background-color 0.32s ease-in-out;
+  transition:
+    background-color 0.32s ease-in-out,
+    color 0.32s ease-in-out;
 
   svg {
     flex: 0 0 rem(20);
     width: rem(20);
     height: rem(20);
     fill: var(--clr-white);
+  }
+
+  &__arrow {
+    transition: color 0.32s ease-in-out;
   }
 
   @media (any-hover: hover) {
@@ -62,6 +69,24 @@
     @media (any-hover: hover) {
       &:hover {
         background-color: rgba(0, 0, 0, 0.6);
+      }
+    }
+  }
+  &.button_white {
+    background-color: var(--clr-white);
+    color: var(--clr-black);
+    backdrop-filter: blur(5px);
+    .button__arrow {
+      color: rgba(0, 0, 0, 0.5);
+    }
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.4);
+        color: var(--clr-white);
+
+        .button__arrow {
+          color: rgba(255, 255, 255, 0.7);
+        }
       }
     }
   }

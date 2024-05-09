@@ -7,10 +7,11 @@
     content: "";
     pointer-events: none;
     position: absolute;
-    right: 0;
-    bottom: 0;
-    width: 55%;
-    height: 100%;
+
+    right: -27%;
+    bottom: -12%;
+    width: 110%;
+    height: 110%;
     @extend %bg-con;
     background-image: url("@img/complete/background.png");
   }
