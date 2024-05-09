@@ -19,6 +19,20 @@
   }
 }
 
+.big-title {
+  font-weight: 600;
+  @include adaptiveValue("font-size", 105, 48);
+  line-height: 100%;
+  letter-spacing: -0.03em;
+}
+
+.descr {
+  font-weight: 400;
+  @include adaptiveValue("font-size", 28, 20);
+  line-height: 140%;
+  letter-spacing: -0.03em;
+}
+
 .description {
   font-weight: 400;
   @include adaptiveValue("font-size", 18, 14);
