@@ -5,8 +5,25 @@
     <div class="wrapper">
       @@include('html/_header.htm',{})
       <main class="page">
-        @@include('html/_aside.htm', {}) @@include('html/_hero.htm', {})
-        @@include('html/_complete.htm')
+        @@include('html/_aside.htm', {}) @@include('html/_hero.htm', {}) @@include('html/_complete.htm')
+        @@include('html/_double.htm', {}) @@include('html/_covered.htm', {}) @@include('html/_berlin.htm', {})
+        <section class="page__double double">
+          <div class="double__container container grid-container">
+            <div
+              class="double__image info-image grid-7"
+              style="background-image: url(&quot;@img/double/02.jpg&quot;)"></div>
+            <div class="double__content grid-5">
+              <h2 class="double__title title">Акустические кабины</h2>
+              <p class="description">
+                Закажите офис по минимальной цене, выбрав наиболее подходящий стиль для вашего интерьера
+              </p>
+              <div class="benefit">
+                <span class="benefit__percentage"> 75% </span>
+                <p class="benefit__text">шумов поглащают акустические системы компании ForestOffice</p>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
       @@include('html/_footer.htm',{})
     </div>
