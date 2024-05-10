@@ -1,7 +1,7 @@
-import * as nodePath from 'path';
+import * as nodePath from "path";
 const rootFolder = nodePath.basename(nodePath.resolve());
 
-const buildFolder = `./dist`;
+const buildFolder = `./docs`;
 const srcFolder = `./src`;
 
 export const path = {
@@ -35,8 +35,8 @@ export const path = {
 
 // Настройка FTP соединения
 export const configFTP = {
-  host: '',
-  user: '',
-  password: '',
+  host: "",
+  user: "",
+  password: "",
   parallel: 5,
 };

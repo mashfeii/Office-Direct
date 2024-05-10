@@ -6,12 +6,10 @@ import HtmlWebpackPlugin from "html-webpack-plugin";
 import * as path from "path";
 
 const srcFolder = "src";
-const builFolder = "dist";
+const builFolder = "docs";
 const rootFolder = path.basename(path.resolve());
 
-let pugPages = fs
-  .readdirSync(srcFolder)
-  .filter((fileName) => fileName.endsWith(".pug"));
+let pugPages = fs.readdirSync(srcFolder).filter((fileName) => fileName.endsWith(".pug"));
 let htmlPages = [];
 
 if (!pugPages.length) {
@@ -56,12 +54,7 @@ const config = {
     port: "auto",
     hot: true,
     host: "local-ip",
-    watchFiles: [
-      `${paths.src}/**/*.html`,
-      `${paths.src}/**/*.pug`,
-      `${paths.src}/**/*.htm`,
-      `${paths.src}/img/**/*.*`,
-    ],
+    watchFiles: [`${paths.src}/**/*.html`, `${paths.src}/**/*.pug`, `${paths.src}/**/*.htm`, `${paths.src}/img/**/*.*`],
   },
   module: {
     rules: [
@@ -128,7 +121,7 @@ const config = {
           minify: false,
           template: `${srcFolder}/${pugPage}`,
           filename: `${pugPage.replace(/\.pug/, ".html")}`,
-        }),
+        })
     ),
     new CopyPlugin({
       patterns: [
