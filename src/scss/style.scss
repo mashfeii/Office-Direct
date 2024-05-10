@@ -73,9 +73,13 @@ body {
   overflow: hidden;
   > main {
     flex: 1 1 auto;
+    &:not(:last-child) {
+      margin-bottom: rem(135);
+    }
   }
 
-  section {
+  section,
+  footer {
     padding-left: rem(267);
   }
 }
@@ -147,3 +151,9 @@ body {
 @import "blocks/feedback";
 @import "blocks/cases";
 @import "blocks/card-navigation";
+@import "blocks/opotrunities";
+@import "blocks/card-links";
+@import "blocks/connect";
+@import "blocks/agents";
+@import "blocks/advantages";
+@import "blocks/suppliers";

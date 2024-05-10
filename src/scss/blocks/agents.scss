@@ -1,0 +1,57 @@
+.page {
+  &__inner {
+    &:not(:last-child) {
+      margin-bottom: rem(110);
+    }
+  }
+}
+.inner {
+  &__container {
+  }
+
+  &__title {
+    &:not(:last-child) {
+      margin-bottom: rem(19);
+    }
+  }
+  p {
+    font-weight: 400;
+    @include adaptiveValue("font-size", 24, 18);
+    line-height: 140%;
+
+    &._strong {
+      font-weight: 600;
+    }
+    a {
+      color: var(--clr-blue);
+    }
+    &:not(:last-child) {
+      margin-bottom: rem(19);
+    }
+  }
+
+  &__benefits {
+    margin-top: rem(39);
+    &:not(:last-child) {
+      margin-bottom: rem(49);
+    }
+  }
+}
+.inner-benefit {
+  background-repeat: no-repeat;
+  background-position: rem(31) rem(35);
+  background-size: rem(34) rem(48);
+  background-image: url("@img/warranty.svg");
+
+  display: flex;
+  align-items: flex-end;
+  min-height: rem(200);
+  padding: rem(30) rem(22) rem(24) rem(30);
+  border-radius: rem(5);
+  background-color: var(--c, #f5f5f5);
+  color: var(--tc, #000);
+
+  font-weight: 400;
+  @include adaptiveValue("font-size", 21, 16);
+  line-height: 140%;
+}

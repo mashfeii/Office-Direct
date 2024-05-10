@@ -1,0 +1,31 @@
+.page {
+  &__advantages {
+    &:not(:last-child) {
+      margin-bottom: rem(122);
+    }
+  }
+}
+.advantages {
+  &__title {
+    &:not(:last-child) {
+      margin-bottom: rem(24);
+    }
+  }
+
+  &__items {
+    display: flex;
+    gap: rem(79);
+  }
+
+  &__item {
+    flex-grow: 1;
+    font-weight: 400;
+    @include adaptiveValue("font-size", 20, 14);
+    line-height: 140%;
+    color: rgba(0, 0, 0, 0.5);
+    strong {
+      font-weight: 400;
+      color: var(--clr-black);
+    }
+  }
+}

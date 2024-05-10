@@ -1,0 +1,88 @@
+.page {
+  &__connect {
+    &:not(:last-child) {
+      margin-bottom: rem(125);
+    }
+  }
+}
+.connect {
+  padding-top: rem(87);
+  padding-bottom: rem(81);
+  background-color: #f5f5f5;
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-image: url("@img/connect/background.png");
+
+  &__container {
+  }
+
+  &__image {
+    &:not(:last-child) {
+      margin-bottom: rem(42);
+    }
+  }
+
+  &__title {
+    &:not(:last-child) {
+      margin-bottom: rem(16);
+    }
+  }
+
+  &__description {
+    max-width: rem(1012);
+    font-weight: 400;
+    @include adaptiveValue("font-size", 24, 18);
+    line-height: 140%;
+    &:not(:last-child) {
+      margin-bottom: rem(16);
+    }
+  }
+
+  &__form {
+    max-width: rem(920);
+  }
+
+  &__form-row {
+    display: flex;
+    gap: rem(20);
+    > * {
+      flex-grow: 1;
+    }
+  }
+
+  &__form-button {
+    margin-top: rem(35);
+  }
+
+  &__form-input {
+    width: 100%;
+    padding: rem(20) 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    background-color: transparent;
+
+    font-weight: 400;
+    @include adaptiveValue("font-size", 20, 16);
+    line-height: 140%;
+    color: rgba(0, 0, 0, 0.5);
+
+    transition:
+      border-color 0.32s ease-in-out,
+      color 0.32s ease-in-out;
+
+    &:active {
+      border-color: var(--clr-black);
+      color: var(--clr-black);
+    }
+
+    &:focus {
+      outline: none;
+      border-color: var(--clr-black);
+      color: var(--clr-black);
+    }
+  }
+
+  textarea {
+    resize: none;
+    min-height: rem(155);
+  }
+}
