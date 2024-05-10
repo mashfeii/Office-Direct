@@ -141,3 +141,65 @@ p._strong {
 ._light-blue {
   color: #0fa6bc;
 }
+.page__quote {
+  margin-top: rem(145);
+  &:not(:last-child) {
+    margin-bottom: rem(165);
+  }
+}
+.quote {
+  position: relative;
+  max-width: rem(852);
+  margin: 0 auto;
+  &.quote_fw {
+    max-width: rem(1062);
+  }
+  &.quote_clear {
+    h2::after {
+      display: none;
+    }
+  }
+  h2:not(:last-child) {
+    margin-bottom: rem(28);
+  }
+  h2 {
+    font-family: "PlayfairDisplay";
+    font-weight: 400;
+    @include adaptiveValue("font-size", 44, 28);
+    line-height: 120%;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.5);
+
+    strong {
+      font-weight: 400;
+      color: var(--clr-black);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: rem(492);
+      height: rem(10);
+      right: rem(60);
+      bottom: rem(42);
+      @extend %bg-con;
+      background-image: url("@img/line.svg");
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: rem(-48);
+      left: 50%;
+      width: rem(36);
+      height: rem(28);
+      @extend %bg-con;
+      background-image: url("@img/quote.svg");
+      transform: translateX(-50%);
+    }
+  }
+  p {
+    @extend %f-24-400;
+    text-align: center;
+  }
+}
