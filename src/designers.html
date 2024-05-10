@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ru">
+  @@include('html/_head.htm',{ "title":"Дизайнерам и архитекторам" })
+  <body>
+    <div class="wrapper">
+      <main class="page">
+        @@include('html/_aside.htm', {})
+        <div class="preview" style="background-image: url(&quot;@img/preview/02.jpg&quot;)"></div>
+        <section class="inner">
+          <div class="inner__container container">
+            <h1 class="inner__title title">Дизайнерам и архитекторам</h1>
+            <p>
+              Мы готовы стать вашим надёжным партнёром в области офисного дизайна и предложить качественную мебель,
+              которая подчеркнёт уникальность и стильность ваших проектов.
+            </p>
+            <p>
+              Приглашаем опытных дизайнеров и архитекторов к сотрудничеству — вместе мы сможем создавать функциональные
+              и эстетически привлекательные интерьеры с использованием нашей инновационной офисной мебели.
+            </p>
+            <ul class="grid-container inner__cards">
+              <li class="grid-4">
+                <h3 class="subtitle">Откройте новые возможности для совместной работы —</h3>
+                <p>
+                  наша мебель станет незаменимым акцентом в вашем дизайне и поможет создать продуктивное рабочее
+                  пространство для клиентов.
+                </p>
+              </li>
+              <li class="grid-4">
+                <h3 class="subtitle">Наша мебель идеально впишется в ваши творческие идеи —</h3>
+                <p>
+                  поможем воплотить в жизнь проекты офисных пространств с удобством для сотрудников и стильным дизайном.
+                </p>
+              </li>
+              <li class="grid-4">
+                <h3 class="subtitle">Предлагаем вдохновляющий выбор офисной мебели для ваших проектов —</h3>
+                <p>
+                  от современных решений до классических стилей, чтобы подчеркнуть индивидуальность каждого интерьера.
+                </p>
+              </li>
+            </ul>
+            <div class="inner__images grid-container">
+              <div class="inner__col grid-4">
+                <img src="@img/designers/image.jpg" height="282" alt="" aria-hidden="true" />
+                <img src="@img/designers/image.jpg" height="282" alt="" aria-hidden="true" />
+                <img src="@img/designers/image.jpg" height="282" alt="" aria-hidden="true" />
+              </div>
+              <div class="inner__col grid-4">
+                <img src="@img/designers/image.jpg" height="392" alt="" aria-hidden="true" />
+                <img src="@img/designers/image.jpg" height="392" alt="" aria-hidden="true" />
+              </div>
+              <div class="inner__col grid-4">
+                <img src="@img/designers/image.jpg" height="316" alt="" aria-hidden="true" />
+                <img src="@img/designers/image.jpg" height="316" alt="" aria-hidden="true" />
+              </div>
+              <div class="inner__quote quote">
+                <h2>
+                  <strong
+                    >Ваш талант не останется без внимания. Вашими решениями будут пользоваться тысячи
+                    пользователей</strong
+                  >
+                </h2>
+              </div>
+            </div>
+          </div>
+        </section>
+        @@include('html/_connect.htm', {}) @@include('html/_card-links.htm', {}) @@include('html/_opotrunities.htm', {})
+      </main>
+      @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_popup.htm',{}) @@include('html/_js.htm',{})
+  </body>
+</html>
