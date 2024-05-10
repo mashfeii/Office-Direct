@@ -96,10 +96,6 @@ body {
     @if ($containerPadding > 0) {
       padding: 0 rem(math.div($containerPadding, 2));
     }
-    @media (min-width: em(1600)) {
-      padding-left: rem(115);
-      padding-right: rem(15);
-    }
   }
 } @else {
   .container {
@@ -134,6 +130,10 @@ body {
 // Подключение стилей небольших элементов
 @import "elements/logo";
 @import "elements/menu";
+@import "elements/card";
+@import "elements/infinite-line";
+@import "elements/preview";
+@import "elements/quote";
 
 // Подключение стилей отдельных блоков
 @import "header";
@@ -158,3 +158,8 @@ body {
 @import "blocks/advantages";
 @import "blocks/suppliers";
 @import "blocks/franchise";
+@import "blocks/faced-work";
+@import "blocks/gallery";
+@import "blocks/showrooms";
+@import "blocks/team";
+@import "blocks/clients";

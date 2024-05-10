@@ -1,0 +1,17 @@
+.card {
+  img {
+    max-width: 100%;
+    object-fit: cover;
+    min-height: rem(408);
+    border-radius: rem(5);
+    &:not(:last-child) {
+      margin-bottom: rem(23);
+    }
+  }
+
+  &__title {
+    &:not(:last-child) {
+      margin-bottom: rem(7);
+    }
+  }
+}

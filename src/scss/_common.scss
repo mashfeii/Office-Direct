@@ -33,6 +33,12 @@
   }
 }
 
+.subtitle {
+  @include adaptiveValue("font-size", 30, 20);
+  line-height: 110%;
+  letter-spacing: -0.03em;
+}
+
 .big-title {
   font-weight: 600;
   @include adaptiveValue("font-size", 105, 48);
@@ -52,14 +58,6 @@
   @include adaptiveValue("font-size", 18, 14);
   line-height: 140%;
   color: rgba(23, 23, 23, 0.7);
-}
-
-.page {
-  &__double {
-    &:not(:last-child) {
-      margin-bottom: rem(135);
-    }
-  }
 }
 
 .grid-container {
@@ -83,52 +81,6 @@
   grid-column: span 9;
 }
 
-.infinite-line {
-  display: flex;
-  gap: rem(28);
-  @extend %ml;
-
-  @media (min-width: em(1600)) {
-    padding-left: rem(60);
-  }
-
-  > * {
-    flex: 0 0 rem(1100);
-  }
-}
-.subtitle {
-  @include adaptiveValue("font-size", 30, 20);
-  line-height: 110%;
-  letter-spacing: -0.03em;
-}
-.card {
-  img {
-    max-width: 100%;
-    object-fit: cover;
-    min-height: rem(408);
-    border-radius: rem(5);
-    &:not(:last-child) {
-      margin-bottom: rem(23);
-    }
-  }
-
-  &__title {
-    &:not(:last-child) {
-      margin-bottom: rem(7);
-    }
-  }
-}
-.preview {
-  margin-left: rem(267);
-  @extend %bg-cov;
-  background-position: 30% top;
-  height: rem(400);
-
-  &:not(:last-child) {
-    margin-bottom: rem(90);
-  }
-}
-
 p._strong {
   font-weight: 600;
 }
@@ -140,66 +92,4 @@ p._strong {
 }
 ._light-blue {
   color: #0fa6bc;
-}
-.page__quote {
-  margin-top: rem(145);
-  &:not(:last-child) {
-    margin-bottom: rem(165);
-  }
-}
-.quote {
-  position: relative;
-  max-width: rem(852);
-  margin: 0 auto;
-  &.quote_fw {
-    max-width: rem(1062);
-  }
-  &.quote_clear {
-    h2::after {
-      display: none;
-    }
-  }
-  h2:not(:last-child) {
-    margin-bottom: rem(28);
-  }
-  h2 {
-    font-family: "PlayfairDisplay";
-    font-weight: 400;
-    @include adaptiveValue("font-size", 44, 28);
-    line-height: 120%;
-    text-align: center;
-    color: rgba(0, 0, 0, 0.5);
-
-    strong {
-      font-weight: 400;
-      color: var(--clr-black);
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      width: rem(492);
-      height: rem(10);
-      right: rem(60);
-      bottom: rem(42);
-      @extend %bg-con;
-      background-image: url("@img/line.svg");
-    }
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: rem(-48);
-      left: 50%;
-      width: rem(36);
-      height: rem(28);
-      @extend %bg-con;
-      background-image: url("@img/quote.svg");
-      transform: translateX(-50%);
-    }
-  }
-  p {
-    @extend %f-24-400;
-    text-align: center;
-  }
 }

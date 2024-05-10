@@ -6,9 +6,6 @@
   }
 }
 .inner {
-  &__container {
-  }
-
   &__text-split ul {
     grid-column: 9 / 11;
     margin-right: rem(-20);
@@ -115,6 +112,22 @@
     margin-top: rem(39);
     &:not(:last-child) {
       margin-bottom: rem(49);
+    }
+  }
+
+  &__advantages {
+    display: flex;
+    gap: rem(60);
+  }
+  &__advantages-item {
+    max-width: rem(263);
+    display: flex;
+    flex-direction: column;
+    span:first-child {
+      @extend %f-120-600;
+    }
+    span:last-child {
+      @extend %f-24-400;
     }
   }
 }

@@ -1,0 +1,13 @@
+.infinite-line {
+  display: flex;
+  gap: rem(28);
+  @extend %ml;
+
+  @media (min-width: em(1600)) {
+    padding-left: rem(60);
+  }
+
+  > * {
+    flex: 0 0 rem(1100);
+  }
+}

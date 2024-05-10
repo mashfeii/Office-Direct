@@ -1,0 +1,10 @@
+.preview {
+  margin-left: rem(267);
+  @extend %bg-cov;
+  background-position: 30% top;
+  height: rem(400);
+
+  &:not(:last-child) {
+    margin-bottom: rem(90);
+  }
+}

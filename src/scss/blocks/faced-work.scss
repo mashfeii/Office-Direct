@@ -1,0 +1,52 @@
+.page {
+  &__faced-work {
+  }
+}
+.faced-work {
+  @extend %bg-cov;
+  background-image: url("@img/faced-work/image.jpg");
+
+  &__container {
+    padding-top: rem(81);
+    padding-bottom: rem(81);
+    min-height: rem(568);
+    color: var(--clr-white);
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    max-width: rem(491);
+    font-weight: 800;
+    @include adaptiveValue("font-size", 40, 24);
+    line-height: 120%;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    flex: 1 1 auto;
+
+    img {
+      vertical-align: baseline;
+    }
+
+    span {
+      @supports (-webkit-text-stroke: 2px white) {
+        color: transparent;
+        -webkit-text-stroke: 2px white;
+        storng {
+          -webkit-text-stroke: 0%;
+        }
+      }
+    }
+  }
+
+  &__content {
+    h3:not(:last-child) {
+      margin-bottom: rem(13);
+    }
+    p:not(:last-child) {
+      margin-bottom: rem(8);
+    }
+    max-width: rem(592);
+    @extend %f-24-400;
+  }
+}
