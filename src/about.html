@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ru">
+  @@include('html/_head.htm',{ "title":"О компании" })
+  <body>
+    <div class="wrapper">
+      <main class="page">
+        @@include('html/_aside.htm', {})
+        <div class="preview" style="background-image: url(&quot;@img/preview/04.jpg&quot;)"></div>
+        <section class="page__inner inner">
+          <div class="inner__container container">
+            <h1 class="inner__title inner-title">О компании</h1>
+            <p>
+              Мы помогаем нашим клиентам в короткие сроки обустраивать офисные пространства качественной и стильной
+              мебелью и канцтоварами.
+            </p>
+            <p>
+              Современный формат мебельного магазина, включающего онлайн-гипермаркет и сеть шоу-румов. Покупатели могут
+              выбрать кресло непосредственно в мебельном салоне или совершить интернет-покупку при помощи удобного
+              механизма подбора и качественных описаний товара.
+            </p>
+            <ul class="inner__advantages">
+              <li class="inner__advantages-item">
+                <span>16+</span>
+                <span>лет на рынке офисной мебели</span>
+              </li>
+              <li class="inner__advantages-item">
+                <span>20К</span>
+                <span>моделей мебели представлено</span>
+              </li>
+              <li class="inner__advantages-item">
+                <span>30+</span>
+                <span>регионов доставки по всей стране</span>
+              </li>
+              <li class="inner__advantages-item">
+                <span>500+</span>
+                <span>довольных компаний- клиентов</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+        @@include('html/_faced-work.htm', {})
+        <section class="page__quote quote quote_clear quote_fw">
+          <div class="quote__cover container">
+            <h2>
+              <strong>Сегодня ОфисДирект — один из крупнейших в стране онлайн и оффлайн гипермаркетов</strong> товаров
+              для офиса с доставкой в 90+ регионов России
+            </h2>
+            <p>И мы продолжаем развиваться ежедневно</p>
+          </div>
+        </section>
+        @@include('html/_gallery.htm', {}) @@include('html/_showrooms.htm', {}) @@include('html/_team.htm', {})
+        @@include('html/_clients.htm', {}) @@include('html/_card-links.htm', {})
+      </main>
+      @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_popup.htm',{}) @@include('html/_js.htm',{})
+  </body>
+</html>
