@@ -1,11 +1,93 @@
-<!-- 
-<div id="popup" aria-hidden="true" class="popup">
-	<div class="popup__wrapper">
-		<div class="popup__content">
-			<button data-close type="button" class="popup__close">Закрыть</button>
-			<div class="popup__text">
-			</div>
-		</div>
-	</div>
+<div id="answer" class="complete complete_modal" style="display: none">
+  <h2 class="middle-title complete__title">Готовое решениe</h2>
+  <form action="#" class="complete__form">
+    <label class="form__item">
+      <p>Укажите количество сотрудников</p>
+      <p class="radio-select">
+        <span>
+          <input type="radio" name="employee-quantity" id="radio_modal_1" value="2" />
+          <label for="radio_modal_1">2</label>
+        </span>
+        <span>
+          <input type="radio" name="employee-quantity" id="radio_modal_2" value="4" checked />
+          <label for="radio_modal_2">4</label>
+        </span>
+        <span>
+          <input type="radio" name="employee-quantity" id="radio_modal_3" value="6" />
+          <label for="radio_modal_3">6</label>
+        </span>
+        <span>
+          <input type="radio" name="employee-quantity" id="radio_modal_4" value="8+" />
+          <label for="radio_modal_4">8+</label>
+        </span>
+      </p>
+    </label>
+    <label class="form__item">
+      <p>Выберите комплектацию</p>
+      <p class="checkboxes">
+        <span class="checkbox">
+          <input type="checkbox" name="configuration" id="check_modal_1" />
+          <label for="check_modal_1">
+            <span class="radio-select"></span>
+            Акустические панели
+          </label>
+        </span>
+        <span class="checkbox">
+          <input type="checkbox" name="configuration" id="check_modal_2" />
+          <label for="check_modal_2">
+            <span class="radio-select"></span>
+            Кресла
+          </label>
+        </span>
+        <span class="checkbox">
+          <input type="checkbox" name="configuration" id="check_modal_3" />
+          <label for="check_modal_3">
+            <span class="radio-select"></span>
+            Тумбы
+          </label>
+        </span>
+        <span class="checkbox">
+          <input type="checkbox" name="configuration" id="check_modal_4" />
+          <label for="check_modal_4">
+            <span class="radio-select"></span>
+            Шкафы
+          </label>
+        </span>
+      </p>
+    </label>
+    <label>
+      <input class="button form__button" type="submit" value="Получить предложение &rarr;" />
+    </label>
+  </form>
 </div>
- -->
+<div id="request" class="complete complete_modal" style="display: none">
+  <h2 class="middle-title complete__title">Готовое решение</h2>
+  <p class="complete__description">
+    Заполните форму — мы перезвоним вам в течение 10 минут и проконсультируем по любым продуктам
+  </p>
+  <form action="#" class="modal-form">
+    <label class="modal-form__item">
+      <span class="modal-form__input">
+        <span>Ваше имя</span>
+        <input type="text" class="input input_user" required />
+      </span>
+    </label>
+    <label class="modal-form__item">
+      <span class="modal-form__input">
+        <span>Телефон</span>
+        <input type="text" class="input input_tel" required />
+      </span>
+    </label>
+    <label>
+      <span>
+        <input type="submit" value="Оставить заявку &rarr;" class="modal-form__button button" />
+      </span>
+    </label>
+    <label>
+      <span class="modal-form__checkbox">
+        <input type="checkbox" id="politics" checked />
+        <label for="politics">Нажимая кнопку, я соглашаюсь с Политикой конфиденциальности</label>
+      </span>
+    </label>
+  </form>
+</div>

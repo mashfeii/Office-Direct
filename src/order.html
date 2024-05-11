@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ru">
+  @@include('html/_head.htm',{ "title":"Мой заказ" })
+  <body>
+    <div class="wrapper">
+      <main class="page page_order">
+        @@include('html/_aside.htm', {})
+        <div class="container container_ml container_mb">
+          <a href="javascript:void(0);" class="order-link">
+            <svg width="20" height="20">
+              <use xlink:href="@img/icons/icons.svg#link" />
+            </svg>
+            <span>Поделиться ссылкой на список</span>
+          </a>
+        </div>
+        <section class="page__inner inner">
+          <div class="inner__container container">
+            <h1 class="inner__title inner-title">Мой заказ</h1>
+            <p>
+              Здесь собраны все товары, которые вы отложили. Оставьте заявку, чтобы с вами связался менеджер и
+              проконсультировал.
+            </p>
+          </div>
+        </section>
+        @@include('html/_cart-preview.htm', {}) @@include('html/_request.htm', {})
+      </main>
+      @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_popup.htm',{}) @@include('html/_js.htm',{})
+  </body>
+</html>
