@@ -1,0 +1,19 @@
+.complete_modal {
+  width: rem(1031);
+  overflow: hidden;
+  border-radius: rem(10);
+  padding: rem(59) rem(57);
+
+  .complete__title:not(:last-child) {
+    margin-bottom: rem(9);
+  }
+  .complete__description {
+    max-width: rem(574);
+    @extend %f-20-500;
+    &:not(:last-child) {
+      margin-bottom: rem(40);
+    }
+  }
+}
+.modal-form {
+}

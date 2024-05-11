@@ -79,8 +79,21 @@ body {
   }
 
   section,
-  footer {
+  footer,
+  .container_ml {
     padding-left: rem(267);
+  }
+}
+
+.page {
+  &_order {
+    padding-top: rem(77);
+  }
+}
+
+.container_mb {
+  &:not(:last-child) {
+    margin-bottom: rem(64);
   }
 }
 
@@ -134,6 +147,7 @@ body {
 @import "elements/infinite-line";
 @import "elements/preview";
 @import "elements/quote";
+@import "elements/order-link";
 
 // Подключение стилей отдельных блоков
 @import "header";
@@ -163,3 +177,6 @@ body {
 @import "blocks/showrooms";
 @import "blocks/team";
 @import "blocks/clients";
+@import "blocks/cart-preview";
+@import "blocks/request";
+@import "blocks/complete-modal";

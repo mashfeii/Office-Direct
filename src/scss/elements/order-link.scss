@@ -1,0 +1,22 @@
+.order-link {
+  display: inline-flex;
+  align-items: center;
+  gap: rem(11);
+  @extend %f-20-500;
+  color: rgba(0, 0, 0, 0.5);
+  transition: color 0.32s ease;
+
+  svg {
+    fill: rgba(0, 0, 0, 0.5);
+    transition: fill 0.32s ease;
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      color: var(--clr-green);
+      svg {
+        fill: var(--clr-green);
+      }
+    }
+  }
+}

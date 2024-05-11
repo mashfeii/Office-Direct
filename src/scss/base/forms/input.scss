@@ -1,24 +1,41 @@
 // Снипет (HTML): inp
-input[type='text'],
-input[type='submit'],
-input[type='email'],
-input[type='tel'],
+input[type="text"],
+input[type="submit"],
+input[type="email"],
+input[type="tel"],
 textarea {
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 .input {
-	border-radius: 0 !important;
-	width: 100%;
-	height: rem(48);
-	display: block;
-	padding: 0px 20px;
-	border: 1px solid #eee;
-	&.just-validate-error-field {
-	}
+  border-radius: 0 !important;
+  width: 100%;
+  padding: rem(20) 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  background-color: transparent;
+
+  font-weight: 400;
+  @include adaptiveValue("font-size", 20, 16);
+  line-height: 140%;
+  color: rgba(0, 0, 0, 0.5);
+
+  transition:
+    border-color 0.32s ease-in-out,
+    color 0.32s ease-in-out;
+
+  &:active {
+    border-color: var(--clr-black);
+    color: var(--clr-black);
+  }
+
+  &:focus {
+    outline: none;
+    border-color: var(--clr-black);
+    color: var(--clr-black);
+  }
 }
 textarea.input {
-	resize: none;
-	padding: 0px 0px;
+  resize: none;
+  min-height: rem(155);
 }

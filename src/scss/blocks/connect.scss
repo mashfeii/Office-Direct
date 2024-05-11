@@ -53,36 +53,4 @@
   &__form-button {
     margin-top: rem(35);
   }
-
-  &__form-input {
-    width: 100%;
-    padding: rem(20) 0;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
-    background-color: transparent;
-
-    font-weight: 400;
-    @include adaptiveValue("font-size", 20, 16);
-    line-height: 140%;
-    color: rgba(0, 0, 0, 0.5);
-
-    transition:
-      border-color 0.32s ease-in-out,
-      color 0.32s ease-in-out;
-
-    &:active {
-      border-color: var(--clr-black);
-      color: var(--clr-black);
-    }
-
-    &:focus {
-      outline: none;
-      border-color: var(--clr-black);
-      color: var(--clr-black);
-    }
-  }
-
-  textarea {
-    resize: none;
-    min-height: rem(155);
-  }
 }

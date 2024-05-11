@@ -6,7 +6,6 @@
   @include adaptiveValue("font-size", 18, 14);
   line-height: 110%;
   letter-spacing: -0.03em;
-
   input {
     display: none;
   }
@@ -36,6 +35,7 @@
   }
 
   .radio-select {
+    cursor: pointer;
     position: absolute;
     display: flex;
     align-items: center;
