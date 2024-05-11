@@ -12,14 +12,14 @@ export const otfToTtf = () => {
           app.plugins.notify.onError({
             title: "FONTS",
             message: "Error: <%= error.message %>",
-          }),
-        ),
+          })
+        )
       )
       // Конвертируем в .ttf
       .pipe(
         fonter({
           formats: ["ttf"],
-        }),
+        })
       )
       // Выгружаем в исходную папку
       .pipe(app.gulp.dest(`${app.path.srcFolder}/fonts/`))
@@ -35,29 +35,27 @@ export const ttfToWoff = () => {
           app.plugins.notify.onError({
             title: "FONTS",
             message: "Error: <%= error.message %>",
-          }),
-        ),
+          })
+        )
       )
       // Конвертируем в .woff
       .pipe(
         fonter({
           formats: ["woff"],
-        }),
+        })
       )
       // Выгружаем в папку с результатом
       .pipe(app.gulp.dest(`${app.path.build.fonts}`))
-      // Ищем файлы шрифтов .ttf
-      // .pipe(
-      //   app.gulp.src(`${app.path.srcFolder}/fonts/*.ttf`, { encoding: false }),
-      // )
-      // // Конвертируем в .woff2
-      // .pipe(ttf2woff2())
-      // // Выгружаем в папку с результатом
-      // .pipe(app.gulp.dest(`${app.path.build.fonts}`))
-      // // Ищем файлы шрифтов .woff и woff2
-      // .pipe(app.gulp.src(`${app.path.srcFolder}/fonts/*.{woff,woff2}`))
-      // // Выгружаем в папку с результатом
-      // .pipe(app.gulp.dest(`${app.path.build.fonts}`))
+    // Ищем файлы шрифтов .ttf
+    // .pipe(app.gulp.src(`${app.path.srcFolder}/fonts/*.ttf`, { encoding: false }))
+    // Конвертируем в .woff2
+    // .pipe(ttf2woff2())
+    // Выгружаем в папку с результатом
+    // .pipe(app.gulp.dest(`${app.path.build.fonts}`))
+    // Ищем файлы шрифтов .woff и woff2
+    // .pipe(app.gulp.src(`${app.path.srcFolder}/fonts/*.{woff,woff2}`))
+    // Выгружаем в папку с результатом
+    // .pipe(app.gulp.dest(`${app.path.build.fonts}`))
   );
 };
 export const fonstStyle = () => {
@@ -76,12 +74,8 @@ export const fonstStyle = () => {
           // Записываем подключения шрифтов в файл стилей
           let fontFileName = fontsFiles[i].split(".")[0];
           if (newFileOnly !== fontFileName) {
-            let fontName = fontFileName.split("-")[0]
-              ? fontFileName.split("-")[0]
-              : fontFileName;
-            let fontWeight = fontFileName.split("-")[1]
-              ? fontFileName.split("-")[1]
-              : fontFileName;
+            let fontName = fontFileName.split("-")[0] ? fontFileName.split("-")[0] : fontFileName;
+            let fontWeight = fontFileName.split("-")[1] ? fontFileName.split("-")[1] : fontFileName;
             if (fontWeight.toLowerCase() === "thin") {
               fontWeight = 100;
             } else if (fontWeight.toLowerCase() === "extralight") {
@@ -94,10 +88,7 @@ export const fonstStyle = () => {
               fontWeight = 600;
             } else if (fontWeight.toLowerCase() === "bold") {
               fontWeight = 700;
-            } else if (
-              fontWeight.toLowerCase() === "extrabold" ||
-              fontWeight.toLowerCase() === "heavy"
-            ) {
+            } else if (fontWeight.toLowerCase() === "extrabold" || fontWeight.toLowerCase() === "heavy") {
               fontWeight = 800;
             } else if (fontWeight.toLowerCase() === "black") {
               fontWeight = 900;
@@ -107,16 +98,14 @@ export const fonstStyle = () => {
             fs.appendFile(
               fontsFile,
               `@font-face {\n\tfont-family: ${fontName};\n\tfont-display: swap;\n\tsrc: url("../fonts/${fontFileName}.woff2") format("woff2"), url("../fonts/${fontFileName}.woff") format("woff");\n\tfont-weight: ${fontWeight};\n\tfont-style: normal;\n}\r\n`,
-              cb,
+              cb
             );
             newFileOnly = fontFileName;
           }
         }
       } else {
         // Если файл есть, выводим сообщение
-        console.log(
-          "Файл scss/fonts/fonts.scss уже существует. Для обновления файла нужно его удалить!",
-        );
+        console.log("Файл scss/fonts/fonts.scss уже существует. Для обновления файла нужно его удалить!");
       }
     } else {
       // Если шрифтов нет

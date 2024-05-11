@@ -4,7 +4,7 @@ import webpack from "webpack-stream";
 import webPackConfig from "../webpack.prod.js";
 
 const srcFolder = "src";
-const builFolder = "docs";
+const builFolder = "dist";
 
 const paths = {
   src: path.resolve(srcFolder),

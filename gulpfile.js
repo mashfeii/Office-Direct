@@ -28,35 +28,27 @@ import { zip } from "./config/gulp-tasks/zip.js";
 
 const fonts = gulp.series(reset, otfToTtf, ttfToWoff, fonstStyle);
 const devTasks = gulp.parallel(fonts, gitignore);
-const buildTasks = gulp.series(
-  fonts,
-  jsDev,
-  js,
-  gulp.parallel(html, css, images, gitignore),
-);
-const vendorsTasks = gulp.series(
-  fonts,
-  jsDev,
-  js,
-  gulp.parallel(html, css, cssVendors, images, resources, gitignore),
-);
+const buildTasks = gulp.series(fonts, jsDev, js, gulp.parallel(html, css, images, resources, gitignore));
+const vendorsTasks = gulp.series(fonts, jsDev, js, gulp.parallel(html, css, cssVendors, images, resources, gitignore));
 
-export { html };
-export { css };
-export { cssVendors };
-export { js };
-export { jsDev };
-export { images };
-export { fonts };
-export { sprite };
-export { ftp };
-export { zip };
-export { reset };
-export { development };
-export { build };
-export { deployFTP };
-export { deployZIP };
-export { vendors };
+export {
+  build,
+  css,
+  cssVendors,
+  deployFTP,
+  deployZIP,
+  development,
+  fonts,
+  ftp,
+  html,
+  images,
+  js,
+  jsDev,
+  reset,
+  sprite,
+  vendors,
+  zip,
+};
 
 const development = gulp.series(devTasks);
 const build = gulp.series(buildTasks);

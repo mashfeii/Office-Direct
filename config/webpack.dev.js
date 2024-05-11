@@ -6,7 +6,7 @@ import HtmlWebpackPlugin from "html-webpack-plugin";
 import * as path from "path";
 
 const srcFolder = "src";
-const builFolder = "docs";
+const builFolder = "dist";
 const rootFolder = path.basename(path.resolve());
 
 let pugPages = fs.readdirSync(srcFolder).filter((fileName) => fileName.endsWith(".pug"));

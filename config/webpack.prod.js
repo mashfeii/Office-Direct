@@ -8,7 +8,7 @@ import TerserPlugin from "terser-webpack-plugin";
 import * as path from "path";
 
 const srcFolder = "src";
-const builFolder = "docs";
+const builFolder = "dist";
 const rootFolder = path.basename(path.resolve());
 
 let pugPages = fs.readdirSync(srcFolder).filter((fileName) => fileName.endsWith(".pug"));
@@ -20,8 +20,8 @@ if (!pugPages.length) {
       source: srcFolder,
       destination: "../",
       htmlBeautifyOptions: {
-        "indent-with-tabs": true,
-        indent_size: 3,
+        "indent-with-tabs": false,
+        indent_size: 2,
       },
       replace: [
         { regex: "../img", to: "img" },
