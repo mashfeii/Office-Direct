@@ -81,7 +81,7 @@ body {
   section,
   footer,
   .container_ml {
-    padding-left: rem(267);
+    padding-left: var(--aside-width);
   }
 }
 
@@ -180,3 +180,9 @@ body {
 @import "blocks/cart-preview";
 @import "blocks/request";
 @import "blocks/complete-modal";
+@import "blocks/inner-cards";
+@import "blocks/tripple";
+@import "blocks/delivery";
+@import "blocks/slider";
+@import "blocks/double-description";
+@import "blocks/vertical-cards";

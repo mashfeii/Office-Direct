@@ -1,0 +1,17 @@
+.page {
+  &__tripple {
+    &:not(:last-child) {
+      margin-bottom: rem(140);
+    }
+  }
+}
+.image-card {
+  display: flex;
+  align-items: flex-end;
+  padding: rem(40);
+  border-radius: rem(5);
+  height: rem(400);
+  &__title {
+    color: var(--clr-white);
+  }
+}

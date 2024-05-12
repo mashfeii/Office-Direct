@@ -1,0 +1,46 @@
+.page {
+  &__double-description {
+    &:not(:last-child) {
+      margin-bottom: rem(107);
+    }
+  }
+}
+.double-description {
+  &_reversed {
+    .double-description__image {
+      margin-right: 0;
+      margin-left: rem(30);
+    }
+  }
+  &__container {
+  }
+
+  &__image {
+    margin-right: rem(30);
+    img {
+      width: 100%;
+      height: rem(454);
+      border-radius: rem(5);
+    }
+  }
+
+  &__content {
+  }
+
+  &__title {
+    &:not(:last-child) {
+      margin-bottom: rem(11);
+    }
+  }
+
+  &__description {
+    max-width: rem(485);
+    color: rgba(0, 0, 0, 0.7);
+    &:not(:last-child) {
+      margin-bottom: rem(31);
+    }
+  }
+
+  &__button {
+  }
+}

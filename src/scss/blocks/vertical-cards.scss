@@ -1,0 +1,40 @@
+.page {
+  &__vertical-cards {
+    &:not(:last-child) {
+      margin-bottom: rem(100);
+    }
+  }
+}
+.vertical-cards {
+  &_extended {
+    .vertical-card__image img {
+      height: rem(410);
+    }
+  }
+}
+.vertical-card {
+  &__image {
+    img {
+      width: 100%;
+      height: rem(300);
+      object-fit: cover;
+      border-radius: rem(5);
+    }
+    &:not(:last-child) {
+      margin-bottom: rem(25);
+    }
+  }
+
+  &__title {
+    &:not(:last-child) {
+      margin-bottom: rem(6);
+    }
+  }
+
+  &__description {
+    color: rgba(0, 0, 0, 0.5);
+    p:not(:last-child) {
+      margin-bottom: rem(3);
+    }
+  }
+}

@@ -9,6 +9,24 @@
   letter-spacing: -0.03em;
 }
 
+.title-35 {
+  @extend %f-35-500;
+}
+
+.bg-cov {
+  @extend %bg-cov;
+}
+.bg-con {
+  @extend %bg-con;
+}
+
+.inner-header {
+  font-weight: 600;
+  @include adaptiveValue("font-size", 76, 32);
+  line-height: 100%;
+  letter-spacing: -0.03em;
+}
+
 .middle-title {
   font-weight: 600;
   @include adaptiveValue("font-size", 40, 20);
@@ -65,6 +83,9 @@
   grid-template-columns: repeat(12, 1fr);
   grid-gap: rem(20);
 }
+.vertical-center {
+  align-items: center;
+}
 .grid-3 {
   grid-column: span 3;
 }
@@ -73,6 +94,9 @@
 }
 .grid-5 {
   grid-column: span 5;
+}
+.grid-6 {
+  grid-column: span 6;
 }
 .grid-7 {
   grid-column: span 7;

@@ -1,0 +1,30 @@
+.page {
+  &__delivery + * {
+    margin-top: rem(-120);
+  }
+}
+.delivery {
+  padding-top: rem(80);
+  padding-bottom: rem(200);
+  background: url("@img/delivery.png"), var(--c, #1952c2);
+  background-position: right center;
+
+  color: var(--clr-white);
+  svg {
+    fill: var(--clr-white);
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    gap: rem(100);
+  }
+
+  &__title {
+    flex: 0 0 rem(370);
+  }
+
+  &__description {
+    max-width: rem(528);
+  }
+}

@@ -21,6 +21,10 @@
     border-radius: rem(10);
 
     transition: all 0.32s ease-in-out;
+
+    .complete_bg & {
+      background-color: var(--clr-white);
+    }
   }
   input:checked + label {
     background-color: #d5e2fc;
@@ -28,9 +32,12 @@
   }
   input:checked + label span {
     background-color: var(--clr-blue);
+    .complete_bg & {
+      border-color: transparent;
+    }
     &::before {
       background-color: var(--clr-white);
-      transform: translateX(calc(100% - rem(2)));
+      transform: translateX(calc(100% - rem(4)));
     }
   }
 
@@ -47,6 +54,10 @@
     height: rem(26);
 
     transition: background-color 0.32s ease-in-out;
+
+    .complete_bg & {
+      border: 2px solid var(--clr-grey-light);
+    }
 
     &::before {
       content: "";

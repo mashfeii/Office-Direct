@@ -33,6 +33,10 @@
   height: rem(44);
   overflow: hidden;
 
+  .complete_bg & {
+    background-color: var(--clr-white);
+  }
+
   > span {
     display: flex;
     align-items: center;
@@ -62,7 +66,7 @@
     display: none;
     & + label {
       display: block;
-      padding: rem(9) rem(20);
+      padding: rem(9) rem(17);
       border-radius: rem(10);
       border: rem(6) solid transparent;
 
@@ -79,6 +83,10 @@
       color: var(--clr-blue);
       background-color: #d5e2fc;
       border-color: var(--clr-white);
+
+      .complete_bg & {
+        border-color: var(--clr-grey-light);
+      }
     }
   }
 }
@@ -115,3 +123,121 @@
 // <RANGE>
 // Снипет (HTML):
 // @import "range";
+
+.modal-form {
+  &__item {
+    display: block;
+    &:not(:last-child) {
+      margin-bottom: rem(12);
+    }
+  }
+
+  &__input {
+    position: relative;
+    display: block;
+    max-width: rem(400);
+
+    input {
+      padding-left: rem(34);
+      padding-top: rem(16);
+      padding-bottom: rem(16);
+    }
+    input + span span {
+      position: absolute;
+      left: rem(34);
+      top: 50%;
+      transform: translateY(-50%);
+
+      @extend %f-20-400;
+      color: rgba(0, 0, 0, 0.5);
+      transition: transform 0.32s ease-in-out;
+    }
+
+    input + span svg {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      flex: 0 0 rem(20);
+      width: rem(20);
+      height: rem(20);
+      fill: rgba(0, 0, 0, 0.5);
+      transform: translateY(-50%);
+      transition: fill 0.32s ease-in-out;
+    }
+
+    input:focus,
+    input:hover {
+      + span svg {
+        fill: var(--clr-black);
+      }
+    }
+    input:focus {
+      + span span {
+        transform: translateY(calc(-50% - rem(25))) translateX(rem(-10)) scale(0.8);
+      }
+    }
+  }
+
+  &__button {
+    margin-top: rem(28);
+    &:not(:last-child) {
+      margin-bottom: rem(19);
+    }
+  }
+
+  &__checkbox {
+    margin-top: rem(19);
+    display: block;
+
+    input {
+      display: none;
+    }
+    input:checked + label {
+      &::before {
+        background-color: rgba(0, 0, 0, 0.4);
+      }
+      &::after {
+        transform: scale(1);
+      }
+    }
+    input + label {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: rem(10);
+
+      font-weight: 400;
+      font-size: rem(12);
+      line-height: 140%;
+      color: rgba(0, 0, 0, 0.5);
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: rem(4);
+        left: rem(4);
+        width: rem(9);
+        height: rem(9);
+        @extend %bg-con;
+        background-image: url("@img/check.svg");
+        transform: scale(0);
+        transition: transform 0.32s ease-in-out;
+      }
+      &::before {
+        content: "";
+        flex: 0 0 rem(17);
+        width: rem(17);
+        height: rem(17);
+        border-radius: rem(5);
+        background-color: transparent;
+        border: 1px solid rgba(0, 0, 0, 0.4);
+        transition: background-color 0.32s ease-in-out;
+      }
+    }
+  }
+}
+.input {
+  position: relative;
+}
+.button {
+}

@@ -1,10 +1,31 @@
 .preview {
-  margin-left: rem(267);
+  margin-left: var(--aside-width);
   @extend %bg-cov;
   background-position: 30% top;
   height: rem(400);
 
   &:not(:last-child) {
     margin-bottom: rem(90);
+  }
+
+  &.preview_gradient {
+    position: relative;
+    z-index: -1;
+    height: rem(540);
+    &:not(:last-child) {
+      margin-bottom: rem(0);
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 43%;
+      background: linear-gradient(0deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+    }
+    + * {
+      margin-top: rem(-40);
+    }
   }
 }

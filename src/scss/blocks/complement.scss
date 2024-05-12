@@ -1,4 +1,12 @@
 .complete {
+  &_bg {
+    background-color: #f5f5f5;
+    padding-top: rem(77);
+    padding-bottom: rem(93);
+    &:not(:last-child) {
+      margin-bottom: rem(125);
+    }
+  }
   position: relative;
   padding-top: rem(127);
   padding-bottom: rem(148);
