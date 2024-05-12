@@ -68,14 +68,24 @@
   <form action="#" class="modal-form">
     <label class="modal-form__item">
       <span class="modal-form__input">
-        <span>Ваше имя</span>
         <input type="text" class="input input_user" required />
+        <span
+          ><span>Ваше имя</span>
+
+          <svg>
+            <use xlink:href="@img/icons/icons.svg#user" />
+          </svg>
+        </span>
       </span>
     </label>
     <label class="modal-form__item">
       <span class="modal-form__input">
-        <span>Телефон</span>
         <input type="text" class="input input_tel" required />
+        <span
+          ><span>Телефон</span>
+          <svg>
+            <use xlink:href="@img/icons/icons.svg#phone" /></svg
+        ></span>
       </span>
     </label>
     <label>
@@ -85,7 +95,7 @@
     </label>
     <label>
       <span class="modal-form__checkbox">
-        <input type="checkbox" id="politics" checked />
+        <input type="checkbox" id="politics" checked required />
         <label for="politics">Нажимая кнопку, я соглашаюсь с Политикой конфиденциальности</label>
       </span>
     </label>
