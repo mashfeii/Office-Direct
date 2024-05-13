@@ -1,0 +1,37 @@
+.page {
+  &__decision {
+    &:not(:last-child) {
+      margin-bottom: rem(155);
+    }
+  }
+}
+.decision {
+  background-color: var(--clr-grey-light);
+
+  &__container {
+    padding-top: rem(76);
+    padding-bottom: rem(82);
+    background-position: 90% bottom;
+    background-image: url("@img/decision/image.png");
+  }
+
+  &__title {
+    max-width: rem(402);
+    &:not(:last-child) {
+      margin-bottom: rem(14);
+    }
+  }
+
+  &__description {
+    max-width: rem(635);
+    > p:not(:last-child) {
+      margin-bottom: rem(7);
+    }
+    &:not(:last-child) {
+      margin-bottom: rem(35);
+    }
+  }
+
+  &__button {
+  }
+}

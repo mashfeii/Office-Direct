@@ -20,6 +20,7 @@
   }
 
   &__images {
+    grid-template-columns: repeat(auto-fit, minmax(rem(240), 1fr));
     margin-top: rem(-25);
     position: relative;
     @extend %ml;
@@ -43,9 +44,8 @@
   }
 
   &__column {
-    display: grid;
-    grid-template-rows: rem(304);
-    grid-column: span 1.2;
+    display: flex;
+    flex-direction: column;
     gap: rem(14);
 
     &:nth-of-type(2n) {
@@ -57,5 +57,8 @@
   }
 
   &__image {
+    img {
+      max-width: 100%;
+    }
   }
 }

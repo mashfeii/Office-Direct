@@ -104,6 +104,15 @@
 .f-28-500 {
   @extend %f-28-500;
 }
+%f-30-600 {
+  font-weight: 600;
+  @include adaptiveValue("font-size", 30, 20);
+  line-height: 120%;
+  letter-spacing: -0.02em;
+}
+.f-30-600 {
+  @extend %f-30-600;
+}
 %f-34-500 {
   font-weight: 500;
   @include adaptiveValue("font-size", 34, 20);

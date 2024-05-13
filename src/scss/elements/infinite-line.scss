@@ -3,8 +3,8 @@
   gap: rem(28);
   @extend %ml;
 
-  @media (min-width: em(1600)) {
-    padding-left: rem(60);
+  @media (min-width: $pc) {
+    padding-left: rem(15);
   }
 
   > * {
