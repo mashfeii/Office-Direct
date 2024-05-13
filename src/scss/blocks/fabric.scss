@@ -1,0 +1,35 @@
+.page {
+  &__fabric {
+    &:not(:last-child) {
+      margin-bottom: rem(115);
+    }
+  }
+}
+.fabric {
+  &__container {
+  }
+
+  &__image {
+    max-width: rem(426);
+    &:not(:last-child) {
+      margin-bottom: rem(38);
+    }
+  }
+
+  &__title {
+    max-width: rem(950);
+    &:not(:last-child) {
+      margin-bottom: rem(14);
+    }
+  }
+
+  &__description {
+    max-width: rem(706);
+    &:not(:last-child) {
+      margin-bottom: rem(33);
+    }
+  }
+
+  &__link {
+  }
+}

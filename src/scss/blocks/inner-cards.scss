@@ -145,6 +145,19 @@
   min-height: rem(360);
   padding: rem(42) rem(36) rem(41) rem(49);
 
+  background-repeat: no-repeat;
+  background-position: right 10%;
+
+  &_end {
+    justify-content: flex-end;
+    .showrooms-card__description:not(:last-child) {
+      margin-bottom: rem(7);
+    }
+    .showrooms-card__description:last-child {
+      margin-bottom: 0;
+    }
+  }
+
   &_transparent {
     .quantity__hours {
       color: rgba(0, 0, 0, 0.3);
@@ -154,11 +167,8 @@
   &__hours {
     display: block;
     max-width: rem(220);
-
-    font-weight: 600;
-    @include adaptiveValue("font-size", 55, 24);
-    line-height: 90%;
     letter-spacing: -0.06em;
+    line-height: 1;
 
     &:not(:last-child) {
       margin-bottom: rem(16);

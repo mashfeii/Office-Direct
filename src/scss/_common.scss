@@ -32,6 +32,16 @@
   letter-spacing: -0.03em;
 }
 
+.image-section {
+  &:not(:last-child) {
+    margin-bottom: rem(140);
+  }
+  .container {
+    min-height: rem(556);
+    border-radius: rem(5);
+  }
+}
+
 .inner-header {
   font-weight: 600;
   @include adaptiveValue("font-size", 76, 32);
