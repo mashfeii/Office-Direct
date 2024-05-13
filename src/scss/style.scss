@@ -58,6 +58,7 @@ $responsiveType: 1;
 body {
   background-color: var(--clr-white);
   font-weight: 500;
+  letter-spacing: -0.02em;
   .lock & {
     overflow: hidden;
     touch-action: none;
@@ -193,3 +194,4 @@ body {
 @import "blocks/strength";
 @import "blocks/decision";
 @import "blocks/sound";
+@import "blocks/material";

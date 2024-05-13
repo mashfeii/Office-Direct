@@ -12,7 +12,12 @@
 .title-35 {
   @extend %f-35-500;
 }
-
+.text-field {
+  max-width: rem(1080);
+  p:not(:last-child) {
+    margin-bottom: rem(7);
+  }
+}
 .bg-cov {
   @extend %bg-cov;
 }
