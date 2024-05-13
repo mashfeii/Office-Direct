@@ -57,10 +57,38 @@
             </div>
           </div>
         </section>
-        @@include('html/_inner-cards.htm', {})
-        <section class="page__quote quote quote_clear quote_fw">
+        <section class="page__strength strength">
+          <div class="strength__cards container grid-container">
+            <div class="strength__icon-card grid-6">
+              <svg class="strength__icon-card-icon">
+                <use xlink:href="@img/icons/icons.svg#design" />
+              </svg>
+              <h2 class="strength__icon-card-title product-title">Эффектный дизайн</h2>
+              <div class="strength__icon-card-description f-20-400">
+                <p>
+                  Мы отобрали для вас лучшие модели, отвечающие всем тенденциям современного дизайна, чтобы гости вашего
+                  офиса становились к вам ближе с первых минут
+                </p>
+              </div>
+            </div>
+            <div class="strength__gradient-card grid-3">
+              <h3 class="strength__gradient-card-title f-24-600">Функциональные гибкие модули</h3>
+              <div class="strength__gradient-card-description f-17-400">
+                <p>Каждая деталь продумана до мелочей, а модульные серии помогут персоналу быть еще эффективнее</p>
+              </div>
+            </div>
+            <div class="strength__text-card grid-3">
+              <span class="strength__text-card-number">48 часов</span>
+              <h3 class="strength__text-card-title f-24-600">до отправки вашей мебели</h3>
+              <div class="strength__text-card-description f-17-400">
+                <p>ваш заказ будет готов в кратчайшие сроки</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="page__quote quote quote_clear">
           <div class="quote__cover container">
-            <h2>Обеспечьте еще более <strong>лучший опыт переговоров для вас и ваших компаньонов</strong></h2>
+            <h2>Первое впечатление — самое важное. <strong>Особено когда речь заходит о бизнесе</strong></h2>
           </div>
         </section>
         @@include('html/_delivery.htm', {}) @@include('html/_slider.htm', {})
