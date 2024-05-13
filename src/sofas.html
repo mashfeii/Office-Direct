@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="ru">
+  @@include('html/_head.htm',{ "title":"Диваны" })
+  <body>
+    <div class="wrapper">
+      <main class="page">
+        @@include('html/_aside.htm', {})
+        <div class="preview preview_gradient" style="background-image: url(&quot;@img/preview/12.jpg&quot;)"></div>
+        <section class="page__inner inner">
+          <div class="inner__container container">
+            <h1 class="inner__title inner-header">Диваны</h1>
+            <p>
+              Помогаем организовать комфортную зону отдыха для гостей и персонала и обустроить холл с удивительно
+              широким каталогом на дизайн интерьера
+            </p>
+            <div class="inner__icon-benefits grid-container">
+              <div class="inner__icon-benefit icon-benefit grid-3">
+                <svg width="44" height="44">
+                  <use xlink:href="@img/icons/icons.svg#colors" />
+                </svg>
+                <h3 class="icon-benefit__title f-20-500">Широкая палитра</h3>
+                <p class="icon-benefit__description f-20-400">обладает очень высоким коэффициентом шумопоглощения</p>
+              </div>
+              <div class="inner__icon-benefit icon-benefit grid-3">
+                <svg width="44" height="44">
+                  <use xlink:href="@img/icons/icons.svg#catalog" />
+                </svg>
+                <h3 class="icon-benefit__title f-20-500">Огромный каталог</h3>
+                <p class="icon-benefit__description f-20-400">
+                  изделия из этого фактурного материала отлично завершают
+                </p>
+              </div>
+              <div class="inner__icon-benefit icon-benefit grid-3">
+                <svg width="44" height="44">
+                  <use xlink:href="@img/icons/icons.svg#market" />
+                </svg>
+                <h3 class="icon-benefit__title f-20-500">Собственный онлайн-маркет</h3>
+                <p class="icon-benefit__description f-20-400">не имеет запаха, тактильно приятный, устойчивый</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        @@include('html/_overflow-slider.htm', {}) @@include('html/_fabric.htm', {})
+        <section class="page__inner-cards inner-cards">
+          <div class="inner-cards__container container grid-container">
+            <div class="grid-5 inner-cards__col">
+              <div class="models inner-cards__card">
+                <h2 class="models__title">1200+ моделей</h2>
+                <h3 class="models__subtitle f-24-600">представлено в нашем расширенном каталоге</h3>
+                <p class="models__description f-20-400">
+                  Мы знаем рынок и продаем кресла, проверенные тысячами клиентов
+                </p>
+              </div>
+            </div>
+            <div class="grid-4 inner-cards__col">
+              <div
+                class="showrooms-card showrooms-card_end inner-cards__card"
+                style="background-image: url(&quot;@img/sofas-card.png&quot;)">
+                <span class="showrooms-card__hours f-34-600">Сборные конструкции</span>
+                <p class="showrooms-card__description">
+                  Наши диваны удобно разбираются, благодаря чему транспортировка проще, а дверные проемы вашего офиса
+                  целее.
+                </p>
+                <p class="showrooms-card__description">Перед отправкой всегдо производим тестовую сборку</p>
+              </div>
+              <div
+                class="franchise-card inner-cards__card bg-cov"
+                style="background-image: url(&quot;@img/inner-cards/image-inner-02.jpg&quot;)">
+                <h3 class="franchise-card__title f-34-600">Франшиза</h3>
+                <a href="javascript:void(0);" class="franchise-card__link f-17-600">Уникальные условия</a>
+              </div>
+            </div>
+            <div class="grid-3 inner-cards__col">
+              <div class="icon-card inner-cards__card">
+                <svg width="60" height="60">
+                  <use xlink:href="@img/icons/icons.svg#sofa-icon" />
+                </svg>
+                <h3 class="icon-card__title">
+                  Собственный <br />
+                  онлайн-маркет
+                </h3>
+              </div>
+              <div class="quantity quantity_transparent inner-cards__card">
+                <span class="quantity__hours">48 часов</span>
+                <h3 class="quantity__title">до отправки вашей мебели</h3>
+                <p class="quantity__description">ваш заказ будет готов в кратчайшие сроки</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="page__quote quote quote_clear">
+          <div class="quote__cover container">
+            <h2>Сотни моделей из мягкой экокожи. <strong>Выберите на свой вкус и цвет</strong></h2>
+          </div>
+        </section>
+        @@include('html/_image-section.htm', {})
+        <section class="page__delivery delivery bg-cov" style="--c: #d12d33">
+          <div class="delivery__container container">
+            <h2 class="delivery__title inner-title">
+              <svg width="43" height="48">
+                <use xlink:href="@img/icons/icons.svg#light" />
+              </svg>
+              48 часов на отправку!
+            </h2>
+            <div class="delivery__description f-24-400">
+              Почти весь товар из каталога уже хранится у нас на складе — мы отправим его вам в фантастические сроки
+            </div>
+          </div>
+        </section>
+        @@include('html/_product-covered_2.htm', {}) @@include('html/_opotrunities.htm', {})
+      </main>
+      @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_popup.htm',{}) @@include('html/_js.htm',{})
+  </body>
+</html>

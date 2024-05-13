@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="ru">
+  @@include('html/_head.htm',{ "title":"Системы хранения" })
+  <body>
+    <div class="wrapper">
+      <main class="page">
+        @@include('html/_aside.htm', {})
+        <div class="preview preview_gradient" style="background-image: url(&quot;@img/preview/11.jpg&quot;)"></div>
+        <section class="page__inner inner">
+          <div class="inner__container container">
+            <h1 class="inner__title inner-header">Системы хранения</h1>
+            <p>
+              Ничего лишнего и все на своих местах — с профессионально спроектированными системами хранения в вашем
+              офисе.
+            </p>
+          </div>
+        </section>
+        @@include('html/_inner-cards.htm', {})
+        <section class="page__quote quote quote_clear quote_fw">
+          <div class="quote__cover container">
+            <h2>
+              Создайте удобную и функциональную рабочую среду для сотрудников,
+              <strong>и вы увидите, как растут их показатели</strong>
+            </h2>
+          </div>
+        </section>
+        @@include('html/_delivery.htm', {}) @@include('html/_slide-image.htm', {})
+        <section class="page__slide-image slide-image">
+          <div
+            class="slide-image__container container bg-cov"
+            style="background-image: url(&quot;@img/slide-image/image-02.jpg&quot;)">
+            <img src="@img/ergo.png" alt="" class="slide-image__company" />
+            <div class="slide-image__content">
+              <h2 class="slide-image__title product-title">Ergo Office</h2>
+              <div class="slide-image__description f-20-400">
+                <p>
+                  Помимо качественной мебели, мы предлагаем линейку кресел с лучшим комфортом, специально для
+                  руководителей
+                </p>
+              </div>
+            </div>
+            <a href="javascript:void(0);" class="slide-image__link slider__button">
+              <span>Узнать больше</span><span>&rarr;</span>
+            </a>
+          </div>
+        </section>
+        <section class="page__complete complete complete_bg">
+          <div class="complete__container container">
+            <h2 class="title complete__title">Готовое решение для вашего офиса — сейчас</h2>
+            <form action="#" class="complete__form">
+              <label class="form__item">
+                <p>Укажите количество сотрудников</p>
+                <p class="radio-select">
+                  <span>
+                    <input type="radio" name="employee-quantity" id="radio1" value="2" />
+                    <label for="radio1">2</label>
+                  </span>
+                  <span>
+                    <input type="radio" name="employee-quantity" id="radio2" value="4" checked />
+                    <label for="radio2">4</label>
+                  </span>
+                  <span>
+                    <input type="radio" name="employee-quantity" id="radio3" value="6" />
+                    <label for="radio3">6</label>
+                  </span>
+                  <span>
+                    <input type="radio" name="employee-quantity" id="radio4" value="8+" />
+                    <label for="radio4">8+</label>
+                  </span>
+                </p>
+              </label>
+              <label class="form__item">
+                <p>Выберите комплектацию</p>
+                <p class="checkboxes">
+                  <span class="checkbox">
+                    <input type="checkbox" name="configuration" id="check1" />
+                    <label for="check1">
+                      <span class="radio-select"></span>
+                      Акустические панели
+                    </label>
+                  </span>
+                  <span class="checkbox">
+                    <input type="checkbox" name="configuration" id="check2" />
+                    <label for="check2">
+                      <span class="radio-select"></span>
+                      Кресла
+                    </label>
+                  </span>
+                  <span class="checkbox">
+                    <input type="checkbox" name="configuration" id="check3" />
+                    <label for="check3">
+                      <span class="radio-select"></span>
+                      Тумбы
+                    </label>
+                  </span>
+                  <span class="checkbox">
+                    <input type="checkbox" name="configuration" id="check4" />
+                    <label for="check4">
+                      <span class="radio-select"></span>
+                      Шкафы
+                    </label>
+                  </span>
+                </p>
+              </label>
+              <label>
+                <input class="button form__button" type="submit" value="Получить предложение &rarr;" />
+              </label>
+            </form>
+          </div>
+        </section>
+        @@include('html/_opotrunities.htm', {})
+      </main>
+      @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_popup.htm',{}) @@include('html/_js.htm',{})
+  </body>
+</html>
