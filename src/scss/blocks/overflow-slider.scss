@@ -32,12 +32,22 @@
     }
   }
 
+  &__link {
+    position: relative;
+    z-index: 10;
+  }
+
   &__slide {
     position: relative;
+    display: flex !important;
+    align-items: flex-end;
+    justify-content: flex-end;
     overflow: hidden;
+    padding: rem(61) rem(60);
     border-radius: rem(5);
     height: rem(549);
     img {
+      pointer-events: none;
       position: absolute;
       width: 100%;
       height: 100%;
@@ -54,9 +64,8 @@
   &__activities {
     position: absolute;
     left: rem(60);
-    right: rem(60);
     bottom: rem(60);
-    display: flex;
+    display: inline-flex;
     align-items: flex-end;
     justify-content: space-between;
     gap: rem(20);
