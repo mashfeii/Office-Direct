@@ -73,6 +73,15 @@
       }
     }
   }
+  &.button_red {
+    background-color: #d12d33;
+    backdrop-filter: blur(5px);
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: #b3272c;
+      }
+    }
+  }
   &.button_white {
     background-color: var(--clr-white);
     color: var(--clr-black);

@@ -73,11 +73,12 @@
   }
 
   &__title {
+    max-width: rem(852);
     &:not(:last-child) {
       margin-bottom: rem(19);
     }
   }
-  p {
+  &__container > p {
     &._fw {
       max-width: none;
     }
@@ -147,4 +148,32 @@
   font-weight: 400;
   @include adaptiveValue("font-size", 21, 16);
   line-height: 140%;
+}
+.inner {
+  &__icon-benefits {
+    gap: rem(12);
+    margin-top: rem(78);
+    &:not(:last-child) {
+      margin-bottom: rem(40);
+    }
+  }
+  &__icon-benefit {
+  }
+}
+.icon-benefit {
+  svg {
+    fill: #5cb108;
+    &:not(:last-child) {
+      margin-bottom: rem(19);
+    }
+  }
+  &__title {
+    &:not(:last-child) {
+      margin-bottom: rem(2);
+    }
+  }
+
+  &__description {
+    color: rgba(0, 0, 0, 0.7);
+  }
 }

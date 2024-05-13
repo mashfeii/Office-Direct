@@ -20,6 +20,13 @@
   @extend %bg-con;
 }
 
+.product-title {
+  font-weight: 500;
+  @include adaptiveValue("font-size", 50, 24);
+  line-height: 110%;
+  letter-spacing: -0.03em;
+}
+
 .inner-header {
   font-weight: 600;
   @include adaptiveValue("font-size", 76, 32);
@@ -104,6 +111,9 @@
 .grid-9 {
   grid-column: span 9;
 }
+.grid-fl {
+  grid-column: span 12;
+}
 
 p._strong {
   font-weight: 600;
@@ -116,4 +126,9 @@ p._strong {
 }
 ._light-blue {
   color: #0fa6bc;
+}
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: rem(7);
 }

@@ -6,12 +6,30 @@
   }
 }
 .product {
+  &_covered.product_light {
+    padding-top: 0;
+    padding-bottom: 0;
+    background: none;
+    .product__body {
+      padding-top: rem(66);
+      padding-bottom: rem(57);
+      padding-left: rem(55);
+    }
+  }
+  &_super {
+    .product__body {
+      max-width: rem(575);
+    }
+  }
   &_light {
     padding-top: rem(66);
     padding-bottom: rem(57);
     color: var(--clr-white);
     .product__body {
       text-align: left;
+    }
+    .product__container {
+      border-radius: rem(5);
     }
     .product__logo {
       color: var(--clr-white);
@@ -38,6 +56,9 @@
   @extend %bg-cov;
   background-position: 80% center;
   background-image: url("@img/product/image.png");
+
+  &__container {
+  }
 
   &__body {
     text-align: center;
