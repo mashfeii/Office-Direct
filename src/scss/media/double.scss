@@ -1,0 +1,83 @@
+.double {
+  &__container {
+    //== 992px ==//
+    @media (max-width: $tb) {
+      display: flex;
+      flex-direction: column-reverse;
+      gap: 0;
+      padding: 0;
+    }
+  }
+
+  &__image {
+    //== 992px ==//
+    @media (max-width: $tb) {
+      min-height: rem(236);
+      border-radius: 0;
+    }
+  }
+
+  &__button {
+  }
+
+  &__content {
+    //== 992px ==//
+    @media (max-width: $tb) {
+      min-height: 0;
+      border-radius: 0;
+      .description {
+        &:not(:last-child) {
+          margin-bottom: rem(23);
+        }
+      }
+      > * {
+        max-width: rem(580);
+      }
+    }
+    //== 440px ==//
+    @media (max-width: $mb-s) {
+      padding-top: rem(60);
+      padding-left: rem(20);
+      padding-right: rem(20);
+      padding-bottom: rem(30);
+    }
+  }
+}
+
+.benefit {
+  //== 992px ==//
+  @media (max-width: $tb) {
+    gap: rem(18);
+  }
+  //== 576px ==//
+  @media (max-width: $mb-m) {
+    gap: rem(13);
+  }
+
+  &__percentage {
+    //== 992px ==//
+    @media (max-width: $tb) {
+      flex: 0 0 rem(64);
+      width: rem(64);
+      height: rem(64);
+
+      &::before {
+        width: rem(64);
+        height: rem(64);
+      }
+    }
+    //== 576px ==//
+    @media (max-width: $mb-m) {
+      border-width: rem(4);
+      flex: 0 0 rem(44);
+      width: rem(44);
+      height: rem(44);
+
+      &::before {
+        border-width: rem(4);
+        width: rem(44);
+        height: rem(44);
+      }
+    }
+  }
+}

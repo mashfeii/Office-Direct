@@ -1,0 +1,65 @@
+.page {
+  &__showrooms {
+  }
+}
+.showrooms {
+  padding-bottom: rem(134);
+  @extend %bg-con;
+  background-position: 60% center;
+  background-image: url("@img/showrooms/image.svg");
+
+  text-align: center;
+  &__title {
+    &:not(:last-child) {
+      margin-bottom: rem(13);
+    }
+  }
+  p {
+    @extend %f-22-500;
+  }
+  p:not(:last-child) {
+    margin-bottom: rem(7);
+  }
+  img {
+    display: block;
+    max-width: rem(513);
+    width: 100%;
+    height: rem(300);
+    border-radius: rem(5);
+    margin-top: rem(46);
+    margin-left: auto;
+    margin-right: auto;
+    &:not(:last-child) {
+      margin-bottom: rem(39);
+    }
+  }
+  a {
+    display: inline-flex;
+    align-items: flex-end;
+    gap: rem(11);
+    @extend %f-22-500;
+    color: #1952c2;
+    span {
+      border-bottom: 1.5px dashed rgba(25, 81, 194, 0.5);
+      transition:
+        border-color 0.32s ease-in-out,
+        color 0.32s ease-in-out;
+    }
+    svg {
+      vertical-align: middle;
+      fill: #1952c2;
+      transition: fill 0.32s ease-in-out;
+    }
+    @media (any-hover: hover) {
+      &:hover {
+        svg {
+          fill: rgba(25, 81, 194, 0.8);
+        }
+        span {
+          border-color: #1952c2;
+          color: rgba(25, 81, 194, 0.8);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,43 @@
+.page {
+  &__request {
+  }
+}
+.request {
+  &__container {
+  }
+
+  &__title {
+    @extend %f-35-600;
+    &:not(:last-child) {
+      margin-bottom: rem(11);
+    }
+  }
+
+  &__description {
+    max-width: rem(685);
+    @extend %f-24-400;
+
+    &:not(:last-child) {
+      margin-bottom: rem(12);
+    }
+  }
+
+  &__form {
+  }
+
+  &__form-row {
+    display: flex;
+    gap: rem(20);
+    > * {
+      flex: 0 1 rem(450);
+    }
+  }
+
+  &__form-input {
+    max-width: rem(450);
+  }
+
+  &__button {
+    margin-top: rem(35);
+  }
+}

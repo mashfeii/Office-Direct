@@ -1,0 +1,15 @@
+.page {
+  &__gallery {
+    &:not(:last-child) {
+      margin-bottom: rem(145);
+    }
+  }
+}
+.gallery {
+  margin-left: rem(267);
+  img {
+    width: 100%;
+    height: rem(400);
+    object-fit: cover;
+  }
+}

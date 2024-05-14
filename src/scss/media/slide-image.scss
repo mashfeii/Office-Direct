@@ -1,0 +1,59 @@
+.page {
+  &__slide-image {
+    &:not(:last-child) {
+      margin-bottom: rem(100);
+    }
+  }
+}
+.slide-image {
+  &__container {
+    position: relative;
+    overflow: hidden;
+    border-radius: rem(5);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: rem(60);
+    min-height: rem(551);
+
+    &::before {
+      content: "";
+      pointer-events: none;
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 67%;
+      background: linear-gradient(80.47deg, rgba(102, 93, 80, 0.9) 0.15%, rgba(161, 155, 145, 0) 65.89%);
+      opacity: 0.5;
+      border-radius: 5px;
+    }
+  }
+
+  &__company {
+    position: absolute;
+    top: rem(60);
+    left: rem(60);
+    max-width: rem(192);
+    object-fit: contain;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 2;
+    color: var(--clr-white);
+  }
+
+  &__title {
+    &:not(:last-child) {
+      margin-bottom: rem(16);
+    }
+  }
+
+  &__description {
+    max-width: rem(476);
+  }
+
+  &__link {
+  }
+}

@@ -1,0 +1,120 @@
+.header {
+  //== 992px ==//
+  @media (max-width: $tb) {
+    display: block;
+  }
+  &__container {
+    //== 992px ==//
+    @media (max-width: $tb) {
+    }
+  }
+  &__logo {
+    //== 992px ==//
+    @media (max-width: $tb) {
+    }
+  }
+  .icon-menu {
+    //== 992px ==//
+    @media (max-width: $tb) {
+    }
+  }
+}
+.icon-menu {
+  @media (max-width: $tb) {
+    display: block;
+    position: relative;
+    width: rem(22);
+    height: rem(16);
+    cursor: pointer;
+    z-index: 31;
+    span,
+    &::before,
+    &::after {
+      content: "";
+      transition: all 0.35s ease 0s;
+      right: 0;
+      position: absolute;
+      width: 100%;
+      height: rem(2);
+      background-color: var(--clr-white);
+      border-radius: 20px;
+    }
+    &::before {
+      top: 0;
+      animation: menu07-bar01 0.55s forwards;
+    }
+    span {
+      top: calc(50% - rem(1));
+      transition: all 0.25s 0.25s;
+      opacity: 1;
+    }
+    &::after {
+      bottom: 0;
+      animation: menu07-bar03 0.55s forwards;
+    }
+    .menu-open & {
+      &::before {
+        animation: active-menu07-bar01 0.55s forwards;
+      }
+      span {
+        opacity: 0;
+      }
+      &::after {
+        animation: active-menu07-bar03 0.55s forwards;
+      }
+    }
+  }
+}
+
+@keyframes menu07-bar01 {
+  0% {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  50% {
+    transform: translateY(7px) rotate(0);
+  }
+
+  100% {
+    transform: translateY(0) rotate(0);
+  }
+}
+@keyframes menu07-bar03 {
+  0% {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  50% {
+    transform: translateY(-7px) rotate(0);
+  }
+
+  100% {
+    transform: translateY(0) rotate(0);
+  }
+}
+@keyframes active-menu07-bar01 {
+  0% {
+    transform: translateY(0) rotate(0);
+  }
+
+  50% {
+    transform: translateY(7px) rotate(0);
+  }
+
+  100% {
+    transform: translateY(7px) rotate(45deg);
+  }
+}
+@keyframes active-menu07-bar03 {
+  0% {
+    transform: translateY(0) rotate(0);
+  }
+
+  50% {
+    transform: translateY(-7px) rotate(0);
+  }
+
+  100% {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+}

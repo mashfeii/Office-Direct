@@ -1,0 +1,47 @@
+.complete {
+  &_bg {
+    background-color: #f5f5f5;
+    padding-top: rem(77);
+    padding-bottom: rem(93);
+    &:not(:last-child) {
+      margin-bottom: rem(125);
+    }
+  }
+  position: relative;
+  padding-top: rem(127);
+  padding-bottom: rem(148);
+
+  &::before {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+
+    right: -27%;
+    bottom: -12%;
+    width: 110%;
+    height: 110%;
+    @extend %bg-con;
+    background-image: url("@img/complete/background.png");
+  }
+
+  &__container {
+  }
+
+  &__title {
+    max-width: rem(630);
+    &:not(:last-child) {
+      margin-bottom: rem(36);
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: rem(30);
+  }
+}
+.form {
+  &__button {
+    margin-top: rem(5);
+  }
+}

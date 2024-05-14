@@ -1,0 +1,63 @@
+.hero {
+  &__container {
+    //== 992px ==//
+    @media (max-width: $tb) {
+      padding-top: rem(85);
+      padding-bottom: rem(55);
+    }
+    //== 576px ==//
+    @media (max-width: $mb-m) {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+    //== 440px ==//
+    @media (max-width: $mb-s) {
+      padding-top: rem(50);
+      padding-bottom: rem(45);
+    }
+  }
+
+  &__buttons {
+    //== 768px ==//
+    @media (max-width: $mb) {
+      flex-direction: column;
+    }
+    //== 576px ==//
+    @media (max-width: $mb-m) {
+      display: none;
+    }
+  }
+
+  &__button {
+  }
+
+  &__bottom {
+    @media (max-width: em(1499.98)) {
+      align-items: flex-start;
+      flex-direction: column;
+      gap: rem(40);
+    }
+  }
+
+  &__content {
+  }
+
+  &__title {
+    //== 440px ==//
+    @media (max-width: $mb-m) {
+      &:not(:last-child) {
+        margin-bottom: rem(13);
+      }
+    }
+  }
+
+  &__slide {
+    align-self: flex-end;
+
+    //== 992px ==//
+    @media (max-width: $tb) {
+      display: none;
+    }
+  }
+}

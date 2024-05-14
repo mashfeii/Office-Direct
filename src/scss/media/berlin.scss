@@ -1,0 +1,21 @@
+.page {
+  &__berlin {
+    &:not(:last-child) {
+      margin-bottom: rem(135);
+    }
+  }
+}
+.berlin {
+  &__container {
+  }
+
+  &__title {
+    max-width: rem(605);
+    &:not(:last-child) {
+      margin-bottom: rem(44);
+    }
+  }
+
+  &__cards {
+  }
+}

@@ -1,0 +1,15 @@
+.page {
+  &__double {
+    &:not(:last-child) {
+      margin-bottom: rem(135);
+      //== 992px ==//
+      @media (max-width: $tb) {
+        margin-bottom: rem(80);
+      }
+      //== 576px ==//
+      @media (max-width: $mb-m) {
+        margin-bottom: rem(60);
+      }
+    }
+  }
+}

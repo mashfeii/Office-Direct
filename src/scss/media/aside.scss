@@ -1,0 +1,47 @@
+.aside {
+  //== 1440px ==//
+  @media (max-width: $note-xl) {
+    padding-top: rem(32);
+    padding-left: rem(20);
+    padding-right: rem(20);
+    padding-bottom: rem(30);
+  }
+  //== 992px ==//
+  @media (max-width: $tb) {
+    padding-top: rem(80);
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(rem(80), rem(320)));
+    align-items: center;
+    justify-content: center;
+    gap: rem(20);
+
+    transform: translateX(100%);
+    transition: transform 0.32s ease;
+
+    .menu-open & {
+      transform: translateX(0);
+    }
+  }
+  //== 576px ==//
+  @media (max-width: $mb-m) {
+    grid-template-columns: 1fr;
+    gap: rem(0);
+  }
+
+  &__header-logo {
+    //== 992px ==//
+    @media (max-width: $tb) {
+      display: none;
+      img {
+        max-width: rem(240);
+        width: 100%;
+      }
+      &:not(:last-child) {
+        margin-bottom: rem(11);
+      }
+    }
+  }
+}

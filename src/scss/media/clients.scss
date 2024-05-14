@@ -1,0 +1,37 @@
+.page {
+  &__clients {
+    &:not(:last-child) {
+      margin-bottom: rem(132);
+    }
+  }
+}
+.clients {
+  &__container {
+  }
+  &__description {
+    max-width: rem(724);
+    @extend %f-22-400;
+    p:not(:last-child) {
+      margin-bottom: rem(8);
+    }
+    &:not(:last-child) {
+      margin-bottom: rem(49);
+    }
+  }
+
+  &__title {
+    &:not(:last-child) {
+      margin-bottom: rem(13);
+    }
+  }
+
+  &__row {
+    margin-top: rem(50);
+    display: flex;
+    justify-content: space-between;
+    gap: rem(53);
+    > * {
+      flex-grow: 1;
+    }
+  }
+}

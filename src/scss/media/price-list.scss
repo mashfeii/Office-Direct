@@ -1,0 +1,49 @@
+.page {
+  &__price-list {
+    &:not(:last-child) {
+      margin-bottom: rem(165);
+    }
+  }
+}
+.price-list {
+  &__container {
+  }
+
+  &__item {
+    &_end {
+      align-items: flex-end;
+    }
+
+    min-height: rem(468);
+    display: flex;
+    border-radius: rem(4);
+    padding: rem(38);
+    color: rgba(0, 0, 0, 0.5);
+    transition: color 0.32s ease;
+    span {
+      max-width: rem(200);
+    }
+    @media (any-hover: hover) {
+      &:hover {
+        color: var(--clr-black);
+      }
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: rem(8);
+    padding: rem(30) rem(30) rem(36) rem(30);
+    background-color: #f5f5f5;
+    transition: color 0.32s ease;
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: rgba(0, 0, 0, 0.5);
+      }
+    }
+  }
+}

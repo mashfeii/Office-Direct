@@ -1,0 +1,39 @@
+.page {
+  &__components {
+    &:not(:last-child) {
+      margin-bottom: rem(112);
+    }
+  }
+}
+.components {
+  &__container {
+  }
+
+  &__title {
+    font-weight: 600;
+    &:not(:last-child) {
+      margin-bottom: rem(36);
+    }
+  }
+
+  &__table {
+  }
+
+  &__row {
+    padding-top: rem(13);
+    padding-bottom: rem(18);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(rem(120), rem(400)));
+    gap: rem(25);
+  }
+
+  &__item {
+    display: inline-flex;
+    gap: rem(10);
+  }
+
+  &__count {
+    color: rgba(0, 0, 0, 0.3);
+  }
+}

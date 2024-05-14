@@ -1,0 +1,44 @@
+.page {
+  &__opotrunities {
+    &:not(:last-child) {
+      margin-bottom: rem(135);
+    }
+  }
+}
+.opotrunities {
+  &__container {
+  }
+
+  &__title {
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.4);
+    strong {
+      font-weight: 600;
+      color: var(--clr-black);
+    }
+    &:not(:last-child) {
+      margin-bottom: rem(50);
+    }
+  }
+
+  &__list {
+    display: flex;
+    gap: rem(64);
+  }
+
+  &__item {
+    max-width: rem(220);
+    font-weight: 400;
+    @include adaptiveValue("font-size", 24, 18);
+    line-height: 130%;
+    letter-spacing: -0.04em;
+    color: rgba(0, 0, 0, 0.4);
+    strong {
+      font-weight: 600;
+      color: var(--clr-black);
+    }
+    &:last-child {
+      max-width: rem(320);
+    }
+  }
+}
