@@ -12,9 +12,23 @@
     }
   }
 
+  &__images {
+    cursor: grab;
+    @extend %ml;
+  }
+
   &__image {
+    display: flex !important;
+    align-items: flex-end;
     flex: 0 0 rem(450);
     width: rem(450);
     height: rem(450);
+
+    &:not(:last-child) {
+      margin-right: rem(20);
+    }
+    &:focus {
+      outline: none;
+    }
   }
 }

@@ -131,6 +131,29 @@
       @extend %f-24-400;
     }
   }
+
+  &__row-benefits {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: rem(40);
+    row-gap: rem(20);
+  }
+
+  &__row-benefits-item {
+    display: flex;
+    align-items: center;
+    gap: rem(15);
+  }
+
+  &__row-benefits-icon {
+    flex: 0 0 rem(32);
+    width: rem(32);
+    height: rem(32);
+    fill: var(--clr-black);
+  }
+
+  &__row-benefits-text {
+  }
 }
 .inner-benefit {
   background-repeat: no-repeat;

@@ -46,7 +46,7 @@ import * as flsFunctions from "./files/functions.js";
 Документация:
 Сниппет (HTML): tabs
 */
-// flsFunctions.tabs();
+flsFunctions.tabs();
 
 /*
 Модуль "показать еще"

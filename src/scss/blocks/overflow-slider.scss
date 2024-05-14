@@ -10,6 +10,10 @@
     overflow: visible;
   }
 
+  &_dark .overflow-slider__cover::before {
+    background-color: var(--clr-grey-light);
+  }
+
   &__cover {
     position: relative;
     max-width: rem(1037);

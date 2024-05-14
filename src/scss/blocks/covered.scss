@@ -33,6 +33,9 @@
   }
 
   &__list {
+    &:not(:last-child) {
+      margin-bottom: rem(65);
+    }
   }
 
   &__image {
