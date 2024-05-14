@@ -1,10 +1,9 @@
 <aside class="aside">
-  <header class="aside__header header">
-    <a href="javascript:void(0);" class="header__logo">
+  <header class="aside__header">
+    <a href="javascript:void(0);" class="aside__header-logo">
       <img src="@img/logo.svg" alt="Логотип компании ОфисДирект" />
     </a>
-    <div class="header__menu menu">
-      <button type="button" class="menu__icon icon-menu"><span></span></button>
+    <div class="aside__header-menu menu">
       <nav class="menu__body">
         <ul class="menu__list">
           <li class="menu__item">
@@ -83,22 +82,24 @@
       </nav>
     </div>
   </header>
-  <div class="aside__menu menu">
-    <button type="button" class="menu__icon icon-menu"><span></span></button>
-    <nav class="menu__body">
-      <ul class="menu__list">
-        <li class="menu__item"><a href="javascript:void(0);" class="menu__link">О компании</a></li>
-        <li class="menu__item"><a href="javascript:void(0);" class="menu__link">Партнерская программа</a></li>
-        <li class="menu__item"><a href="javascript:void(0);" class="menu__link">Франшиза</a></li>
-        <li class="menu__item"><a href="javascript:void(0);" class="menu__link">Дизайнерам</a></li>
-        <li class="menu__item"><a href="javascript:void(0);" class="menu__link">Шоурумы</a></li>
-      </ul>
-    </nav>
+  <div class="aside__bottom">
+    <div class="aside__menu menu">
+      <nav class="menu__body">
+        <ul class="menu__list">
+          <li class="menu__item"><a href="javascript:void(0);" class="menu__link">О компании</a></li>
+          <li class="menu__item"><a href="javascript:void(0);" class="menu__link">Партнерская программа</a></li>
+          <li class="menu__item"><a href="javascript:void(0);" class="menu__link">Франшиза</a></li>
+          <li class="menu__item"><a href="javascript:void(0);" class="menu__link">Дизайнерам</a></li>
+          <li class="menu__item"><a href="javascript:void(0);" class="menu__link">Шоурумы</a></li>
+        </ul>
+      </nav>
+    </div>
+    <a href="tel:+78127750775" class="aside__phone">8 812 775 07 75</a>
+    <a data-fancybox data-src="#answer" class="aside__button button button_small">
+      <svg>
+        <use xlink:href="@img/icons/icons.svg#particles" />
+      </svg>
+      <span>Получить решение</span>
+    </a>
   </div>
-  <a href="tel:+78127750775" class="aside__phone">8 812 775 07 75</a>
-  <a data-fancybox data-src="#answer" class="aside__button button button_small">
-    <svg>
-      <use xlink:href="@img/icons/icons.svg#particles" /></svg
-    ><span>Получить решение</span>
-  </a>
 </aside>
