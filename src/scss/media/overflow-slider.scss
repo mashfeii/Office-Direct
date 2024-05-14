@@ -1,0 +1,74 @@
+.overflow-slider {
+  &__cover {
+    //== 992px ==//
+    @media (max-width: $tb) {
+      max-width: rem(750);
+    }
+    //== 768px ==//
+    @media (max-width: $mb) {
+      max-width: rem(480);
+    }
+  }
+
+  &__slider {
+    .slick-list {
+      overflow: visible;
+    }
+  }
+
+  &__link {
+  }
+
+  &__slide {
+    //== 1360px ==//
+    @media (max-width: $note-l) {
+      height: rem(480);
+    }
+    //== 1200px ==//
+    @media (max-width: $note-m) {
+      height: rem(420);
+      padding: rem(45) rem(40);
+    }
+    //== 768px ==//
+    @media (max-width: $mb) {
+      height: rem(280);
+      padding: rem(35) rem(30);
+    }
+    //== 576px ==//
+    @media (max-width: $mb-m) {
+      height: rem(240);
+    }
+    //== 440px ==//
+    @media (max-width: $mb-s) {
+      height: rem(190);
+    }
+  }
+
+  &__activities {
+    position: absolute;
+    left: rem(60);
+    bottom: rem(60);
+    display: inline-flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: rem(20);
+
+    //== 1200px ==//
+    @media (max-width: $note-m) {
+      left: rem(40);
+      bottom: rem(45);
+    }
+    //== 768px ==//
+    @media (max-width: $mb) {
+      left: rem(30);
+      bottom: rem(35);
+    }
+  }
+
+  &__navigation {
+    //== 768px ==//
+    @media (max-width: $mb) {
+      display: none;
+    }
+  }
+}
