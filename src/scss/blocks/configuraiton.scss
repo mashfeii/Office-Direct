@@ -98,7 +98,23 @@
   &__title {
     font-weight: 600;
     &:not(:last-child) {
+      margin-bottom: rem(30);
+    }
+  }
+
+  &__subtitle {
+    &:not(:last-child) {
       margin-bottom: rem(24);
+    }
+    img {
+      width: rem(30);
+      height: rem(30);
+      border-radius: 100%;
+      vertical-align: middle;
+      display: inline-block;
+      &:not(:last-child) {
+        margin-right: rem(6);
+      }
     }
   }
 
@@ -132,8 +148,12 @@
 
   &__image {
     width: 100%;
+    height: rem(300);
     object-fit: cover;
     border-radius: rem(5);
+    &:not(:last-child) {
+      margin-bottom: rem(25);
+    }
   }
 }
 .tabs-inner {
@@ -160,5 +180,10 @@
 
   &__body {
     padding-top: rem(43);
+  }
+}
+.page__row-slider {
+  &:not(:last-child) {
+    margin-bottom: rem(114);
   }
 }

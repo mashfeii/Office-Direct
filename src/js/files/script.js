@@ -46,6 +46,18 @@ $(document).ready(function () {
         lazyLoad: "progressive",
       });
   });
+  $(".row-slider-3").each(function (slider) {
+    $(this)
+      .find(".row-slider__slider")
+      .slick({
+        infinite: false,
+        slidesToShow: 3,
+        prevArrow: this.closest(".row-slider-3").querySelector(".row-slider__button_prev"),
+        nextArrow: this.closest(".row-slider-3").querySelector(".row-slider__button_next"),
+        speed: 800,
+        lazyLoad: "progressive",
+      });
+  });
   $(".cases-slider").each(function (slider) {
     $(this).slick({
       variableWidth: true,
