@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ru">
+  @@include('html/_head.htm',{ "title":"Офисная мебель Berlin" })
+  <body>
+    <div class="wrapper">
+      <main class="page">
+        @@include('html/_aside.htm', {})
+        <div class="preview preview_gradient" style="background-image: url(&quot;@img/preview/13.jpg&quot;)"></div>
+        <section class="page__inner inner">
+          <div class="inner__container container">
+            <h1 class="inner__title inner-header">Офисная мебель Berlin</h1>
+            <p>
+              Эталон системного подхода к организации офисного пространства любого масштаба и назначения. Все
+              функциональные зоны офиса объединены единым стилистическим решением.
+            </p>
+            <div class="inner__row-benefits">
+              <div class="inner__row-benefits-item">
+                <svg class="inner__row-benefits-icon">
+                  <use xlink:href="@img/icons/icons.svg#colors" />
+                </svg>
+                <span class="inner__row-benefits-text f-20-400">Выезд на замер в ваш офис</span>
+              </div>
+              <div class="inner__row-benefits-item">
+                <svg class="inner__row-benefits-icon">
+                  <use xlink:href="@img/icons/icons.svg#catalog" />
+                </svg>
+                <span class="inner__row-benefits-text f-20-400">Дизайн-проект бесплатно </span>
+              </div>
+              <div class="inner__row-benefits-item">
+                <svg class="inner__row-benefits-icon">
+                  <use xlink:href="@img/icons/icons.svg#market" />
+                </svg>
+                <span class="inner__row-benefits-text f-20-400">Доставка и сборка </span>
+              </div>
+              <div class="inner__row-benefits-item">
+                <svg class="inner__row-benefits-icon">
+                  <use xlink:href="@img/icons/icons.svg#market" />
+                </svg>
+                <span class="inner__row-benefits-text f-20-400">Гарантия З года</span>
+              </div>
+            </div>
+          </div>
+        </section>
+        @@include('html/_overflow-slider.htm', {}) @@include('html/_company.htm', {})
+        @@include('html/_configuration.htm', {}) @@include('html/_delivery-alone.htm', {})
+        @@include('html/_product-covered_2.htm', {}) @@include('html/_opotrunities.htm', {})
+      </main>
+      @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_popup.htm',{}) @@include('html/_js.htm',{})
+  </body>
+</html>
