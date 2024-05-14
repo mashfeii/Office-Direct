@@ -45,7 +45,7 @@
   &__content {
     max-width: rem(870);
 
-    @include adaptiveValue("font-size", 26, 16);
+    @include adaptiveValue("font-size", 26, 18);
     line-height: 150%;
     letter-spacing: -0.02em;
 
@@ -58,7 +58,7 @@
 
   &__title {
     font-weight: 600;
-    @include adaptiveValue("font-size", 76, 32);
+    @include adaptiveValue("font-size", 76, 35);
     line-height: 100%;
     letter-spacing: -0.05em;
 
@@ -78,7 +78,7 @@
       align-items: center;
       gap: rem(10);
 
-      @include adaptiveValue("font-size", 26, 14);
+      @include adaptiveValue("font-size", 26, 18);
     }
     button svg {
       flex: 0 0 rem(24);

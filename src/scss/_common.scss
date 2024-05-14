@@ -1,35 +1,11 @@
 [hidden] {
   display: none;
 }
-
-.inner-title {
-  font-weight: 600;
-  @include adaptiveValue("font-size", 60, 28);
-  line-height: 110%;
-  letter-spacing: -0.03em;
-}
-
-.title-35 {
-  @extend %f-35-500;
-}
-.text-field {
-  max-width: rem(1080);
-  p:not(:last-child) {
-    margin-bottom: rem(7);
-  }
-}
 .bg-cov {
   @extend %bg-cov;
 }
 .bg-con {
   @extend %bg-con;
-}
-
-.product-title {
-  font-weight: 500;
-  @include adaptiveValue("font-size", 50, 24);
-  line-height: 110%;
-  letter-spacing: -0.03em;
 }
 
 .image-section {
@@ -40,6 +16,29 @@
     min-height: rem(556);
     border-radius: rem(5);
   }
+}
+
+.inner-title {
+  font-weight: 600;
+  @include adaptiveValue("font-size", 60, 28);
+  line-height: 110%;
+  letter-spacing: -0.03em;
+}
+.title-35 {
+  @extend %f-35-500;
+}
+
+.text-field {
+  max-width: rem(1080);
+  p:not(:last-child) {
+    margin-bottom: rem(7);
+  }
+}
+.product-title {
+  font-weight: 500;
+  @include adaptiveValue("font-size", 50, 24);
+  line-height: 110%;
+  letter-spacing: -0.03em;
 }
 
 .inner-header {
@@ -62,7 +61,7 @@
 
 .title {
   font-weight: 600;
-  @include adaptiveValue("font-size", 55, 24);
+  @include adaptiveValue("font-size", 55, 25);
   line-height: 100%;
   letter-spacing: -0.03em;
 
@@ -99,7 +98,7 @@
 
 .description {
   font-weight: 400;
-  @include adaptiveValue("font-size", 18, 14);
+  @include adaptiveValue("font-size", 18, 16);
   line-height: 140%;
   color: rgba(23, 23, 23, 0.7);
 }

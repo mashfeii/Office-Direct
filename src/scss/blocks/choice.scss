@@ -20,7 +20,7 @@
   }
 
   &__images {
-    grid-template-columns: repeat(auto-fit, minmax(rem(240), 1fr));
+    grid-template-columns: repeat(5, minmax(rem(120), 1fr));
     margin-top: rem(-25);
     position: relative;
     @extend %ml;

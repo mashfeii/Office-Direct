@@ -18,3 +18,9 @@
 
   --aside-width: 267px;
 }
+//== 1440px ==//
+@media (max-width: $note-xl) {
+  :root {
+    --aside-width: 230px;
+  }
+}

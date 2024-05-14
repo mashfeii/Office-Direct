@@ -29,7 +29,7 @@ $maxWidth: 1920;
 $maxWidthContainer: 1390;
 // Общий отступ у контейнера
 // (30 = по 15px слева и справа, 0 = нет отступа)
-$containerPadding: 30;
+$containerPadding: 40;
 
 // Ширина срабатывания первого брейкпоинта
 $containerWidth: $maxWidthContainer + $containerPadding;
@@ -82,7 +82,10 @@ body {
   section,
   footer,
   .container_ml {
-    padding-left: var(--aside-width);
+    //== 992px ==//
+    @media (min-width: $tb) {
+      padding-left: var(--aside-width);
+    }
   }
 }
 
@@ -200,3 +203,5 @@ body {
 @import "blocks/company";
 @import "blocks/configuraiton";
 @import "blocks/components";
+
+@import "media";

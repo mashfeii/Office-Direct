@@ -36,7 +36,7 @@
           opacity 0.32s ease-in-out,
           transform 0.32s ease-in-out;
       }
-      @include adaptiveValue("font-size", 16, 12);
+      font-size: rem(16);
       letter-spacing: -0.04em;
       color: rgba(0, 0, 0, 0.6);
 
@@ -60,53 +60,53 @@
   }
 }
 //====================================================================================================
-.icon-menu {
-  display: none;
-  @media (max-width: $mb) {
-    display: block;
-    position: relative;
-    width: rem(22);
-    height: rem(16);
-    cursor: pointer;
-    z-index: 31;
-    span,
-    &::before,
-    &::after {
-      content: "";
-      transition: all 0.35s ease 0s;
-      right: 0;
-      position: absolute;
-      width: 100%;
-      height: rem(2);
-      background-color: var(--clr-white);
-      border-radius: 20px;
-    }
-    &::before {
-      top: 0;
-      animation: menu07-bar01 0.55s forwards;
-    }
-    span {
-      top: calc(50% - rem(1));
-      transition: all 0.25s 0.25s;
-      opacity: 1;
-    }
-    &::after {
-      bottom: 0;
-      animation: menu07-bar03 0.55s forwards;
-    }
-    .menu-open & {
-      &::before {
-        animation: active-menu07-bar01 0.55s forwards;
-      }
-      span {
-        opacity: 0;
-      }
-      &::after {
-        animation: active-menu07-bar03 0.55s forwards;
-      }
-    }
-  }
-}
+// .icon-menu {
+//   display: none;
+//   @media (max-width: $mb) {
+//     display: block;
+//     position: relative;
+//     width: rem(22);
+//     height: rem(16);
+//     cursor: pointer;
+//     z-index: 31;
+//     span,
+//     &::before,
+//     &::after {
+//       content: "";
+//       transition: all 0.35s ease 0s;
+//       right: 0;
+//       position: absolute;
+//       width: 100%;
+//       height: rem(2);
+//       background-color: var(--clr-white);
+//       border-radius: 20px;
+//     }
+//     &::before {
+//       top: 0;
+//       animation: menu07-bar01 0.55s forwards;
+//     }
+//     span {
+//       top: calc(50% - rem(1));
+//       transition: all 0.25s 0.25s;
+//       opacity: 1;
+//     }
+//     &::after {
+//       bottom: 0;
+//       animation: menu07-bar03 0.55s forwards;
+//     }
+//     .menu-open & {
+//       &::before {
+//         animation: active-menu07-bar01 0.55s forwards;
+//       }
+//       span {
+//         opacity: 0;
+//       }
+//       &::after {
+//         animation: active-menu07-bar03 0.55s forwards;
+//       }
+//     }
+//   }
+// }
 
 @keyframes menu07-bar01 {
   0% {

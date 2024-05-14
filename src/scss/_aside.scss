@@ -6,7 +6,7 @@
   bottom: 0;
   left: 0;
 
-  width: rem(267);
+  width: var(--aside-width);
   display: flex;
   flex-direction: column;
 
@@ -25,8 +25,9 @@
   }
 
   &__phone {
+    display: block;
     font-weight: 600;
-    @include adaptiveValue("font-size", 24, 18);
+    font-size: rem(24);
     line-height: 100%;
     letter-spacing: -0.04em;
 
@@ -35,13 +36,21 @@
     }
   }
 
-  &__button {
+  &__button.button {
+    font-size: rem(14);
   }
 
   &__header {
     flex: 1 1 auto;
     &:not(:last-child) {
       margin-bottom: rem(55);
+    }
+  }
+
+  &__header-logo {
+    display: block;
+    &:not(:last-child) {
+      margin-bottom: rem(30);
     }
   }
 }
