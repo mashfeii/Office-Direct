@@ -193,7 +193,7 @@
     input + label {
       position: relative;
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       gap: rem(10);
 
       font-weight: 400;

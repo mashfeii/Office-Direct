@@ -16,6 +16,22 @@
       padding-bottom: rem(40);
     }
   }
+  &.complete_modal {
+    //== 768px ==//
+    @media (max-width: $mb) {
+      &::before {
+        left: auto;
+        right: -45%;
+        bottom: -25%;
+      }
+    }
+    //== 576px ==//
+    @media (max-width: $mb-m) {
+      &::before {
+        display: none;
+      }
+    }
+  }
 
   //== 1440px ==//
   @media (max-width: $note-xl) {
