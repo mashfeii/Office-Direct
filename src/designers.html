@@ -3,10 +3,11 @@
   @@include('html/_head.htm',{ "title":"Дизайнерам и архитекторам" })
   <body>
     <div class="wrapper">
+      @@include('html/_header.htm', {})
       <main class="page">
         @@include('html/_aside.htm', {})
         <div class="preview" style="background-image: url(&quot;@img/preview/02.jpg&quot;)"></div>
-        <section class="inner">
+        <section class="inner inner_designers">
           <div class="inner__container container">
             <h1 class="inner__title inner-title">Дизайнерам и архитекторам</h1>
             <p>
@@ -20,20 +21,20 @@
             <ul class="grid-container inner__cards">
               <li class="grid-4">
                 <h3 class="subtitle">Откройте новые возможности для совместной работы —</h3>
-                <p>
+                <p class="f-20-400">
                   наша мебель станет незаменимым акцентом в вашем дизайне и поможет создать продуктивное рабочее
                   пространство для клиентов.
                 </p>
               </li>
               <li class="grid-4">
                 <h3 class="subtitle">Наша мебель идеально впишется в ваши творческие идеи —</h3>
-                <p>
+                <p class="f-20-400">
                   поможем воплотить в жизнь проекты офисных пространств с удобством для сотрудников и стильным дизайном.
                 </p>
               </li>
               <li class="grid-4">
                 <h3 class="subtitle">Предлагаем вдохновляющий выбор офисной мебели для ваших проектов —</h3>
-                <p>
+                <p class="f-20-400">
                   от современных решений до классических стилей, чтобы подчеркнуть индивидуальность каждого интерьера.
                 </p>
               </li>

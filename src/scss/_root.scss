@@ -24,3 +24,9 @@
     --aside-width: 230px;
   }
 }
+//== 992px ==//
+@media (max-width: $tb) {
+  :root {
+    --aside-width: 0;
+  }
+}

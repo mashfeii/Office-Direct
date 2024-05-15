@@ -1,13 +1,4 @@
-.page {
-  &__clients {
-    &:not(:last-child) {
-      margin-bottom: rem(132);
-    }
-  }
-}
 .clients {
-  &__container {
-  }
   &__description {
     max-width: rem(724);
     @extend %f-22-400;
@@ -32,6 +23,8 @@
     gap: rem(53);
     > * {
       flex-grow: 1;
+      max-width: rem(230);
+      object-fit: contain;
     }
   }
 }

@@ -1,10 +1,7 @@
-.page {
-  &__faced-work {
-  }
-}
 .faced-work {
   @extend %bg-cov;
   background-image: url("@img/faced-work/image.jpg");
+  background-position: left center;
 
   &__container {
     padding-top: rem(81);
@@ -18,7 +15,7 @@
   &__title {
     max-width: rem(491);
     font-weight: 800;
-    @include adaptiveValue("font-size", 40, 24);
+    @include adaptiveValue("font-size", 40, 35);
     line-height: 120%;
     letter-spacing: -0.03em;
     text-transform: uppercase;

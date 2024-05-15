@@ -1,7 +1,7 @@
 .double {
   &__container {
-    //== 992px ==//
-    @media (max-width: $tb) {
+    //== 1200px ==//
+    @media (max-width: $note-m) {
       display: flex;
       flex-direction: column-reverse;
       gap: 0;
@@ -10,8 +10,8 @@
   }
 
   &__image {
-    //== 992px ==//
-    @media (max-width: $tb) {
+    //== 1360px ==//
+    @media (max-width: $note-l) {
       min-height: rem(236);
       border-radius: 0;
     }
@@ -21,8 +21,8 @@
   }
 
   &__content {
-    //== 992px ==//
-    @media (max-width: $tb) {
+    //== 1360px ==//
+    @media (max-width: $note-l) {
       min-height: 0;
       border-radius: 0;
       .description {

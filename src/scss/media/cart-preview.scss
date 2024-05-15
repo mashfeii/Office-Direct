@@ -1,95 +1,67 @@
-.page {
-  &__cart-preview {
-    &:not(:last-child) {
-      margin-bottom: rem(95);
-    }
-  }
-}
 .cart-preview {
-  &__container {
-  }
-
   &__block {
-    padding-bottom: rem(50);
-    &:not(:last-child) {
-      margin-bottom: rem(50);
-      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    //== 1200px ==//
+    @media (max-width: $note-m) {
+      padding-bottom: rem(30);
+      &:not(:last-child) {
+        margin-bottom: rem(30);
+      }
     }
   }
 
   &__title {
-    @extend %f-35-600;
-
-    &:not(:last-child) {
-      margin-bottom: rem(22);
+    //== 576px ==//
+    @media (max-width: $mb-m) {
+      &:not(:last-child) {
+        margin-bottom: rem(15);
+      }
     }
   }
 
   &__items {
+    //== 576px ==//
+    @media (max-width: $mb-m) {
+      gap: rem(25);
+    }
   }
 
   &__item {
     grid-column: span 4;
 
-    @media (any-hover: hover) {
-      &:hover {
-        .cart-preview__item-title {
-          color: var(--clr-black);
-        }
-        .cart-preview__item-remove {
-          opacity: 1;
-        }
-        .cart-preview__item-image img {
-          transform: scale(1.05);
-        }
-      }
+    //== 768px ==//
+    @media (max-width: $mb) {
+      grid-column: span 3;
+    }
+    //== 576px ==//
+    @media (max-width: $mb-m) {
+      grid-column: span 6;
     }
   }
 
   &__item-image {
-    overflow: hidden;
-    img {
-      width: 100%;
-      height: rem(270);
-      border-radius: rem(5);
-      transition: transform 0.32s ease;
+    //== 1200px ==//
+    @media (max-width: $note-m) {
+      img {
+        height: rem(220);
+      }
     }
-    &:not(:last-child) {
-      margin-bottom: rem(21);
+    //== 576px ==//
+    @media (max-width: $mb-m) {
+      &:not(:last-child) {
+        margin-bottom: rem(15);
+      }
+      img {
+        height: rem(190);
+      }
     }
-  }
-
-  &__item-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: rem(20);
-    padding-right: rem(10);
-  }
-
-  &__item-title {
-    font-weight: 500;
-    @include adaptiveValue("font-size", 25, 20);
-    line-height: 110%;
-    letter-spacing: -0.03em;
-    color: rgba(0, 0, 0, 0.5);
-
-    transition: color 0.32s ease;
   }
 
   &__item-remove {
-    flex: 0 0 rem(24);
-    opacity: 0;
-    transition: opacity 0.32s ease-in-out;
-    svg {
-      width: rem(24);
-      height: rem(24);
-      fill: rgba(0, 0, 0, 0.5);
-      transition: fill 0.32s ease;
-    }
-    @media (any-hover: hover) {
-      &:hover svg {
-        fill: var(--clr-black);
+    @media (max-width: $tb) {
+      flex: 0 0 rem(28);
+      svg {
+        width: rem(28);
+        height: rem(28);
       }
     }
   }

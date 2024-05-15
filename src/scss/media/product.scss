@@ -1,10 +1,3 @@
-.page {
-  &__product {
-    &:not(:last-child) {
-      margin-bottom: rem(125);
-    }
-  }
-}
 .product {
   &_covered.product_light {
     padding-top: 0;

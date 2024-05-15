@@ -1,0 +1,36 @@
+.quote {
+  h2:not(:last-child) {
+    margin-bottom: rem(28);
+    //== 768px ==//
+    @media (max-width: $mb) {
+      margin-bottom: rem(20);
+    }
+    //== 440px ==//
+    @media (max-width: $mb-s) {
+      margin-bottom: rem(13);
+    }
+  }
+  h2 {
+    &::after {
+      //== 992px ==//
+      @media (max-width: $tb) {
+        display: none;
+      }
+    }
+
+    &::before {
+      //== 576px ==//
+      @media (max-width: $mb-m) {
+        top: rem(-38);
+        width: rem(32);
+        height: rem(24);
+      }
+      //== 440px ==//
+      @media (max-width: $mb-s) {
+        top: rem(-30);
+        width: rem(28);
+        height: rem(20);
+      }
+    }
+  }
+}

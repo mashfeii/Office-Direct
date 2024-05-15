@@ -117,47 +117,24 @@ body {
 .container_mb {
   &:not(:last-child) {
     margin-bottom: rem(64);
+    //== 768px ==//
+    @media (max-width: $mb) {
+      margin-bottom: rem(40);
+    }
   }
 }
 
 // Ограничивающий контейнер ======================================================================================================================================================================================================================
-
-@if ($responsiveType == 1) {
-  .container {
-    @if ($maxWidthContainer > 0) {
-      max-width: rem($maxWidthContainer);
-      box-sizing: content-box;
-      margin: 0 auto;
-    }
-    @if ($containerPadding > 0) {
-      padding: 0 rem(math.div($containerPadding, 2));
-    }
-  }
-} @else {
-  .container {
+.container {
+  @if ($maxWidthContainer > 0) {
+    max-width: rem($maxWidthContainer);
+    box-sizing: content-box;
     margin: 0 auto;
-    @if ($maxWidthContainer > 0) {
-      max-width: rem($maxWidthContainer);
-      box-sizing: content-box;
-    }
-    @if ($containerPadding > 0) {
-      padding: 0 rem(math.div($containerPadding, 2));
-    }
-    @media (max-width: $note-m) {
-      max-width: rem(970);
-    }
-    @media (max-width: $tablet) {
-      max-width: rem(750);
-    }
-    @media (max-width: $mobile) {
-      max-width: none;
-      @if ($containerPadding > 0 and $maxWidthContainer > 0) {
-        padding: 0 rem(math.div($containerPadding, 2));
-      }
-    }
+  }
+  @if ($containerPadding > 0) {
+    padding: 0 rem(math.div($containerPadding, 2));
   }
 }
-
 // Подключение базовых стилей, шаблонов (заготовок) и вспомогательных  классов
 @import "base";
 // Подключение стилей общих элементов проекта

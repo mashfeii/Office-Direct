@@ -1,0 +1,56 @@
+//====================================================================================================
+.footer {
+  &__container {
+  }
+
+  &__upper {
+    //== 1440px ==//
+    @media (max-width: $note-xl) {
+      position: relative;
+      padding-bottom: rem(240);
+      background-image: none;
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: rem(240);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center top;
+        background-image: url("@img/footer.png");
+      }
+    }
+    //== 768px ==//
+    @media (max-width: $mb) {
+      padding-top: rem(47);
+    }
+  }
+  &__title {
+    &:not(:last-child) {
+      //== 768px ==//
+      @media (max-width: $mb) {
+        margin-bottom: rem(16);
+      }
+    }
+  }
+
+  &__list {
+    //== 768px ==//
+    @media (max-width: $mb) {
+      column-gap: rem(15);
+      row-gap: rem(8);
+    }
+  }
+
+  &__lower {
+    @media (max-width: em(819.98)) {
+      padding-top: rem(40);
+      padding-bottom: rem(40);
+      flex-direction: column;
+      gap: rem(6);
+    }
+  }
+}
+//====================================================================================================

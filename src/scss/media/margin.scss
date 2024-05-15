@@ -1,2 +1,83 @@
 .page {
+  &__hero {
+    &:not(:last-child) {
+      margin-bottom: rem(65);
+      //== 992px ==//
+      @media (max-width: $tb) {
+        margin-bottom: rem(55);
+      }
+      //== 576px ==//
+      @media (max-width: $mb-m) {
+        margin-bottom: rem(35);
+      }
+    }
+  }
+  &__feedback,
+  &__product,
+  &__connect,
+  &__advantages,
+  &__inner,
+  &__team {
+    &:not(:last-child) {
+      margin-bottom: rem(125);
+      //== 992px ==//
+      @media (max-width: $tb) {
+        margin-bottom: rem(75);
+      }
+      //== 576px ==//
+      @media (max-width: $mb-m) {
+        margin-bottom: rem(51);
+      }
+    }
+  }
+  &__card-links,
+  &__suppliers,
+  &__cart-preview {
+    &:not(:last-child) {
+      margin-bottom: rem(100);
+      //== 992px ==//
+      @media (max-width: $tb) {
+        margin-bottom: rem(75);
+      }
+      //== 576px ==//
+      @media (max-width: $mb-m) {
+        margin-bottom: rem(51);
+      }
+    }
+  }
+  .page__quote {
+    margin-top: rem(145);
+    //== 992px ==//
+    @media (max-width: $tb) {
+      margin-top: rem(125);
+    }
+    //== 576px ==//
+    @media (max-width: $mb-m) {
+      margin-top: rem(90);
+    }
+    &:not(:last-child) {
+      margin-bottom: rem(165);
+      //== 992px ==//
+      @media (max-width: $tb) {
+        margin-bottom: rem(95);
+      }
+      //== 576px ==//
+      @media (max-width: $mb-m) {
+        margin-bottom: rem(80);
+      }
+    }
+  }
+  &__showrooms-conutries {
+    &:not(:last-child) {
+      margin-bottom: rem(180);
+      //== 992px ==//
+      @media (max-width: $tb) {
+        margin-bottom: rem(80);
+      }
+      //== 576px ==//
+      @media (max-width: $mb-m) {
+        margin-bottom: rem(50);
+      }
+    }
+  }
 }

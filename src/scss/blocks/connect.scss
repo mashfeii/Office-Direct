@@ -1,10 +1,3 @@
-.page {
-  &__connect {
-    &:not(:last-child) {
-      margin-bottom: rem(125);
-    }
-  }
-}
 .connect {
   padding-top: rem(87);
   padding-bottom: rem(81);

@@ -1,12 +1,5 @@
-.page {
-  &__gallery {
-    &:not(:last-child) {
-      margin-bottom: rem(145);
-    }
-  }
-}
 .gallery {
-  margin-left: rem(267);
+  margin-left: var(--aside-width);
   img {
     width: 100%;
     height: rem(400);

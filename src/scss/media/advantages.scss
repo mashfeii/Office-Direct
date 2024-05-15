@@ -1,31 +1,26 @@
-.page {
-  &__advantages {
-    &:not(:last-child) {
-      margin-bottom: rem(122);
-    }
-  }
-}
 .advantages {
   &__title {
     &:not(:last-child) {
-      margin-bottom: rem(24);
+      //== 768px ==//
+      @media (max-width: $mb) {
+        margin-bottom: rem(15);
+      }
     }
   }
 
   &__items {
-    display: flex;
-    gap: rem(79);
-  }
-
-  &__item {
-    flex-grow: 1;
-    font-weight: 400;
-    @include adaptiveValue("font-size", 20, 14);
-    line-height: 140%;
-    color: rgba(0, 0, 0, 0.5);
-    strong {
-      font-weight: 400;
-      color: var(--clr-black);
+    //== 992px ==//
+    @media (max-width: $tb) {
+      gap: rem(49);
+    }
+    //== 768px ==//
+    @media (max-width: $mb) {
+      gap: rem(30);
+    }
+    //== 576px ==//
+    @media (max-width: $mb-m) {
+      flex-direction: column;
+      gap: rem(20);
     }
   }
 }

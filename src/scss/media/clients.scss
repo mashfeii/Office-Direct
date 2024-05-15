@@ -1,37 +1,30 @@
-.page {
-  &__clients {
-    &:not(:last-child) {
-      margin-bottom: rem(132);
-    }
-  }
-}
 .clients {
-  &__container {
-  }
   &__description {
-    max-width: rem(724);
-    @extend %f-22-400;
-    p:not(:last-child) {
-      margin-bottom: rem(8);
-    }
-    &:not(:last-child) {
-      margin-bottom: rem(49);
-    }
-  }
-
-  &__title {
-    &:not(:last-child) {
-      margin-bottom: rem(13);
+    //== 992px ==//
+    @media (max-width: $tb) {
+      &:not(:last-child) {
+        margin-bottom: rem(30);
+      }
     }
   }
 
   &__row {
-    margin-top: rem(50);
-    display: flex;
-    justify-content: space-between;
-    gap: rem(53);
-    > * {
-      flex-grow: 1;
+    //== 992px ==//
+    @media (max-width: $tb) {
+      margin-top: rem(30);
+      display: grid;
+      gap: rem(20);
+      align-items: center;
+      grid-template-columns: repeat(auto-fit, minmax(rem(60), rem(120)));
+
+      > * {
+        max-width: 100%;
+        width: 100%;
+      }
+
+      &:last-child {
+        display: none;
+      }
     }
   }
 }

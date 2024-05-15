@@ -4,7 +4,9 @@
     padding: rem(13) rem(16);
   }
 }
-
+@import "media/preview";
+@import "media/quote";
+@import "media/footer";
 @import "media/card";
 @import "media/margin";
 @import "media/menu";

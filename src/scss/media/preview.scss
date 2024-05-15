@@ -1,11 +1,9 @@
 .preview {
-  margin-left: var(--aside-width);
-  @extend %bg-cov;
-  background-position: 30% top;
-  height: min(37vh, rem(400));
-
   &:not(:last-child) {
-    margin-bottom: rem(90);
+    //== 768px ==//
+    @media (max-width: $mb) {
+      margin-bottom: rem(60);
+    }
   }
 
   &.preview_gradient {

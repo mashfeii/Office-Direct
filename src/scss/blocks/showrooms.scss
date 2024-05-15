@@ -1,8 +1,7 @@
-.page {
-  &__showrooms {
-  }
-}
 .showrooms {
+  &:not(:last-child) {
+    margin-bottom: rem(0);
+  }
   padding-bottom: rem(134);
   @extend %bg-con;
   background-position: 60% center;
@@ -29,6 +28,7 @@
     margin-top: rem(46);
     margin-left: auto;
     margin-right: auto;
+    object-fit: cover;
     &:not(:last-child) {
       margin-bottom: rem(39);
     }

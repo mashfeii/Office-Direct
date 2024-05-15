@@ -19,10 +19,13 @@
     gap: rem(20);
   }
 
-  &__logo {
-  }
+  transition: transform 0.32s ease-in-out;
 
-  &__icon {
+  &._header-scroll {
+    transform: translateY(-100%);
+  }
+  &._header-scroll._header-show {
+    transform: translateY(0);
   }
 }
 

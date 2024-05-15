@@ -1,9 +1,7 @@
 //* Настройки стилей для повторяющихся начертаний
-%f-18-400 {
-}
 %f-17-400 {
   font-weight: 400;
-  @include adaptiveValue("font-size", 17, 13);
+  @include adaptiveValue("font-size", 17, 15);
   line-height: 140%;
 }
 .f-17-400 {
@@ -11,7 +9,7 @@
 }
 %f-17-600 {
   font-weight: 600;
-  @include adaptiveValue("font-size", 17, 13);
+  @include adaptiveValue("font-size", 17, 15);
   line-height: 140%;
   letter-spacing: -0.02em;
 }
@@ -20,7 +18,7 @@
 }
 %f-20-400 {
   font-weight: 400;
-  @include adaptiveValue("font-size", 20, 14);
+  @include adaptiveValue("font-size", 20, 16);
   line-height: 140%;
 }
 .f-20-400 {
@@ -28,7 +26,7 @@
 }
 %f-20-500 {
   font-weight: 500;
-  @include adaptiveValue("font-size", 20, 14);
+  @include adaptiveValue("font-size", 20, 16);
   line-height: 140%;
 }
 .f-20-500 {
@@ -79,7 +77,7 @@
 }
 %f-25-400 {
   font-weight: 400;
-  @include adaptiveValue("font-size", 25, 19);
+  @include adaptiveValue("font-size", 25, 18);
   line-height: 140%;
   letter-spacing: -0.02em;
 }
@@ -88,7 +86,7 @@
 }
 %f-25-500 {
   font-weight: 500;
-  @include adaptiveValue("font-size", 25, 19);
+  @include adaptiveValue("font-size", 25, 18);
   line-height: 110%;
   letter-spacing: -0.03em;
 }
@@ -97,7 +95,7 @@
 }
 %f-28-500 {
   font-weight: 500;
-  @include adaptiveValue("font-size", 28, 20);
+  @include adaptiveValue("font-size", 28, 18);
   line-height: 120%;
   letter-spacing: -0.03em;
 }
@@ -132,7 +130,7 @@
 }
 %f-35-500 {
   font-weight: 500;
-  @include adaptiveValue("font-size", 35, 21);
+  @include adaptiveValue("font-size", 35, 22);
   line-height: 120%;
   letter-spacing: -0.02em;
 }
@@ -141,7 +139,7 @@
 }
 %f-35-600 {
   font-weight: 600;
-  @include adaptiveValue("font-size", 35, 21);
+  @include adaptiveValue("font-size", 35, 22);
   line-height: 120%;
   letter-spacing: -0.03em;
 }
@@ -150,7 +148,7 @@
 }
 %f-36-500 {
   font-weight: 500;
-  @include adaptiveValue("font-size", 36, 22);
+  @include adaptiveValue("font-size", 36, 24);
   line-height: 120%;
   letter-spacing: -0.03em;
 }

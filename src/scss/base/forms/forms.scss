@@ -1,18 +1,6 @@
 //<FORM>
 // Снипет (HTML):
 .form {
-  &__row {
-  }
-  &__column {
-  }
-  &__line {
-  }
-  &__input {
-  }
-  &__button {
-  }
-  &__error {
-  }
   &__item {
     font-weight: 500;
     @include adaptiveValue("font-size", 24, 16);
@@ -32,6 +20,12 @@
   border-radius: rem(10);
   height: rem(44);
   overflow: hidden;
+
+  //== 576px ==//
+  @media (max-width: $mb-m) {
+    padding-left: rem(10);
+    padding-right: rem(10);
+  }
 
   .complete_bg & {
     background-color: var(--clr-white);
@@ -56,6 +50,11 @@
     transform: translateY(-20%);
     letter-spacing: -0.03em;
     color: rgba(0, 0, 0, 0.2);
+
+    //== 576px ==//
+    @media (max-width: $mb-m) {
+      display: none;
+    }
   }
 
   span label {
@@ -77,6 +76,12 @@
       color: var(--clr-main);
 
       transition: all 0.32s ease-in-out;
+
+      //== 576px ==//
+      @media (max-width: $mb-m) {
+        border: none;
+        padding: rem(9) rem(12);
+      }
     }
     &:checked + label {
       transform: scale(1.2);
@@ -86,6 +91,11 @@
 
       .complete_bg & {
         border-color: var(--clr-grey-light);
+      }
+
+      //== 576px ==//
+      @media (max-width: $mb-m) {
+        transform: none;
       }
     }
   }
@@ -103,26 +113,6 @@
 // <CHECK>
 // Снипет (HTML): chk
 @import "checkbox";
-
-// <RADIO>
-// Снипет (HTML): opt
-// @import "radio";
-
-// <SELECT>
-// Снипет (HTML): sel
-// @import "select";
-
-// <RATING>
-// Снипет (HTML): rating
-// @import "rating";
-
-// <QUANTITY>
-// Снипет (HTML): qa
-// @import "quantity";
-
-// <RANGE>
-// Снипет (HTML):
-// @import "range";
 
 .modal-form {
   &__item {
@@ -238,6 +228,4 @@
 }
 .input {
   position: relative;
-}
-.button {
 }

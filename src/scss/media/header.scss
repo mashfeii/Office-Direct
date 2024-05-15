@@ -21,7 +21,7 @@
       position: absolute;
       width: 100%;
       height: rem(2);
-      background-color: var(--clr-black);
+      background-color: var(--clr-white);
       border-radius: 20px;
     }
     &::before {
@@ -38,6 +38,11 @@
       animation: menu07-bar03 0.55s forwards;
     }
     .menu-open & {
+      span,
+      &::before,
+      &::after {
+        background-color: var(--clr-black);
+      }
       &::before {
         animation: active-menu07-bar01 0.55s forwards;
       }

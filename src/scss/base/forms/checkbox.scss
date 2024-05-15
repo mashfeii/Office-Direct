@@ -1,9 +1,14 @@
 .checkboxes {
   display: flex;
   gap: rem(10);
+
+  //== 576px ==//
+  @media (max-width: $mb-m) {
+    gap: rem(6);
+  }
 }
 .checkbox {
-  @include adaptiveValue("font-size", 18, 14);
+  @include adaptiveValue("font-size", 18, 13);
   line-height: 110%;
   letter-spacing: -0.03em;
   input {
@@ -25,6 +30,16 @@
     .complete_bg & {
       background-color: var(--clr-white);
     }
+
+    //== 576px ==//
+    @media (max-width: $mb-m) {
+      min-height: rem(100);
+    }
+    //== 440px ==//
+    @media (max-width: $mb-s) {
+      min-height: rem(80);
+      padding: rem(7) rem(11) rem(7) rem(8);
+    }
   }
   input:checked + label {
     background-color: #d5e2fc;
@@ -40,7 +55,6 @@
       transform: translateX(calc(100% - rem(4)));
     }
   }
-
   .radio-select {
     cursor: pointer;
     position: absolute;
@@ -69,6 +83,12 @@
       border-radius: rem(20);
 
       transition: all 0.32s ease-in-out;
+    }
+
+    //== 440px ==//
+    @media (max-width: $mb-s) {
+      left: rem(8);
+      top: rem(7);
     }
   }
 }
