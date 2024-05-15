@@ -32,7 +32,10 @@
   }
   &__card-links,
   &__suppliers,
-  &__cart-preview {
+  &__cart-preview,
+  &__double-description,
+  &__slider,
+  &__vertical-cards {
     &:not(:last-child) {
       margin-bottom: rem(100);
       //== 992px ==//
@@ -78,6 +81,31 @@
       @media (max-width: $mb-m) {
         margin-bottom: rem(50);
       }
+    }
+  }
+
+  &__delivery {
+    &:not(:last-child) {
+      margin-bottom: rem(0);
+      //== 992px ==//
+      @media (max-width: $tb) {
+        margin-bottom: rem(60);
+      }
+      //== 576px ==//
+      @media (max-width: $mb-m) {
+        margin-bottom: rem(40);
+      }
+    }
+  }
+
+  &__delivery.delivery_alone + * {
+    margin-top: 0;
+  }
+  &__delivery + * {
+    margin-top: rem(-120);
+    //== 992px ==//
+    @media (max-width: $tb) {
+      margin-top: 0;
     }
   }
 }

@@ -1,8 +1,3 @@
-.page {
-  &__delivery + * {
-    margin-top: rem(-120);
-  }
-}
 .delivery {
   padding-top: rem(80);
   padding-bottom: rem(200);
@@ -30,9 +25,6 @@
     .delivery__button {
       backdrop-filter: blur(5px);
     }
-  }
-  &_alone + * {
-    margin-top: 0;
   }
 
   color: var(--clr-white);

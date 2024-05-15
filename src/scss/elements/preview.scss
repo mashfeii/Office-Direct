@@ -2,10 +2,14 @@
   margin-left: var(--aside-width);
   @extend %bg-cov;
   background-position: 30% top;
-  height: min(37vh, rem(400));
+  height: rem(400);
 
   &:not(:last-child) {
     margin-bottom: rem(90);
+  }
+
+  &.preview_chairs {
+    background-position: 60% top;
   }
 
   &.preview_gradient {

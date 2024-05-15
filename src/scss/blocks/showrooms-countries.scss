@@ -1,10 +1,4 @@
 .showrooms-conutries {
-  &__container {
-  }
-
-  &__content {
-  }
-
   &__title {
     max-width: rem(560);
     &:not(:last-child) {
@@ -25,10 +19,6 @@
     flex-wrap: wrap;
     gap: rem(18);
   }
-
-  &__item {
-  }
-
   &__link {
     padding-bottom: rem(4);
     border-bottom: 2px dashed rgba(0, 0, 0, 0.25);
@@ -46,8 +36,10 @@
 
   &__image {
     img {
+      max-width: 100%;
       height: rem(315);
       border-radius: rem(5);
+      object-fit: cover;
     }
   }
 }

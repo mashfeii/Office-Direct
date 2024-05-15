@@ -1,10 +1,3 @@
-.page {
-  &__inner-cards {
-    &:not(:last-child) {
-      margin-bottom: rem(135);
-    }
-  }
-}
 .inner-cards {
   &__title {
     &:not(:last-child) {
@@ -232,6 +225,7 @@
 .quantity {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   min-height: rem(360);
   padding: rem(67) rem(36) rem(40) rem(36);
 
@@ -266,7 +260,7 @@
     margin-right: auto;
 
     font-weight: 600;
-    @include adaptiveValue("font-size", 64, 28);
+    @include adaptiveValue("font-size", 64, 32);
     line-height: 70%;
     letter-spacing: -0.06em;
 

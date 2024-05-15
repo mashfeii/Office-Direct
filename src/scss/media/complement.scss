@@ -1,10 +1,19 @@
 .complete {
-  &_bg {
-    background-color: #f5f5f5;
-    padding-top: rem(77);
-    padding-bottom: rem(93);
-    &:not(:last-child) {
-      margin-bottom: rem(125);
+  &.complete_bg {
+    //== 1440px ==//
+    @media (max-width: $note-xl) {
+      padding-top: rem(80);
+      padding-bottom: rem(80);
+    }
+    //== 992px ==//
+    @media (max-width: $tb) {
+      padding-top: rem(60);
+      padding-bottom: rem(60);
+    }
+    //== 576px ==//
+    @media (max-width: $mb-m) {
+      padding-top: rem(40);
+      padding-bottom: rem(40);
     }
   }
 
@@ -47,9 +56,6 @@
       left: -10%;
       bottom: -28%;
     }
-  }
-
-  &__container {
   }
 
   &__title {

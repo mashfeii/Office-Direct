@@ -1,14 +1,4 @@
-.page {
-  &__slider {
-    &:not(:last-child) {
-      margin-bottom: rem(106);
-    }
-  }
-}
 .slider {
-  &__container {
-  }
-
   &__slider {
     overflow: hidden;
     border-radius: rem(5);
@@ -75,7 +65,7 @@
     background-color: var(--clr-white);
 
     font-weight: 600;
-    @include adaptiveValue("font-size", 15, 11);
+    @include adaptiveValue("font-size", 15, 12);
     line-height: 100%;
     letter-spacing: -0.02em;
 

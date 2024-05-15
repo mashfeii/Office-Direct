@@ -2,21 +2,37 @@
   &__description {
     &:not(:last-child) {
       @media (max-width: $mb) {
-        margin-bottom: rem(20);
+        margin-bottom: rem(10);
       }
     }
   }
 
   &__contry-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: rem(18);
+    @media (max-width: $tb) {
+      gap: rem(13);
+    }
   }
 
   &__image {
     img {
-      height: rem(315);
-      border-radius: rem(5);
+      //== 768px ==//
+      @media (max-width: $mb) {
+        width: 100%;
+      }
+      //== 576px ==//
+      @media (max-width: $mb-m) {
+        height: rem(270);
+      }
+    }
+    //== 1360px ==//
+    @media (max-width: $note-l) {
+      grid-column: span 6;
+    }
+  }
+  &__content {
+    //== 1360px ==//
+    @media (max-width: $note-l) {
+      grid-column: span 6;
     }
   }
 }
