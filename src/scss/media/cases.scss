@@ -1,34 +1,16 @@
-.page {
-  &__cases {
-    &:not(:last-child) {
-      margin-bottom: rem(150);
-    }
-  }
-}
 .cases {
-  &__container {
-    &:not(:last-child) {
-      margin-bottom: rem(30);
-    }
-  }
-
-  &__images {
-    cursor: grab;
-    @extend %ml;
-  }
-
   &__image {
-    display: flex !important;
-    align-items: flex-end;
-    flex: 0 0 rem(450);
-    width: rem(450);
-    height: rem(450);
-
-    &:not(:last-child) {
-      margin-right: rem(20);
+    //== 992px ==//
+    @media (max-width: $tb) {
+      flex: 0 0 rem(320);
+      width: rem(320);
+      height: rem(320);
     }
-    &:focus {
-      outline: none;
+    //== 576px ==//
+    @media (max-width: $mb-m) {
+      flex: 0 0 rem(240);
+      width: rem(240);
+      height: rem(240);
     }
   }
 }

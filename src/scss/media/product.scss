@@ -64,53 +64,79 @@
   }
 
   &__logo {
-    display: inline-flex;
-    align-items: center;
-    gap: rem(3.5);
-    font-weight: 600;
-    @include adaptiveValue("font-size", 35, 22);
-    line-height: 100%;
-    letter-spacing: -0.03em;
-    text-transform: uppercase;
-    color: rgba(0, 0, 0, 0.5);
     &:not(:last-child) {
-      margin-bottom: rem(20);
-    }
-    &::before,
-    &::after {
-      content: "";
-      flex: 0 0 rem(20);
-      width: rem(20);
-      height: rem(40);
-      @extend %bg-con;
-    }
-    &::before {
-      background-image: url("@img/left-product.svg");
-    }
-    &::after {
-      background-image: url("@img/right-product.svg");
+      //== 768px ==//
+      @media (max-width: $mb) {
+        margin-bottom: rem(18);
+      }
     }
   }
 
   &__title {
     &:not(:last-child) {
-      margin-bottom: rem(18);
+      //== 768px ==//
+      @media (max-width: $mb) {
+        margin-bottom: rem(9);
+      }
     }
   }
 
   &__description {
-    font-weight: 400;
-    line-height: 140%;
-    letter-spacing: -0.03em;
-
-    @include adaptiveValue("font-size", 22, 16);
     &:not(:last-child) {
-      margin-bottom: rem(55);
+      //== 768px ==//
+      @media (max-width: $mb) {
+        margin-bottom: rem(22);
+      }
     }
   }
 
   &__button.button {
     backdrop-filter: none;
     background-color: var(--clr-black);
+  }
+
+  &_main {
+    &::after {
+      //== 1440px ==//
+      @media (max-width: $note-xl) {
+        background-position: 100% center;
+      }
+      //== 1360px ==//
+      @media (max-width: $note-l) {
+        transform: translateX(20%);
+      }
+      //== 1024px ==//
+      @media (max-width: $note-s) {
+        transform: translateX(40%);
+      }
+      //== 992px ==//
+      @media (max-width: $tb) {
+        transform: translateX(30%);
+      }
+      //== 768px ==//
+      @media (max-width: $mb) {
+        display: block;
+        position: static;
+        height: rem(262);
+        transform: none;
+        background-position: 40%;
+      }
+    }
+    //== 768px ==//
+    @media (max-width: $mb) {
+      padding-top: rem(65);
+      padding-bottom: 0;
+
+      .product__body {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    //== 576px ==//
+    @media (max-width: $mb-m) {
+      &:not(:last-child) {
+        margin-bottom: rem(0);
+      }
+    }
   }
 }

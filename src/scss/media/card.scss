@@ -1,0 +1,32 @@
+.card {
+  img {
+    //== 768px ==//
+    @media (max-width: $mb) {
+      width: 100%;
+      height: rem(380);
+    }
+    //== 576px ==//
+    @media (max-width: $mb-m) {
+      height: rem(180);
+    }
+    //== 440px ==//
+    @media (max-width: $mb-s) {
+      height: rem(164);
+    }
+    &:not(:last-child) {
+      //== 576px ==//
+      @media (max-width: $mb-m) {
+        margin-bottom: rem(14);
+      }
+    }
+  }
+
+  &__title {
+    &:not(:last-child) {
+      //== 576px ==//
+      @media (max-width: $mb-m) {
+        margin-bottom: rem(5);
+      }
+    }
+  }
+}

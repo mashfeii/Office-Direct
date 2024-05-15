@@ -29,7 +29,7 @@
   &__item {
     max-width: rem(220);
     font-weight: 400;
-    @include adaptiveValue("font-size", 24, 18);
+    @include adaptiveValue("font-size", 24, 16);
     line-height: 130%;
     letter-spacing: -0.04em;
     color: rgba(0, 0, 0, 0.4);

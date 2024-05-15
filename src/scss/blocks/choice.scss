@@ -3,6 +3,7 @@
   }
 }
 .choice {
+  position: relative;
   padding-bottom: rem(14);
 
   &__title {
@@ -13,6 +14,8 @@
   }
 
   &__descr {
+    position: relative;
+    z-index: 2;
     text-align: center;
 
     max-width: rem(860);

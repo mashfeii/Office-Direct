@@ -3,21 +3,6 @@
   @media (max-width: $tb) {
     display: block;
   }
-  &__container {
-    //== 992px ==//
-    @media (max-width: $tb) {
-    }
-  }
-  &__logo {
-    //== 992px ==//
-    @media (max-width: $tb) {
-    }
-  }
-  .icon-menu {
-    //== 992px ==//
-    @media (max-width: $tb) {
-    }
-  }
 }
 .icon-menu {
   @media (max-width: $tb) {
@@ -36,7 +21,7 @@
       position: absolute;
       width: 100%;
       height: rem(2);
-      background-color: var(--clr-white);
+      background-color: var(--clr-black);
       border-radius: 20px;
     }
     &::before {
