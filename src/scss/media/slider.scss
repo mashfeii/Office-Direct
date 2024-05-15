@@ -13,7 +13,7 @@
     @media (max-width: $mb) {
       height: rem(380);
       padding: rem(35) rem(30);
-      padding-right: rem(205);
+      padding-bottom: rem(80);
     }
   }
 
@@ -25,8 +25,8 @@
     }
     //== 768px ==//
     @media (max-width: $mb) {
-      right: rem(30);
-      bottom: rem(35);
+      right: rem(10);
+      bottom: rem(15);
     }
   }
 }

@@ -1,7 +1,7 @@
 //* Настройки стилей для повторяющихся начертаний
 %f-17-400 {
   font-weight: 400;
-  @include adaptiveValue("font-size", 17, 15);
+  @include adaptiveValue("font-size", 17, 15.5);
   line-height: 140%;
 }
 .f-17-400 {
@@ -9,7 +9,7 @@
 }
 %f-17-600 {
   font-weight: 600;
-  @include adaptiveValue("font-size", 17, 15);
+  @include adaptiveValue("font-size", 17, 15.5);
   line-height: 140%;
   letter-spacing: -0.02em;
 }

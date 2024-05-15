@@ -35,7 +35,8 @@
   &__cart-preview,
   &__double-description,
   &__slider,
-  &__vertical-cards {
+  &__vertical-cards,
+  &__linked-slider {
     &:not(:last-child) {
       margin-bottom: rem(100);
       //== 992px ==//
@@ -48,6 +49,21 @@
       }
     }
   }
+
+  &__price-list {
+    &:not(:last-child) {
+      margin-bottom: rem(165);
+      //== 992px ==//
+      @media (max-width: $tb) {
+        margin-bottom: rem(85);
+      }
+      //== 576px ==//
+      @media (max-width: $mb-m) {
+        margin-bottom: rem(65);
+      }
+    }
+  }
+
   .page__quote {
     margin-top: rem(145);
     //== 992px ==//
@@ -83,7 +99,6 @@
       }
     }
   }
-
   &__delivery {
     &:not(:last-child) {
       margin-bottom: rem(0);

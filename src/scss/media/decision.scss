@@ -1,37 +1,51 @@
-.page {
-  &__decision {
-    &:not(:last-child) {
-      margin-bottom: rem(155);
-    }
-  }
-}
 .decision {
-  background-color: var(--clr-grey-light);
-
   &__container {
-    padding-top: rem(76);
-    padding-bottom: rem(82);
-    background-position: 90% bottom;
-    background-image: url("@img/decision/image.png");
+    //== 1440px ==//
+    @media (max-width: $note-xl) {
+      background-position: 120% bottom;
+    }
+    //== 1360px ==//
+    @media (max-width: $note-l) {
+      background-position: 160% bottom;
+    }
+    //== 1200px ==//
+    @media (max-width: $note-m) {
+      background-size: 50%;
+    }
+    //== 768px ==//
+    @media (max-width: $mb) {
+      background-size: 60%;
+    }
+    //== 576px ==//
+    @media (max-width: $mb-m) {
+      padding-top: rem(35);
+      padding-bottom: rem(45);
+    }
   }
 
   &__title {
-    max-width: rem(402);
     &:not(:last-child) {
-      margin-bottom: rem(14);
+      //== 768px ==//
+      @media (max-width: $mb) {
+        margin-bottom: rem(9);
+      }
     }
   }
 
   &__description {
     max-width: rem(635);
-    > p:not(:last-child) {
-      margin-bottom: rem(7);
+    //== 768px ==//
+    @media (max-width: $mb) {
+      max-width: 70%;
     }
-    &:not(:last-child) {
-      margin-bottom: rem(35);
+    //== 576px ==//
+    @media (max-width: $mb-m) {
+      > p:not(:last-child) {
+        margin-bottom: rem(3);
+      }
+      &:not(:last-child) {
+        margin-bottom: rem(15);
+      }
     }
-  }
-
-  &__button {
   }
 }

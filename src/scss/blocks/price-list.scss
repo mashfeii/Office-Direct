@@ -1,19 +1,10 @@
-.page {
-  &__price-list {
-    &:not(:last-child) {
-      margin-bottom: rem(165);
-    }
-  }
-}
 .price-list {
-  &__container {
-  }
-
   &__item {
     &_end {
       align-items: flex-end;
     }
 
+    background-color: #f5f5f5;
     min-height: rem(468);
     display: flex;
     border-radius: rem(4);
@@ -27,6 +18,9 @@
       &:hover {
         color: var(--clr-black);
       }
+    }
+    @media (any-hover: none) {
+      color: var(--clr-black);
     }
   }
 

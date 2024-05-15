@@ -193,8 +193,16 @@
     height: rem(32);
     fill: var(--clr-black);
   }
-
-  &__row-benefits-text {
+  &__icon-benefits {
+    //== 992px ==//
+    @media (max-width: $tb) {
+      margin-top: rem(40);
+    }
+    //== 576px ==//
+    @media (max-width: $mb-m) {
+      margin-top: rem(30);
+      gap: rem(25);
+    }
   }
 }
 .inner-benefit {
@@ -231,24 +239,23 @@
     }
   }
 }
-.inner {
-  &__icon-benefits {
-    gap: rem(12);
-    margin-top: rem(78);
-    &:not(:last-child) {
-      margin-bottom: rem(40);
-    }
-  }
-}
 .icon-benefit {
+  //== 576px ==//
+  @media (max-width: $mb-m) {
+    grid-column: span 6;
+  }
   svg {
     &:not(:last-child) {
-      margin-bottom: rem(19);
+      //== 576px ==//
+      @media (max-width: $mb-m) {
+        margin-bottom: rem(6);
+      }
     }
   }
-  &__title {
-    &:not(:last-child) {
-      margin-bottom: rem(2);
+  &__description {
+    //== 576px ==//
+    @media (max-width: $mb-m) {
+      max-width: rem(420);
     }
   }
 }
