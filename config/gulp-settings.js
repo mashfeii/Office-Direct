@@ -18,7 +18,7 @@ export const path = {
     pug: `${srcFolder}/pug/*.pug`,
     js: `${srcFolder}/js/app.js`,
     scss: `${srcFolder}/scss/*.scss`,
-    vendors: `${srcFolder}/scss/vendors.scss`,
+    vendors: `${srcFolder}/scss/media.scss`,
     images: `${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp}`,
     svg: `${srcFolder}/img/**/*.svg`,
     fonts: `${srcFolder}/fonts/*.*`,
