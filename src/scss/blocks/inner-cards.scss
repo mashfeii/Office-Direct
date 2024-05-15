@@ -77,6 +77,10 @@
     }
   }
 
+  .inner-cards_storage & {
+    justify-content: flex-end;
+  }
+
   &__first-title {
     max-width: rem(277);
     flex: 1 1 auto;
@@ -99,6 +103,11 @@
     .inner-cards_super & {
       background-image: url("@img/inner-cards/super.png");
     }
+    .inner-cards_storage & {
+      background-image: url("@img/inner-cards/storage.png");
+      background-size: rem(576) auto;
+      background-position: center top;
+    }
     background-image: url("@img/inner-cards/image.png");
     background-position: right 15%;
   }
@@ -118,6 +127,8 @@
     &:not(:last-child) {
       margin-bottom: rem(16);
     }
+  }
+  &__storage-title {
   }
 
   &__title {
@@ -299,6 +310,13 @@
   }
 }
 .blank-image {
+  &_dark {
+    padding: rem(46) rem(31);
+    align-items: flex-start;
+    color: var(--clr-black);
+    background-position: center 80%;
+  }
+
   height: rem(243);
   display: flex;
   align-items: flex-end;

@@ -1,80 +1,166 @@
-.page {
-  &__company {
-    &:not(:last-child) {
-      margin-bottom: rem(110);
-    }
-  }
-}
 .company {
   &__container {
   }
-
   &__col {
+    //== 1200px ==//
+    @media (max-width: $note-m) {
+      &_1 {
+        grid-column: span 5;
+      }
+      &_3 {
+        grid-column: span 4;
+      }
+    }
+    //== 992px ==//
+    @media (max-width: $tb) {
+      grid-column: span 6;
+      &_1 {
+        grid-column: span 12;
+      }
+      &_2,
+      &_3 {
+        gap: rem(20);
+        grid-column: span 12;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    //== 768px ==//
+    @media (max-width: $mb) {
+      &_1 {
+        grid-column: span 6;
+      }
+      &_2,
+      &_3 {
+        gap: rem(20);
+        grid-column: span 6;
+        display: grid;
+      }
+    }
+    //== 440px ==//
+    @media (max-width: $mb-s) {
+      &_2,
+      &_3 {
+        grid-template-columns: 1fr;
+      }
+    }
   }
-
   &__item {
-    border-radius: rem(5);
-    background-color: #f5f5f5;
     &:not(:last-child) {
       margin-bottom: rem(17);
+      //== 992px ==//
+      @media (max-width: $tb) {
+        margin-bottom: 0;
+      }
     }
     &_1 {
-      min-height: rem(620);
-      padding: rem(55);
-      background-position: center bottom;
-
       .company__title {
-        font-weight: 600;
-        @include adaptiveValue("font-size", 45, 20);
-        line-height: 110%;
-        letter-spacing: -0.02em;
-        &:not(:last-child) {
-          margin-bottom: rem(11);
+        //== 1200px ==//
+        @media (max-width: $note-m) and (min-width: &tb) {
+          font-size: rem(26);
         }
+      }
+      //== 1360px ==//
+      @media (max-width: $note-l) {
+        padding: rem(45) rem(35);
+      }
+      //== 1200px ==//
+      @media (max-width: $note-m) {
+        padding: rem(35) rem(25);
+      }
+      //== 992px ==//
+      @media (max-width: $tb) {
+        background-position: center rem(70);
+        min-height: rem(320);
+      }
+      //== 576px ==//
+      @media (max-width: $mb-m) {
+        background-position: center bottom;
+        padding: rem(25) rem(20);
+        min-height: rem(390);
       }
     }
 
     &_2 {
-      min-height: rem(243);
-      padding: rem(46) rem(31);
-      text-align: center;
-      background-position: center 75%;
+      //== 1360px ==//
+      @media (max-width: $note-l) {
+        padding: rem(35) rem(25);
+      }
+      //== 992px ==//
+      @media (max-width: $tb) {
+        min-height: rem(240);
+      }
+      //== 440px ==//
+      @media (max-width: $mb-s) {
+        min-height: rem(160);
+        padding: rem(25) rem(20);
+      }
     }
 
     &_3 {
-      min-height: rem(360);
-      padding: rem(32) rem(31);
-      text-align: center;
+      //== 1360px ==//
+      @media (max-width: $note-l) {
+        padding: rem(30) rem(25);
+      }
+      //== 992px ==//
+      @media (max-width: $tb) {
+        min-height: rem(240);
+      }
+      //== 440px ==//
+      @media (max-width: $mb-s) {
+        min-height: rem(160);
+        padding: rem(25) rem(20);
+      }
     }
 
     &_4 {
-      min-height: rem(243);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: rem(30);
-      color: var(--clr-white);
+      //== 1360px ==//
+      @media (max-width: $note-l) {
+        padding: rem(20);
+      }
+      //== 992px ==//
+      @media (max-width: $tb) {
+        min-height: rem(200);
+      }
+      //== 440px ==//
+      @media (max-width: $mb-s) {
+        min-height: rem(160);
+        padding: rem(25) rem(20);
+      }
+    }
+
+    &_5 {
+      //== 992px ==//
+      @media (max-width: $tb) {
+        min-height: rem(200);
+      }
+      //== 440px ==//
+      @media (max-width: $mb-s) {
+        padding: rem(25) rem(20);
+      }
     }
 
     &_6,
     &_7 {
-      background-position: right center;
-      padding: rem(51) rem(53);
-      .company__title:not(:last-child) {
-        margin-bottom: rem(9);
+      //== 1360px ==//
+      @media (max-width: $note-l) {
+        background-position: 180% bottom;
       }
-      .company__title,
-      .company__description {
-        max-width: rem(280);
+      //== 1200px ==//
+      @media (max-width: $note-m) {
+        padding: rem(30) rem(25);
+        background-position: rem(250) bottom;
+      }
+      //== 768px ==//
+      @media (max-width: $mb) {
+        background-position: right bottom;
+      }
+      //== 440px ==//
+      @media (max-width: $mb-s) {
+        min-height: rem(160);
+        padding: rem(25) rem(20);
+        background-position: rem(250) bottom;
       }
     }
-  }
-
-  &__title {
-  }
-
-  &__description {
-    color: rgba(0, 0, 0, 0.5);
   }
 }

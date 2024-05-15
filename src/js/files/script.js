@@ -44,6 +44,26 @@ $(document).ready(function () {
         nextArrow: this.closest(".row-slider").querySelector(".row-slider__button_next"),
         speed: 800,
         lazyLoad: "progressive",
+        responsive: [
+          {
+            breakpoint: 1200,
+            settings: {
+              slidesToShow: 3,
+            },
+          },
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 2,
+            },
+          },
+          {
+            breakpoint: 576,
+            settings: {
+              slidesToShow: 1,
+            },
+          },
+        ],
       });
   });
   $(".row-slider-3").each(function (slider) {
@@ -56,6 +76,20 @@ $(document).ready(function () {
         nextArrow: this.closest(".row-slider-3").querySelector(".row-slider__button_next"),
         speed: 800,
         lazyLoad: "progressive",
+        responsive: [
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 2,
+            },
+          },
+          {
+            breakpoint: 576,
+            settings: {
+              slidesToShow: 1,
+            },
+          },
+        ],
       });
   });
   $(".cases-slider").each(function (slider) {

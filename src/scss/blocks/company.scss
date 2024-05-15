@@ -1,17 +1,4 @@
-.page {
-  &__company {
-    &:not(:last-child) {
-      margin-bottom: rem(110);
-    }
-  }
-}
 .company {
-  &__container {
-  }
-
-  &__col {
-  }
-
   &__item {
     border-radius: rem(5);
     background-color: #f5f5f5;

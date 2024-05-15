@@ -17,7 +17,9 @@
   &__connect,
   &__advantages,
   &__inner,
-  &__team {
+  &__team,
+  &__fabric,
+  &__configuration {
     &:not(:last-child) {
       margin-bottom: rem(125);
       //== 992px ==//
@@ -36,7 +38,10 @@
   &__double-description,
   &__slider,
   &__vertical-cards,
-  &__linked-slider {
+  &__linked-slider,
+  &__slide-image,
+  &__row-slider,
+  &__company {
     &:not(:last-child) {
       margin-bottom: rem(100);
       //== 992px ==//
@@ -113,6 +118,19 @@
     }
   }
 
+  &__delivery.delivery_alone {
+    &:not(:last-child) {
+      margin-bottom: rem(80);
+      //== 992px ==//
+      @media (max-width: $tb) {
+        margin-bottom: rem(70);
+      }
+      //== 576px ==//
+      @media (max-width: $mb-m) {
+        margin-bottom: rem(60);
+      }
+    }
+  }
   &__delivery.delivery_alone + * {
     margin-top: 0;
   }
