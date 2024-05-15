@@ -104,7 +104,7 @@
 }
 %f-30-600 {
   font-weight: 600;
-  @include adaptiveValue("font-size", 30, 20);
+  @include adaptiveValue("font-size", 30, 22);
   line-height: 120%;
   letter-spacing: -0.02em;
 }
@@ -113,7 +113,7 @@
 }
 %f-34-500 {
   font-weight: 500;
-  @include adaptiveValue("font-size", 34, 20);
+  @include adaptiveValue("font-size", 34, 22);
   line-height: 110%;
   letter-spacing: -0.02em;
 }

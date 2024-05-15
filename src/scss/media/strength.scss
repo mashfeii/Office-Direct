@@ -1,107 +1,125 @@
-.page {
-  &__strength {
-    &:not(:last-child) {
-      margin-bottom: rem(145);
-    }
-  }
-}
 .strength {
-  &__container {
+  .grid-container {
+    //== 768px ==//
+    @media (max-width: $mb) {
+      gap: rem(12);
+    }
   }
 
   &__title {
     &:not(:last-child) {
-      margin-bottom: rem(14);
+      //== 768px ==//
+      @media (max-width: $mb) {
+        margin-bottom: rem(10);
+      }
     }
   }
 
   &__description {
-    max-width: rem(1080);
-    &:not(:last-child) {
-      margin-bottom: rem(44);
+    //== 768px ==//
+    @media (max-width: $mb) {
+      max-width: rem(620);
     }
-  }
-
-  &__cards {
-    > * {
-      border-radius: rem(5);
-      background-color: #f5f5f5;
+    &:not(:last-child) {
+      //== 768px ==//
+      @media (max-width: $mb) {
+        margin-bottom: rem(30);
+      }
+      //== 576px ==//
+      @media (max-width: $mb-m) {
+        margin-bottom: rem(20);
+      }
     }
   }
 
   &__icon-card {
-    min-height: rem(440);
-    display: flex;
-    flex-direction: column;
-    padding: rem(55);
-  }
-
-  &__icon-card-icon {
-    flex: 0 0 rem(66);
-    width: rem(66);
-    height: rem(66);
-    margin-bottom: auto;
-    fill: var(--clr-green);
-  }
-
-  &__icon-card-title {
-    font-weight: 600;
-    max-width: rem(525);
-    &:not(:last-child) {
-      margin-bottom: rem(16);
+    //== 1440px ==//
+    @media (max-width: $note-xl) {
+      grid-column: span 4;
+      padding: rem(35);
+    }
+    //== 1200px ==//
+    @media (max-width: $note-m) {
+      min-height: 0;
+      grid-column: span 12;
+    }
+    //== 768px ==//
+    @media (max-width: $mb) {
+      grid-column: span 6;
+    }
+    //== 576px ==//
+    @media (max-width: $mb-m) {
+      padding: rem(35) rem(25);
     }
   }
-
-  &__icon-card-description {
-    max-width: rem(525);
-    color: rgba(0, 0, 0, 0.5);
+  &__icon-card-icon {
+    //== 1200px ==//
+    @media (max-width: $note-m) {
+      flex: 0 0 rem(55);
+      width: rem(55);
+      height: rem(55);
+    }
+    //== 576px ==//
+    @media (max-width: $mb-m) {
+      flex: 0 0 rem(45);
+      width: rem(45);
+      height: rem(45);
+    }
   }
 
   &__gradient-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     padding: rem(36);
-    background: linear-gradient(142.99deg, #776b5b 21.49%, #ddc7a9 194.57%);
-    text-align: center;
-    color: var(--clr-white);
-  }
 
-  &__gradient-card-title {
-    &:not(:last-child) {
-      margin-bottom: rem(10);
+    //== 1440px ==//
+    @media (max-width: $note-xl) {
+      grid-column: span 4;
+      padding: rem(30);
     }
-  }
-
-  &__gradient-card-description {
-    color: rgba(255, 255, 255, 0.5);
+    //== 1200px ==//
+    @media (max-width: $note-m) {
+      grid-column: span 6;
+    }
+    //== 768px ==//
+    @media (max-width: $mb) {
+      grid-column: span 3;
+    }
+    //== 576px ==//
+    @media (max-width: $mb-m) {
+      grid-column: span 6;
+    }
   }
 
   &__text-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: rem(92) rem(65) rem(66);
-    text-align: center;
-  }
-
-  &__text-card-number {
-    font-weight: 600;
-    @include adaptiveValue("font-size", 64, 32);
-    line-height: 70%;
-    letter-spacing: -0.06em;
-    color: rgba(0, 0, 0, 0.3);
-    margin-bottom: auto;
-  }
-
-  &__text-card-title {
-    &:not(:last-child) {
-      margin-bottom: rem(10);
+    //== 1440px ==//
+    @media (max-width: $note-xl) {
+      justify-content: center;
+      grid-column: span 4;
+      padding: rem(80) rem(45) rem(50);
+    }
+    //== 1200px ==//
+    @media (max-width: $note-m) {
+      grid-column: span 6;
+    }
+    //== 768px ==//
+    @media (max-width: $mb) {
+      grid-column: span 3;
+    }
+    //== 576px ==//
+    @media (max-width: $mb-m) {
+      grid-column: span 6;
+      padding: rem(40) rem(25) rem(40);
     }
   }
 
-  &__text-card-description {
-    color: rgba(0, 0, 0, 0.5);
+  &__text-card-number {
+    //== 1440px ==//
+    @media (max-width: $note-xl) {
+      &:not(:last-child) {
+        margin-bottom: rem(20);
+      }
+    }
+  }
+
+  &__text-card-title {
   }
 }
