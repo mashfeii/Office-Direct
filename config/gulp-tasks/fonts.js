@@ -46,16 +46,16 @@ export const ttfToWoff = () => {
       )
       // Выгружаем в папку с результатом
       .pipe(app.gulp.dest(`${app.path.build.fonts}`))
-    // Ищем файлы шрифтов .ttf
-    // .pipe(app.gulp.src(`${app.path.srcFolder}/fonts/*.ttf`, { encoding: false }))
-    // Конвертируем в .woff2
-    // .pipe(ttf2woff2())
-    // Выгружаем в папку с результатом
-    // .pipe(app.gulp.dest(`${app.path.build.fonts}`))
-    // Ищем файлы шрифтов .woff и woff2
-    // .pipe(app.gulp.src(`${app.path.srcFolder}/fonts/*.{woff,woff2}`))
-    // Выгружаем в папку с результатом
-    // .pipe(app.gulp.dest(`${app.path.build.fonts}`))
+      // Ищем файлы шрифтов .ttf
+      // .pipe(app.gulp.src(`${app.path.srcFolder}/fonts/*.ttf`, { encoding: false }))
+      // Конвертируем в .woff2
+      // .pipe(ttf2woff2())
+      // Выгружаем в папку с результатом
+      // .pipe(app.gulp.dest(`${app.path.build.fonts}`))
+      // Ищем файлы шрифтов .woff и woff2
+      .pipe(app.gulp.src(`${app.path.srcFolder}/fonts/*.{woff,woff2}`))
+      // Выгружаем в папку с результатом
+      .pipe(app.gulp.dest(`${app.path.build.fonts}`))
   );
 };
 export const fonstStyle = () => {
