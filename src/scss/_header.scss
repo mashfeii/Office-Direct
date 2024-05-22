@@ -1,32 +1,5 @@
 //====================================================================================================
 .header {
-  display: none;
-
-  padding-top: rem(15);
-  padding-bottom: rem(15);
-  position: fixed;
-  z-index: 11;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-
-  &__container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: rem(20);
-  }
-
-  transition: transform 0.32s ease-in-out;
-
-  &._header-scroll {
-    transform: translateY(-100%);
-  }
-  &._header-scroll._header-show {
-    transform: translateY(0);
-  }
 }
 
 //====================================================================================================

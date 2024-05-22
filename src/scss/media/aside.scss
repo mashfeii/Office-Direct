@@ -7,22 +7,23 @@
   }
   //== 992px ==//
   @media (max-width: $tb) {
-    padding-top: rem(80);
-    z-index: 10;
-    width: 100%;
-    height: 100%;
-    display: grid;
-    grid-template-columns: repeat(2, minmax(rem(80), rem(320)));
-    align-items: center;
-    justify-content: center;
-    gap: rem(20);
+    display: none;
+    // padding-top: rem(80);
+    // z-index: 10;
+    // width: 100%;
+    // height: 100%;
+    // display: grid;
+    // grid-template-columns: repeat(2, minmax(rem(80), rem(320)));
+    // align-items: center;
+    // justify-content: center;
+    // gap: rem(20);
 
-    transform: translateX(100%);
-    transition: transform 0.32s ease;
+    // transform: translateX(100%);
+    // transition: transform 0.32s ease;
 
-    .menu-open & {
-      transform: translateX(0);
-    }
+    // .menu-open & {
+    //   transform: translateX(0);
+    // }
   }
   //== 576px ==//
   @media (max-width: $mb-m) {
