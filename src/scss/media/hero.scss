@@ -33,14 +33,15 @@
   }
 
   &__bottom {
-    @media (max-width: em(1499.98)) {
+  }
+
+  &__content {
+    //== 1360px ==//
+    @media (max-width: $note-l) {
       align-items: flex-start;
       flex-direction: column;
       gap: rem(40);
     }
-  }
-
-  &__content {
   }
 
   &__title {

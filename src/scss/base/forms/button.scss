@@ -26,8 +26,9 @@
   @include adaptiveValue("font-size", 18, 13);
 
   transition:
-    background-color 0.32s ease-in-out,
-    color 0.32s ease-in-out;
+    background-color 0.32s ease,
+    color 0.32s ease,
+    border-radius 0.32s ease;
 
   svg {
     flex: 0 0 rem(20);
@@ -37,13 +38,21 @@
   }
 
   &__arrow {
-    color: rgba(255, 255, 255, 0.5);
-    transition: color 0.32s ease-in-out;
+    color: var(--clr-white);
+    opacity: 0.5;
+    transition:
+      color 0.32s ease,
+      transform 0.32s ease;
   }
 
   @media (any-hover: hover) {
     &:hover {
-      background-color: #4e8f2d;
+      background-color: #52a329;
+      border-radius: rem(12);
+      .button__arrow {
+        transform: translateX(rem(2));
+        opacity: 1;
+      }
     }
   }
   &._fw {
@@ -60,16 +69,17 @@
     background-color: var(--clr-blue);
     @media (any-hover: hover) {
       &:hover {
-        background-color: #1647a9;
+        background-color: #1148b3;
       }
     }
   }
   &.button_black {
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: var(--clr-black);
+    color: rgba(255, 255, 255, 0.75);
     backdrop-filter: blur(5px);
     @media (any-hover: hover) {
       &:hover {
-        background-color: rgba(0, 0, 0, 0.6);
+        color: rgba(255, 255, 255, 1);
       }
     }
   }
@@ -78,25 +88,20 @@
     backdrop-filter: blur(5px);
     @media (any-hover: hover) {
       &:hover {
-        background-color: #b3272c;
+        background-color: #cc1e25;
       }
     }
   }
   &.button_white {
     background-color: var(--clr-white);
-    color: var(--clr-black);
+    color: rgba(0, 0, 0, 0.75);
     backdrop-filter: blur(5px);
     .button__arrow {
-      color: rgba(0, 0, 0, 0.5);
+      color: var(--clr-black);
     }
     @media (any-hover: hover) {
       &:hover {
-        background-color: rgba(0, 0, 0, 0.4);
-        color: var(--clr-white);
-
-        .button__arrow {
-          color: rgba(255, 255, 255, 0.7);
-        }
+        color: rgba(0, 0, 0, 1);
       }
     }
   }

@@ -12,7 +12,7 @@
 
   &__header {
     &:not(:last-child) {
-      margin-bottom: rem(25);
+      margin-bottom: rem(16);
     }
   }
 
@@ -28,7 +28,7 @@
   &__description {
     max-width: rem(685);
     &:not(:last-child) {
-      margin-bottom: rem(30);
+      margin-bottom: rem(40);
     }
   }
 

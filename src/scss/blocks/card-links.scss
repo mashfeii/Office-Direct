@@ -20,7 +20,7 @@
       letter-spacing: -0.03em;
     }
     button,
-    a {
+    > span {
       display: flex;
       gap: rem(14);
 
@@ -32,9 +32,18 @@
 
       transition: color 0.32s ease-in-out;
 
-      @media (any-hover: hover) {
-        &:hover {
+      ._arrow {
+        transition: transform 0.32s ease-in-out;
+      }
+    }
+    @media (any-hover: hover) {
+      &:hover {
+        > span,
+        button {
           color: var(--clr-black);
+          ._arrow {
+            transform: translateX(rem(2));
+          }
         }
       }
     }

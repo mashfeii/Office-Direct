@@ -16,6 +16,7 @@
   }
 
   &__description {
+    color: var(--clr-main);
     max-width: rem(635);
     > p:not(:last-child) {
       margin-bottom: rem(7);

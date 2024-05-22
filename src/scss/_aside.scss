@@ -12,14 +12,14 @@
   flex-direction: column;
 
   padding-top: rem(38);
-  padding-left: rem(30);
-  padding-right: rem(21);
+  padding-right: rem(22);
   padding-bottom: rem(30);
   background-color: rgba(255, 255, 255, 0.75);
   border-right: 1px solid rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(10px);
 
   &__menu {
+    padding-left: rem(22);
     &:not(:last-child) {
       margin-bottom: rem(30);
     }
@@ -31,6 +31,7 @@
     font-size: rem(24);
     line-height: 100%;
     letter-spacing: -0.04em;
+    padding-left: rem(28);
 
     &:not(:last-child) {
       margin-bottom: rem(32);
@@ -38,6 +39,7 @@
   }
 
   &__button.button {
+    margin-left: rem(28);
     font-size: rem(14);
   }
 
@@ -48,10 +50,19 @@
     }
   }
 
+  &__header-menu {
+    padding-left: rem(22);
+  }
+
   &__header-logo {
     display: block;
+    padding-left: rem(30);
     &:not(:last-child) {
       margin-bottom: rem(30);
+    }
+
+    img {
+      max-width: rem(192);
     }
   }
 }

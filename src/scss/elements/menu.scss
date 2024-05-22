@@ -26,15 +26,12 @@
         color 0.25s ease-in-out;
       border-radius: rem(10);
 
-      .menu__icon {
+      svg.menu__icon {
         flex: 0 0 rem(28);
         width: rem(28);
         height: rem(28);
-        fill: var(--clr-black);
-
-        transition:
-          opacity 0.32s ease-in-out,
-          transform 0.32s ease-in-out;
+        opacity: 0.6;
+        transition: opacity 0.32s ease-in-out;
       }
       font-size: rem(16);
       letter-spacing: -0.04em;
@@ -43,10 +40,9 @@
       @media (any-hover: hover) {
         &:hover {
           background-color: rgba(218, 214, 207, 0.45);
-          color: rgba(0, 0, 0, 0.8);
+          color: rgba(0, 0, 0, 1);
           .menu__icon {
-            opacity: 0.8;
-            transform: scale(1.1);
+            opacity: 1;
           }
         }
       }

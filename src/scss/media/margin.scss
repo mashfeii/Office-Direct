@@ -118,6 +118,20 @@
     }
   }
 
+  &__inner.inner_about {
+    &:not(:last-child) {
+      margin-bottom: rem(95);
+      //== 992px ==//
+      @media (max-width: $tb) {
+        margin-bottom: rem(65);
+      }
+      //== 576px ==//
+      @media (max-width: $mb-m) {
+        margin-bottom: rem(50);
+      }
+    }
+  }
+
   &__delivery.delivery_alone {
     &:not(:last-child) {
       margin-bottom: rem(80);

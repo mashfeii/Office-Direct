@@ -23,7 +23,6 @@
     }
     p {
       max-width: rem(515);
-      @extend %f-20-400;
       color: rgba(0, 0, 0, 0.7);
       &:not(:last-child) {
         margin-bottom: rem(10);
@@ -35,6 +34,9 @@
       svg {
         margin-bottom: auto;
       }
+      p {
+        @extend %f-20-400;
+      }
       min-height: rem(580);
       padding: rem(57);
       grid-column: span 6;
@@ -42,6 +44,10 @@
     }
 
     &_2 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       padding: rem(54) rem(22);
       text-align: center;
       color: #4d413b;

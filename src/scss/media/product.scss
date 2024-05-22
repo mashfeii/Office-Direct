@@ -1,16 +1,30 @@
 .product {
   &_covered.product_light {
-    .product__container {
-      @media (max-width: $pc) {
-        margin-left: rem(15);
-        margin-right: rem(15);
-      }
-    }
     .product__body {
       //== 576px ==//
       @media (max-width: $mb-m) {
         padding-left: 0;
         padding-right: 0;
+      }
+    }
+    .product__cover {
+      //== 768px ==//
+      @media (max-width: $mb) {
+        &::before {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          border-radius: rem(5);
+          left: 0;
+          background-color: rgba(0, 0, 0, 0.4);
+        }
+      }
+      //== 576px ==//
+      @media (max-width: $mb-m) {
+        padding-left: rem(20);
+        padding-right: rem(20);
       }
     }
   }

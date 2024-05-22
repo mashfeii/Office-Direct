@@ -26,6 +26,12 @@
   }
   &__button {
     margin-top: rem(44);
+    .button {
+      @extend %f-20-500;
+      font-weight: 600;
+      padding-left: rem(35);
+      padding-right: rem(35);
+    }
   }
 }
 .vertical-card {

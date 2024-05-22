@@ -101,7 +101,7 @@
 
   &__subtitle {
     &:not(:last-child) {
-      margin-bottom: rem(24);
+      margin-bottom: rem(6);
     }
     img {
       width: rem(30);
@@ -112,14 +112,22 @@
       margin-right: rem(6);
     }
   }
+  &__description {
+    color: var(--clr-main);
+  }
 
   &__navigation {
     display: flex;
-    gap: rem(25);
+    gap: rem(24);
   }
 
   &__button {
-    @include adaptiveValue("font-size", 40, 20);
+    flex: 0 0 rem(24);
+    svg {
+      width: rem(24);
+      height: rem(24);
+    }
+
     transition: opacity 0.32s ease;
     &.slick-disabled {
       pointer-events: none;

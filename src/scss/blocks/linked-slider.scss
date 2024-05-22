@@ -45,6 +45,7 @@
   }
 
   &__text {
+    color: var(--clr-main);
     &:not(:last-child) {
       margin-bottom: rem(3);
     }

@@ -235,10 +235,15 @@
   }
   svg {
     &:not(:last-child) {
-      //== 576px ==//
-      @media (max-width: $mb-m) {
+      @media (max-width: $mb) {
         margin-bottom: rem(6);
       }
+    }
+    //== 768px ==//
+    @media (max-width: $mb) {
+      flex: 0 0 rem(36);
+      width: rem(36);
+      height: rem(36);
     }
   }
   &__description {

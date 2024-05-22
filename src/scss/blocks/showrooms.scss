@@ -9,12 +9,13 @@
 
   text-align: center;
   &__title {
+    font-weight: 600;
     &:not(:last-child) {
       margin-bottom: rem(13);
     }
   }
   p {
-    @extend %f-22-500;
+    @extend %f-22-400;
   }
   p:not(:last-child) {
     margin-bottom: rem(7);

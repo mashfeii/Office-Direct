@@ -3,11 +3,11 @@
 .form {
   &__item {
     font-weight: 500;
-    @include adaptiveValue("font-size", 24, 16);
+    @include adaptiveValue("font-size", 20, 16);
     line-height: 100%;
     letter-spacing: -0.03em;
     > p:not(:last-child) {
-      margin-bottom: rem(14);
+      margin-bottom: rem(18);
     }
   }
 }
@@ -15,11 +15,10 @@
   display: inline-flex;
   align-items: center;
   background-color: var(--clr-light);
-  padding-left: rem(19);
-  padding-right: rem(19);
+  padding-left: rem(13);
+  padding-right: rem(13);
   border-radius: rem(10);
   height: rem(44);
-  overflow: hidden;
 
   //== 576px ==//
   @media (max-width: $mb-m) {
@@ -36,18 +35,17 @@
     align-items: center;
   }
 
-  > span::before,
-  > span:last-child::after {
+  > span:not(:first-child)::before {
     content: ".";
     display: flex;
     align-items: center;
     justify-content: center;
-    flex: 0 0 rem(36);
-    width: rem(36);
+    flex: 0 0 rem(30);
+    width: rem(30);
 
     text-align: center;
     @include adaptiveValue("font-size", 20, 14);
-    transform: translateY(-20%);
+    transform: translateY(-30%);
     letter-spacing: -0.03em;
     color: rgba(0, 0, 0, 0.2);
 
@@ -61,21 +59,47 @@
     cursor: pointer;
   }
 
+  span label span {
+    position: relative;
+    z-index: 2;
+  }
+
   span input {
     display: none;
     & + label {
+      position: relative;
       display: block;
-      padding: rem(9) rem(17);
-      border-radius: rem(10);
-      border: rem(6) solid transparent;
+      padding: rem(9) rem(18);
+      margin-top: rem(4);
+      margin-bottom: rem(4);
 
       font-weight: 500;
-      @include adaptiveValue("font-size", 20, 14);
+      @include adaptiveValue("font-size", 18, 14);
       line-height: 100%;
       letter-spacing: -0.03em;
       color: var(--clr-main);
 
-      transition: all 0.32s ease-in-out;
+      transition: color 0.32s ease;
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        border-radius: rem(10);
+        background-color: #1860cc;
+        box-shadow:
+          0px 8px 14px -3px rgba(25, 82, 194, 0.6),
+          0px 3px 3px -2px rgba(25, 82, 194, 0.7);
+        transform: scale(0);
+        opacity: 0;
+
+        transition:
+          transform 0.32s ease,
+          opacity 0.2s ease;
+      }
 
       //== 576px ==//
       @media (max-width: $mb-m) {
@@ -84,10 +108,12 @@
       }
     }
     &:checked + label {
-      transform: scale(1.2);
-      color: var(--clr-blue);
-      background-color: #d5e2fc;
+      color: var(--clr-white);
       border-color: var(--clr-white);
+      &::before {
+        transform: scale(1);
+        opacity: 1;
+      }
 
       .complete_bg & {
         border-color: var(--clr-grey-light);

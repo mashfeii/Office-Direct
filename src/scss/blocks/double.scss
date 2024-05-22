@@ -84,13 +84,11 @@
       position: absolute;
       width: rem(70);
       height: rem(70);
-      border-radius: 100%;
-      border: rem(8) solid;
-      border-color: transparent rgba(23, 23, 23, 0.3) rgba(23, 23, 23, 0.3) rgba(23, 23, 23, 0.3);
+      @extend %bg-con;
+      background-image: url("@img/icons/bordered-circle.svg");
       .benefit_dark & {
-        border-color: transparent var(--clr-black) var(--clr-black) var(--clr-black);
+        background-image: url("@img/icons/bordered-circle-dark.svg");
       }
-      transform: rotate(45deg);
     }
   }
 }

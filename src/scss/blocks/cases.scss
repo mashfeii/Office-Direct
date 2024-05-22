@@ -8,6 +8,10 @@
   &__images {
     cursor: grab;
     @extend %ml;
+    padding-left: rem(5);
+    @media (min-width: em(1729.98)) {
+      padding-left: rem(20);
+    }
   }
 
   &__image {

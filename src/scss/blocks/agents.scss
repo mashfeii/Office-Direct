@@ -83,6 +83,9 @@
     &._fw {
       max-width: none;
     }
+    .inner_about & {
+      max-width: rem(920);
+    }
     max-width: rem(835);
     font-weight: 400;
     @include adaptiveValue("font-size", 24, 16);
@@ -95,13 +98,18 @@
       width: rem(25);
       height: rem(19);
       vertical-align: middle;
+      margin-left: rem(8);
     }
     a {
       color: var(--clr-blue);
-      transition: color 0.32s ease-in-out;
+      transition: opacity 0.32s ease-in-out;
+      &:link,
+      &:visited {
+        text-decoration: underline;
+      }
       @media (any-hover: hover) {
         &:hover {
-          color: var(--clr-green);
+          opacity: 0.8;
         }
       }
     }
@@ -118,6 +126,7 @@
   }
 
   &__advantages {
+    margin-top: rem(60);
     display: flex;
     gap: rem(60);
   }
@@ -179,6 +188,12 @@
     margin-top: rem(78);
     &:not(:last-child) {
       margin-bottom: rem(40);
+    }
+    &.inner__icon-benefits_flex {
+      display: flex;
+      column-gap: rem(40);
+      row-gap: rem(20);
+      flex-wrap: wrap;
     }
   }
   &__icon-benefit {
