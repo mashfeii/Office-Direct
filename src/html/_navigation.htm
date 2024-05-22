@@ -1,6 +1,286 @@
 <nav class="general-navigation">
-  <button data-target="catalog" class="general-navigation__button">Каталог</button>
+  <button data-menu data-target="catalog" class="general-navigation__button">Каталог</button>
   <a href="order.html" class="general-navigation__button"> Заказ </a>
-  <button data-target="about" class="general-navigation__button">О нас</button>
-  <button data-target="showrooms" class="general-navigation__button">Шоурумы</button>
+  <button data-menu data-target="about" class="general-navigation__button">О нас</button>
+  <button data-menu data-target="showrooms-menu" class="general-navigation__button">Шоурумы</button>
+
+  <button data-menu class="general-navigation__close">
+    <svg>
+      <use xlink:href="@img/icons/icons.svg#cross" />
+    </svg>
+  </button>
 </nav>
+
+<div class="navigation-cover">
+  <div class="navigation-cover__container container">
+    <div class="navigation-cover__logo">
+      <img src="@img/mobile-logo.svg" alt="Логотип нашей компании" />
+    </div>
+    <div class="navigation-cover__body catalog">
+      <ul class="menu__list">
+        <li class="menu__item">
+          <a href="javascript:void(0);" class="menu__link">
+            <svg class="menu__icon">
+              <use xlink:href="@img/icons/icons.svg#order-cart" />
+            </svg>
+            <span>Мой заказ</span></a
+          >
+        </li>
+        <li class="menu__item">
+          <a href="javascript:void(0);" class="menu__link">
+            <svg class="menu__icon">
+              <use xlink:href="@img/icons/icons.svg#director" />
+            </svg>
+            <span>Директор</span></a
+          >
+        </li>
+        <li class="menu__item">
+          <a href="javascript:void(0);" class="menu__link">
+            <svg class="menu__icon">
+              <use xlink:href="@img/icons/icons.svg#employees" />
+            </svg>
+            <span>Сотрудники</span></a
+          >
+        </li>
+        <li class="menu__item">
+          <a href="javascript:void(0);" class="menu__link">
+            <svg class="menu__icon">
+              <use xlink:href="@img/icons/icons.svg#container" />
+            </svg>
+            <span>Хранение</span></a
+          >
+        </li>
+        <li class="menu__item">
+          <a href="javascript:void(0);" class="menu__link">
+            <svg class="menu__icon">
+              <use xlink:href="@img/icons/icons.svg#meeting" />
+            </svg>
+            <span>Переговорная</span>
+          </a>
+        </li>
+        <li class="menu__item">
+          <a href="javascript:void(0);" class="menu__link">
+            <svg class="menu__icon">
+              <use xlink:href="@img/icons/icons.svg#reception" />
+            </svg>
+            <span>Ресепшн</span>
+          </a>
+        </li>
+        <li class="menu__item">
+          <a href="javascript:void(0);" class="menu__link">
+            <svg class="menu__icon">
+              <use xlink:href="@img/icons/icons.svg#chair" />
+            </svg>
+            <span>Кресла</span>
+          </a>
+        </li>
+        <li class="menu__item">
+          <a href="javascript:void(0);" class="menu__link">
+            <svg class="menu__icon">
+              <use xlink:href="@img/icons/icons.svg#sofa" />
+            </svg>
+            <span>Диваны</span>
+          </a>
+        </li>
+        <li class="menu__item">
+          <a href="javascript:void(0);" class="menu__link">
+            <svg class="menu__icon">
+              <use xlink:href="@img/icons/icons.svg#mute" />
+            </svg>
+            <span>Звукоизоляция</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="navigation-cover__body about">
+      <div class="navigation-cover__menu menu">
+        <nav class="menu__body">
+          <ul class="menu__list">
+            <li class="menu__item"><a href="javascript:void(0);" class="menu__link">О компании</a></li>
+            <li class="menu__item"><a href="javascript:void(0);" class="menu__link">Партнерская программа</a></li>
+            <li class="menu__item"><a href="javascript:void(0);" class="menu__link">Франшиза</a></li>
+            <li class="menu__item"><a href="javascript:void(0);" class="menu__link">Дизайнерам</a></li>
+            <li class="menu__item"><a href="javascript:void(0);" class="menu__link">Шоурумы</a></li>
+          </ul>
+        </nav>
+      </div>
+      <a href="tel:+78127750775" class="aside__phone">8 812 775 07 75</a>
+      <a data-fancybox data-src="#answer" class="aside__button button button_small">
+        <svg>
+          <use xlink:href="@img/icons/icons.svg#particles" />
+        </svg>
+        <span>Получить решение</span>
+      </a>
+    </div>
+    <div class="navigation-cover__body showrooms-menu">
+      <div data-spollers class="spollers">
+        <div class="spollers__item">
+          <button type="button" data-spoller class="spollers__title">Москва</button>
+          <div class="spollers__body">
+            <div class="spollers__item info-block">
+              <div class="info-block__item _underground">
+                <span>Александра Невского</span>
+              </div>
+              <div class="info-block__item _location">
+                <span>Красного Текстильщика, 10-12, Единый Центр Документов</span>
+              </div>
+              <div class="info-block__item _phone">
+                <a href="tel:+78123350777">+7 (812) 335-07-77</a>
+              </div>
+              <div class="info-block__item _timetable">
+                <span>Пн-Пт: с 10:00 до 18:00</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="spollers__item">
+          <button type="button" data-spoller class="spollers__title">Санкт-Петербург</button>
+          <div class="spollers__body">
+            <div class="spollers__item info-block">
+              <div class="info-block__item _underground">
+                <span>Чкаловская или Спортивная</span>
+              </div>
+              <div class="info-block__item _location">
+                <span>Красного Курсанта, 25В, бизнес-центр "RED CADET"</span>
+              </div>
+              <div class="info-block__item _phone">
+                <a href="tel:+78123350971">+7 (812) 335-09-71</a>
+              </div>
+              <div class="info-block__item _timetable">
+                <span>Пн-Пт: с 10:00 до 18:00</span>
+              </div>
+            </div>
+            <div class="spollers__item info-block">
+              <div class="info-block__item _underground">
+                <span>Александра Невского</span>
+              </div>
+              <div class="info-block__item _location">
+                <span>Красного Текстильщика, 10-12, Единый Центр Документов</span>
+              </div>
+              <div class="info-block__item _phone">
+                <a href="tel:+78123350777">+7 (812) 335-07-77</a>
+              </div>
+              <div class="info-block__item _timetable">
+                <span>Пн-Пт: с 10:00 до 18:00</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="spollers__item">
+          <button type="button" data-spoller class="spollers__title">Волгоград</button>
+          <div class="spollers__body">
+            <div class="spollers__item info-block">
+              <div class="info-block__item _underground">
+                <span>Александра Невского</span>
+              </div>
+              <div class="info-block__item _location">
+                <span>Красного Текстильщика, 10-12, Единый Центр Документов</span>
+              </div>
+              <div class="info-block__item _phone">
+                <a href="tel:+78123350777">+7 (812) 335-07-77</a>
+              </div>
+              <div class="info-block__item _timetable">
+                <span>Пн-Пт: с 10:00 до 18:00</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="spollers__item">
+          <button type="button" data-spoller class="spollers__title">Екатеринбург</button>
+          <div class="spollers__body">
+            <div class="spollers__item info-block">
+              <div class="info-block__item _underground">
+                <span>Александра Невского</span>
+              </div>
+              <div class="info-block__item _location">
+                <span>Красного Текстильщика, 10-12, Единый Центр Документов</span>
+              </div>
+              <div class="info-block__item _phone">
+                <a href="tel:+78123350777">+7 (812) 335-07-77</a>
+              </div>
+              <div class="info-block__item _timetable">
+                <span>Пн-Пт: с 10:00 до 18:00</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="spollers__item">
+          <button type="button" data-spoller class="spollers__title">Казань</button>
+          <div class="spollers__body">
+            <div class="spollers__item info-block">
+              <div class="info-block__item _underground">
+                <span>Александра Невского</span>
+              </div>
+              <div class="info-block__item _location">
+                <span>Красного Текстильщика, 10-12, Единый Центр Документов</span>
+              </div>
+              <div class="info-block__item _phone">
+                <a href="tel:+78123350777">+7 (812) 335-07-77</a>
+              </div>
+              <div class="info-block__item _timetable">
+                <span>Пн-Пт: с 10:00 до 18:00</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="spollers__item">
+          <button type="button" data-spoller class="spollers__title">Ростов-на-Дону</button>
+          <div class="spollers__body">
+            <div class="spollers__item info-block">
+              <div class="info-block__item _underground">
+                <span>Александра Невского</span>
+              </div>
+              <div class="info-block__item _location">
+                <span>Красного Текстильщика, 10-12, Единый Центр Документов</span>
+              </div>
+              <div class="info-block__item _phone">
+                <a href="tel:+78123350777">+7 (812) 335-07-77</a>
+              </div>
+              <div class="info-block__item _timetable">
+                <span>Пн-Пт: с 10:00 до 18:00</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="spollers__item">
+          <button type="button" data-spoller class="spollers__title">Красноярск</button>
+          <div class="spollers__body">
+            <div class="spollers__item info-block">
+              <div class="info-block__item _underground">
+                <span>Александра Невского</span>
+              </div>
+              <div class="info-block__item _location">
+                <span>Красного Текстильщика, 10-12, Единый Центр Документов</span>
+              </div>
+              <div class="info-block__item _phone">
+                <a href="tel:+78123350777">+7 (812) 335-07-77</a>
+              </div>
+              <div class="info-block__item _timetable">
+                <span>Пн-Пт: с 10:00 до 18:00</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="spollers__item">
+          <button type="button" data-spoller class="spollers__title">Нижний Новгород</button>
+          <div class="spollers__body">
+            <div class="spollers__item info-block">
+              <div class="info-block__item _underground">
+                <span>Александра Невского</span>
+              </div>
+              <div class="info-block__item _location">
+                <span>Красного Текстильщика, 10-12, Единый Центр Документов</span>
+              </div>
+              <div class="info-block__item _phone">
+                <a href="tel:+78123350777">+7 (812) 335-07-77</a>
+              </div>
+              <div class="info-block__item _timetable">
+                <span>Пн-Пт: с 10:00 до 18:00</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

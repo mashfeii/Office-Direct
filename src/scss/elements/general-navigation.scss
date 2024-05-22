@@ -23,7 +23,41 @@
   color: var(--clr-white);
   white-space: nowrap;
 
+  transition: transform 0.6s ease;
+
   &__button {
     background-color: transparent;
+    transition: all 0.4s ease;
+  }
+
+  .menu-open & {
+    transform: translateX(-50%) translateY(rem(-22));
+    transition: transform 0.6s ease;
+  }
+  .menu-open &.hidden {
+    transform: translateX(-50%) translateY(rem(100));
+    transition: transform 0.2s ease;
+  }
+  &.hidden {
+    transform: translateX(-50%) translateY(rem(100));
+    transition: transform 0.2s ease;
+  }
+
+  &__close {
+    align-items: center;
+    justify-content: center;
+    display: none;
+    opacity: 0;
+    svg {
+      width: rem(20);
+      height: rem(20);
+      fill: var(--clr-white);
+    }
+    transition: opacity 0.38s ease;
+  }
+
+  .menu-open &:not(.hidden) .general-navigation__close {
+    display: flex;
+    opacity: 1;
   }
 }

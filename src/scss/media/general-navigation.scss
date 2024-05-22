@@ -5,10 +5,7 @@
   }
   //== 576px ==//
   @media (max-width: $mb-m) {
-    left: rem(22);
-    right: rem(22);
-    transform: none;
-    gap: rem(10);
+    gap: rem(28);
     justify-content: space-between;
   }
 }
