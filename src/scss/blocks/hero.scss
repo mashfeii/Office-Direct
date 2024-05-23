@@ -72,11 +72,13 @@
   }
 
   &__slide {
-    button {
+    button,
+    a {
       display: inline-flex;
       align-items: center;
       gap: rem(10);
     }
+    a img,
     button img {
       flex: 0 0 rem(20);
       width: rem(20);
