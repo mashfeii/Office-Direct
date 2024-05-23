@@ -146,71 +146,7 @@
             </div>
           </div>
         </div>
-        <section class="page__complete complete complete_bg">
-          <div class="complete__container container">
-            <h2 class="title complete__title">Готовое решение для вашего офиса — сейчас</h2>
-            <form action="#" class="complete__form">
-              <label class="form__item">
-                <p>Укажите количество сотрудников</p>
-                <p class="radio-select">
-                  <span>
-                    <input type="radio" name="employee-quantity" id="radio1" value="2" />
-                    <label for="radio1"><span>2</span></label>
-                  </span>
-                  <span>
-                    <input type="radio" name="employee-quantity" id="radio2" value="4" checked />
-                    <label for="radio2"><span>4</span></label>
-                  </span>
-                  <span>
-                    <input type="radio" name="employee-quantity" id="radio3" value="6" />
-                    <label for="radio3"><span>6</span></label>
-                  </span>
-                  <span>
-                    <input type="radio" name="employee-quantity" id="radio4" value="8+" />
-                    <label for="radio4"><span>8+</span></label>
-                  </span>
-                </p>
-              </label>
-              <label class="form__item">
-                <p>Выберите комплектацию</p>
-                <p class="checkboxes">
-                  <span class="checkbox">
-                    <input type="checkbox" name="configuration" id="check1" />
-                    <label for="check1">
-                      <span class="radio-select"></span>
-                      Акустические панели
-                    </label>
-                  </span>
-                  <span class="checkbox">
-                    <input type="checkbox" name="configuration" id="check2" />
-                    <label for="check2">
-                      <span class="radio-select"></span>
-                      Кресла
-                    </label>
-                  </span>
-                  <span class="checkbox">
-                    <input type="checkbox" name="configuration" id="check3" />
-                    <label for="check3">
-                      <span class="radio-select"></span>
-                      Тумбы
-                    </label>
-                  </span>
-                  <span class="checkbox">
-                    <input type="checkbox" name="configuration" id="check4" />
-                    <label for="check4">
-                      <span class="radio-select"></span>
-                      Шкафы
-                    </label>
-                  </span>
-                </p>
-              </label>
-              <label>
-                <input class="button form__button" type="submit" value="Получить предложение &rarr;" />
-              </label>
-            </form>
-          </div>
-        </section>
-        @@include('html/_opotrunities.htm', {})
+        @@include('html/_complete-bg.htm') @@include('html/_opotrunities.htm', {})
       </main>
       @@include('html/_footer.htm',{})
     </div>
