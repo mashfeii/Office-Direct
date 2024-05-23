@@ -114,3 +114,13 @@ if (document.querySelector(".tabs-card__colors")) {
     });
   });
 }
+
+$(".footer__link").mouseenter(function () {
+  $(`.footer__image-2`).removeClass("_active");
+  $(`.footer__image-${$(this).attr("data-src").substring(10)}`).addClass("_active");
+});
+
+$(".footer__link").mouseleave(function () {
+  $(`.footer__image-${$(this).attr("data-src").substring(10)}`).removeClass("_active");
+  $(`.footer__image-2`).addClass("_active");
+});
