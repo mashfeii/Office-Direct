@@ -124,3 +124,32 @@ $(".footer__link").mouseleave(function () {
   $(`.footer__image-${$(this).attr("data-src").substring(10)}`).removeClass("_active");
   $(`.footer__image-2`).addClass("_active");
 });
+
+$("a").on("click", function (event) {
+  if (this.hash !== "") {
+    event.preventDefault();
+    var hash = this.hash;
+    $("html, body").animate(
+      {
+        scrollTop: $(hash).offset().top,
+      },
+      600,
+      function () {
+        window.location.hash = hash;
+      }
+    );
+  }
+});
+console.log($("input[type='checkbox'][name='configuration'"));
+$("input[type='checkbox'][name='configuration'").change(function () {
+  const imageElement = 
+  $(this)
+    .closest(".complete")
+    .find(`img[data-target="${$(this).attr("value")}"]`);
+  if ($(this).is(":checked")) {
+
+  } else {
+
+  }
+    .addClass("_active");
+});

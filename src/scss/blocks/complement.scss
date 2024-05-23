@@ -18,10 +18,12 @@
     width: 110%;
     height: 110%;
     @extend %bg-con;
-    background-image: url("@img/complete/background.png");
+    // background-image: url("@img/complete/background.png");
   }
 
   &__container {
+    position: relative;
+    z-index: 2;
   }
 
   &__title {
@@ -35,6 +37,28 @@
     display: flex;
     flex-direction: column;
     gap: rem(30);
+  }
+
+  &__image {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    @extend %bg-con;
+    background-image: url("@img/complete/bg.svg");
+
+    img {
+      position: absolute;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+      &._active {
+        opacity: 1;
+      }
+    }
   }
 }
 .form {

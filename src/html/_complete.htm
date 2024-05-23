@@ -1,4 +1,4 @@
-<section class="complete">
+<section class="complete" id="complete-hero">
   <div class="complete__container container">
     <h2 class="title complete__title">
       Готовое решение <br />
@@ -30,28 +30,28 @@
         <p>Выберите комплектацию</p>
         <p class="checkboxes">
           <span class="checkbox">
-            <input type="checkbox" name="configuration" id="check1" />
+            <input type="checkbox" name="configuration" id="check1" value="acoustics" />
             <label for="check1">
               <span class="radio-select"></span>
               Акустика
             </label>
           </span>
           <span class="checkbox">
-            <input type="checkbox" name="configuration" id="check2" />
+            <input type="checkbox" name="configuration" id="check2" value="chairs" />
             <label for="check2">
               <span class="radio-select"></span>
               Кресла
             </label>
           </span>
           <span class="checkbox">
-            <input type="checkbox" name="configuration" id="check3" />
+            <input type="checkbox" name="configuration" id="check3" value="storage" />
             <label for="check3">
               <span class="radio-select"></span>
               Тумбы
             </label>
           </span>
           <span class="checkbox">
-            <input type="checkbox" name="configuration" id="check4" />
+            <input type="checkbox" name="configuration" id="check4" value="storage" />
             <label for="check4">
               <span class="radio-select"></span>
               Шкафы
@@ -63,5 +63,11 @@
         <input class="button form__button" type="submit" value="Получить предложение &rarr;" />
       </label>
     </form>
+  </div>
+  <div class="complete__image">
+    <img src="@img/complete/table.png" alt="" data-target="default" class="_active" aria-hidden="true" />
+    <img src="@img/complete/acoustics.png" alt="" data-target="acoustics" aria-hidden="true" />
+    <img src="@img/complete/chairs.png" alt="" data-target="chairs" aria-hidden="true" />
+    <img src="@img/complete/storage.png" alt="" data-target="storage" aria-hidden="true" />
   </div>
 </section>
