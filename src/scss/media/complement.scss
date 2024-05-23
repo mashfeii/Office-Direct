@@ -15,6 +15,24 @@
       padding-top: rem(40);
       padding-bottom: rem(40);
     }
+    .complete__image {
+      //== 1200px ==//
+      @media (max-width: $note-m) {
+        bottom: rem(105);
+      }
+      //== 992px ==//
+      @media (max-width: $tb) {
+        bottom: rem(95);
+      }
+      //== 768px ==//
+      @media (max-width: $mb) {
+        bottom: rem(105);
+      }
+      //== 440px ==//
+      @media (max-width: $mb-s) {
+        bottom: rem(30);
+      }
+    }
   }
   &.complete_modal {
     //== 768px ==//
@@ -35,8 +53,13 @@
 
   //== 1440px ==//
   @media (max-width: $note-xl) {
+    padding-top: rem(100);
+    padding-bottom: rem(80);
+  }
+  //== 1200px ==//
+  @media (max-width: $note-m) {
     padding-top: rem(80);
-    padding-bottom: rem(40);
+    padding-bottom: rem(20);
   }
   //== 992px ==//
   @media (max-width: $tb) {
@@ -46,32 +69,6 @@
   //== 576px ==//
   @media (max-width: $mb-m) {
     padding-top: 0;
-  }
-
-  &::before {
-    //== 1360px ==//
-    @media (max-width: $note-l) {
-      right: -35%;
-    }
-    //== 1200px ==//
-    @media (max-width: $note-m) {
-      right: -45%;
-    }
-    //== 992px ==//
-    @media (max-width: $tb) {
-      right: -35%;
-    }
-    //== 768px ==//
-    @media (max-width: $mb) {
-      right: auto;
-      left: 0;
-      bottom: -25%;
-    }
-    //== 576px ==//
-    @media (max-width: $mb-m) {
-      left: -10%;
-      bottom: -28%;
-    }
   }
 
   &__title {
@@ -89,16 +86,114 @@
       gap: rem(20);
     }
   }
-}
-.form {
-  &__button {
+
+  &__image {
+    //== 1440px ==//
+    @media (max-width: $note-xl) {
+      bottom: rem(-50);
+      right: rem(-120);
+    }
+    //== 1360px ==//
+    @media (max-width: $note-l) {
+      bottom: rem(-70);
+      width: 70%;
+    }
+    //== 1200px ==//
+    @media (max-width: $note-m) {
+      right: auto;
+      left: var(--aside-width);
+      width: rem(720);
+      bottom: rem(55);
+      background-size: 100%;
+      background-position: 20% 98%;
+    }
+    //== 992px ==//
+    @media (max-width: $tb) {
+      bottom: rem(35);
+    }
     //== 768px ==//
     @media (max-width: $mb) {
-      margin-top: rem(350);
+      width: rem(540);
+      bottom: rem(55);
+      background-size: 150%;
+      background-position: 25% 110%;
+    }
+    //== 576px ==//
+    @media (max-width: $mb-m) {
+      width: rem(420);
     }
     //== 440px ==//
     @media (max-width: $mb-s) {
+      bottom: rem(30);
+    }
+
+    img {
+      &._storage {
+        bottom: rem(-5);
+      }
+      //== 1440px ==//
+      @media (max-width: $note-xl) {
+        right: rem(-50);
+      }
+      //== 1360px ==//
+      @media (max-width: $note-l) {
+        max-width: 100%;
+        object-fit: contain;
+        &._storage {
+          bottom: -2.5%;
+        }
+      }
+      @media (max-width: em(1249.98)) {
+        &._storage {
+          bottom: -3%;
+        }
+      }
+      //== 1200px ==//
+      @media (max-width: $note-m) {
+        &._storage {
+          bottom: rem(-33);
+        }
+      }
+      //== 768px ==//
+      @media (max-width: $mb) {
+        &._storage {
+          bottom: rem(-50);
+        }
+      }
+      //== 576px ==//
+      @media (max-width: $mb-m) {
+        &._storage {
+          bottom: rem(-62);
+        }
+      }
+      //== 440px ==//
+      @media (max-width: $mb-s) {
+        right: 0;
+        bottom: rem(-60);
+        &._storage {
+          bottom: rem(-22);
+        }
+      }
+    }
+  }
+}
+.form {
+  &__button {
+    //== 1200px ==//
+    @media (max-width: $note-m) {
+      margin-top: rem(450);
+    }
+    //== 768px ==//
+    @media (max-width: $mb) {
+      margin-top: rem(340);
+    }
+    //== 576px ==//
+    @media (max-width: $mb-m) {
       margin-top: rem(260);
+    }
+    //== 440px ==//
+    @media (max-width: $mb-s) {
+      margin-top: rem(200);
     }
   }
 }

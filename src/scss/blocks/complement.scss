@@ -5,21 +5,9 @@
     padding-bottom: rem(93);
   }
   position: relative;
-  padding-top: rem(127);
+  overflow: hidden;
+  padding-top: rem(120);
   padding-bottom: rem(148);
-
-  &::before {
-    content: "";
-    pointer-events: none;
-    position: absolute;
-
-    right: -27%;
-    bottom: -12%;
-    width: 110%;
-    height: 110%;
-    @extend %bg-con;
-    // background-image: url("@img/complete/background.png");
-  }
 
   &__container {
     position: relative;
@@ -44,19 +32,24 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 60%;
+    width: 80%;
     height: 100%;
-    top: 0;
-    right: 0;
+    bottom: 0;
+    right: rem(-100);
     @extend %bg-con;
     background-image: url("@img/complete/bg.svg");
 
     img {
       position: absolute;
+      bottom: rem(-100);
+      right: 0;
       opacity: 0;
       transition: opacity 0.5s ease;
       &._active {
         opacity: 1;
+      }
+      &._storage {
+        bottom: rem(-5);
       }
     }
   }

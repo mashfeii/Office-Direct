@@ -1,11 +1,7 @@
 .page {
   &__hero {
     &:not(:last-child) {
-      margin-bottom: rem(65);
-      //== 992px ==//
-      @media (max-width: $tb) {
-        margin-bottom: rem(55);
-      }
+      margin-bottom: rem(15);
       //== 576px ==//
       @media (max-width: $mb-m) {
         margin-bottom: rem(35);

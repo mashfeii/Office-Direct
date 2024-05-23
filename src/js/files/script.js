@@ -142,14 +142,13 @@ $("a").on("click", function (event) {
 });
 console.log($("input[type='checkbox'][name='configuration'"));
 $("input[type='checkbox'][name='configuration'").change(function () {
-  const imageElement = 
-  $(this)
+  const imageElement = $(this)
     .closest(".complete")
     .find(`img[data-target="${$(this).attr("value")}"]`);
-  if ($(this).is(":checked")) {
-
+  console.log($(this).closest("form"));
+  if ($(this).is(":checked") && $(this).attr("value") != "") {
+    imageElement.addClass("_active");
   } else {
-
+    imageElement.removeClass("_active");
   }
-    .addClass("_active");
 });
