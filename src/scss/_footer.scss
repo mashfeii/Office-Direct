@@ -5,13 +5,57 @@
   }
 
   &__upper {
+    position: relative;
     padding-top: rem(80);
     padding-bottom: rem(77);
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
 
+  &__image {
+    position: absolute;
+    right: rem(-20);
+    bottom: 0;
+    width: 50%;
+    height: 100%;
     background-repeat: no-repeat;
-    background-position: right top;
-    background-image: url("@img/footer.png");
+    background-size: cover;
+    background-position: center top;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+
+    &._active {
+      opacity: 1;
+    }
+  }
+  &__image.footer__image-1 {
+    background-image: url("@img/footer/footer-1.png");
+  }
+  &__image.footer__image-2 {
+    background-image: url("@img/footer/footer-2.png");
+  }
+  &__image.footer__image-3 {
+    background-image: url("@img/footer/footer-3.png");
+  }
+  &__image.footer__image-4 {
+    background-image: url("@img/footer/footer-4.png");
+  }
+  &__image.footer__image-5 {
+    background-image: url("@img/footer/footer-5.png");
+  }
+  &__image.footer__image-6 {
+    background-image: url("@img/footer/footer-6.png");
+  }
+  &__image.footer__image-7 {
+    background-image: url("@img/footer/footer-7.png");
+  }
+  &__image.footer__image-8 {
+    background-image: url("@img/footer/footer-8.png");
+  }
+  &__image.footer__image-9 {
+    background-image: url("@img/footer/footer-9.png");
+  }
+  &__image.footer__image-10 {
+    background-image: url("@img/footer/footer-10.png");
   }
 
   &__content {
@@ -19,12 +63,16 @@
   }
 
   &__title {
+    position: relative;
+    z-index: 2;
     &:not(:last-child) {
       margin-bottom: rem(18);
     }
   }
 
   &__list {
+    position: relative;
+    z-index: 2;
     display: flex;
     flex-wrap: wrap;
     column-gap: rem(17);

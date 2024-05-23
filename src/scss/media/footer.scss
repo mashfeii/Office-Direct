@@ -4,27 +4,32 @@
   }
 
   &__upper {
-    //== 1440px ==//
-    @media (max-width: $note-xl) {
-      position: relative;
+    //== 1200px ==//
+    @media (max-width: $note-m) {
       padding-bottom: rem(240);
-      background-image: none;
-      &::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        height: rem(240);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center top;
-        background-image: url("@img/footer.png");
-      }
     }
     //== 768px ==//
     @media (max-width: $mb) {
       padding-top: rem(47);
+    }
+  }
+  &__image {
+    //== 1200px ==//
+    @media (max-width: $note-m) {
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: rem(320);
+      background-size: cover;
+      background-position: center top;
+    }
+    //== 768px ==//
+    @media (max-width: $mb) {
+      height: rem(280);
+    }
+    //== 576px ==//
+    @media (max-width: $mb-m) {
+      bottom: rem(-30);
     }
   }
   &__title {
