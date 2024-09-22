@@ -100,7 +100,11 @@ body {
 
 .page {
   &_order {
-    padding-top: rem(77);
+    padding-top: rem(160);
+    //== 992px ==//
+    @media (max-width: $tb) {
+      padding-top: rem(60);
+    }
   }
   > *:not(:last-child) {
     margin-bottom: rem(135);
@@ -203,5 +207,6 @@ body {
 @import "blocks/configuraiton";
 @import "blocks/components";
 @import "elements/general-navigation";
+@import "blocks/cart-body";
 
 @import "media";

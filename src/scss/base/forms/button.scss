@@ -99,6 +99,9 @@
     .button__arrow {
       color: var(--clr-black);
     }
+    svg {
+      fill: var(--clr-black);
+    }
     @media (any-hover: hover) {
       &:hover {
         color: rgba(0, 0, 0, 1);

@@ -136,6 +136,7 @@
 // Снипет (HTML): inp
 @import "input";
 
+@import "quantity";
 // <CHECK>
 // Снипет (HTML): chk
 @import "checkbox";
@@ -189,7 +190,8 @@
     }
     input:focus {
       + span span {
-        transform: translateY(calc(-50% - rem(25))) translateX(rem(-10)) scale(0.8);
+        transform: translateY(calc(-50% - rem(25))) translateX(rem(-10))
+          scale(0.8);
       }
     }
   }
