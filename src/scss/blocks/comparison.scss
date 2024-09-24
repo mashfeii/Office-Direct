@@ -406,6 +406,10 @@
       0px 10px 10px rgba(0, 0, 0, 0.05),
       0px 2px 2px rgba(0, 0, 0, 0.04);
     border-radius: rem(8);
+
+    @media (max-width: $tb) {
+      padding: rem(8) rem(14);
+    }
   }
   &__final {
     flex: 0 0 rem(24);
@@ -447,12 +451,54 @@
     }
   }
 
+  &__ready {
+    position: absolute;
+    top: rem(10);
+    right: rem(10);
+    @extend %fl-r-ct;
+    gap: rem(9);
+    padding: rem(15) rem(14) rem(17) rem(16);
+    background-color: var(--clr-white);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow:
+      0px 10px 10px rgba(0, 0, 0, 0.05),
+      0px 2px 2px rgba(0, 0, 0, 0.04);
+    border-radius: rem(8);
+
+    font-weight: 600;
+    line-height: 100%;
+    letter-spacing: -0.02em;
+
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(rem(6));
+    @include adaptiveValue("font-size", 14, 12);
+
+    &::before {
+      content: "";
+      flex: 0 0 rem(16);
+      width: rem(16);
+      height: rem(16);
+      @extend %bg-con;
+      background-image: url("@img/icons/check-product.svg");
+    }
+
+    @media (max-width: $tb) {
+      padding: rem(8) rem(14);
+    }
+  }
+
   &._handling .product-item__add {
     visibility: hidden;
     opacity: 0;
     transform: translateY(rem(6));
   }
   &._handling .product-item__handling {
+    visibility: visible;
+    opacity: 1;
+    transform: none;
+  }
+  &._ready .product-item__ready {
     visibility: visible;
     opacity: 1;
     transform: none;

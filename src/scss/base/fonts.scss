@@ -1,163 +1,163 @@
 //* Настройки стилей для повторяющихся начертаний
 %f-17-400 {
   font-weight: 400;
-  @include adaptiveValue("font-size", 17, 15.5);
   line-height: 140%;
+  @include adaptiveValue("font-size", 17, 15.5);
 }
 .f-17-400 {
   @extend %f-17-400;
 }
 %f-17-600 {
   font-weight: 600;
-  @include adaptiveValue("font-size", 17, 15.5);
   line-height: 140%;
   letter-spacing: -0.02em;
+  @include adaptiveValue("font-size", 17, 15.5);
 }
 .f-17-600 {
   @extend %f-17-600;
 }
 %f-20-400 {
   font-weight: 400;
-  @include adaptiveValue("font-size", 20, 16);
   line-height: 140%;
+  @include adaptiveValue("font-size", 20, 16);
 }
 .f-20-400 {
   @extend %f-20-400;
 }
 %f-20-500 {
   font-weight: 500;
-  @include adaptiveValue("font-size", 20, 16);
   line-height: 140%;
+  @include adaptiveValue("font-size", 20, 16);
 }
 .f-20-500 {
   @extend %f-20-500;
 }
 %f-22-500 {
   font-weight: 500;
-  @include adaptiveValue("font-size", 22, 16);
   line-height: 130%;
   letter-spacing: -0.03em;
+  @include adaptiveValue("font-size", 22, 16);
 }
 .f-22-500 {
   @extend %f-22-500;
 }
 %f-22-400 {
   font-weight: 400;
-  @include adaptiveValue("font-size", 22, 16);
   line-height: 130%;
   letter-spacing: -0.03em;
+  @include adaptiveValue("font-size", 22, 16);
 }
 .f-22-400 {
   @extend %f-22-400;
 }
 %f-24-400 {
   font-weight: 400;
-  @include adaptiveValue("font-size", 24, 16);
   line-height: 140%;
+  @include adaptiveValue("font-size", 24, 16);
 }
 .f-24-400 {
   @extend %f-24-400;
 }
 %f-24-500 {
-  @include adaptiveValue("font-size", 24, 16);
   line-height: 130%;
   letter-spacing: -0.02em;
+  @include adaptiveValue("font-size", 24, 16);
 }
 .f-24-500 {
   @extend %f-24-500;
 }
 %f-24-600 {
   font-weight: 600;
-  @include adaptiveValue("font-size", 24, 16);
   line-height: 130%;
   letter-spacing: -0.02em;
+  @include adaptiveValue("font-size", 24, 16);
 }
 .f-24-600 {
   @extend %f-24-600;
 }
 %f-25-400 {
   font-weight: 400;
-  @include adaptiveValue("font-size", 25, 18);
   line-height: 140%;
   letter-spacing: -0.02em;
+  @include adaptiveValue("font-size", 25, 18);
 }
 .f-25-400 {
   @extend %f-25-400;
 }
 %f-25-500 {
   font-weight: 500;
-  @include adaptiveValue("font-size", 25, 18);
   line-height: 110%;
   letter-spacing: -0.03em;
+  @include adaptiveValue("font-size", 25, 18);
 }
 .f-25-500 {
   @extend %f-25-500;
 }
 %f-28-500 {
   font-weight: 500;
-  @include adaptiveValue("font-size", 28, 18);
   line-height: 120%;
   letter-spacing: -0.03em;
+  @include adaptiveValue("font-size", 28, 18);
 }
 .f-28-500 {
   @extend %f-28-500;
 }
 %f-30-600 {
   font-weight: 600;
-  @include adaptiveValue("font-size", 30, 22);
   line-height: 120%;
   letter-spacing: -0.02em;
+  @include adaptiveValue("font-size", 30, 22);
 }
 .f-30-600 {
   @extend %f-30-600;
 }
 %f-34-500 {
   font-weight: 500;
-  @include adaptiveValue("font-size", 34, 22);
   line-height: 110%;
   letter-spacing: -0.02em;
+  @include adaptiveValue("font-size", 34, 22);
 }
 .f-34-500 {
   @extend %f-34-500;
 }
 %f-34-600 {
   font-weight: 600;
-  @include adaptiveValue("font-size", 34, 20);
   line-height: 130%;
+  @include adaptiveValue("font-size", 34, 20);
 }
 .f-34-600 {
   @extend %f-34-600;
 }
 %f-35-500 {
   font-weight: 500;
-  @include adaptiveValue("font-size", 35, 22);
   line-height: 120%;
   letter-spacing: -0.02em;
+  @include adaptiveValue("font-size", 35, 22);
 }
 .f-35-500 {
   @extend %f-35-500;
 }
 %f-35-600 {
   font-weight: 600;
-  @include adaptiveValue("font-size", 35, 22);
   line-height: 120%;
   letter-spacing: -0.03em;
+  @include adaptiveValue("font-size", 35, 22);
 }
 .f-35-600 {
   @extend %f-35-600;
 }
 %f-36-500 {
   font-weight: 500;
-  @include adaptiveValue("font-size", 36, 24);
   line-height: 120%;
   letter-spacing: -0.03em;
+  @include adaptiveValue("font-size", 36, 24);
 }
 .f-36-500 {
   @extend %f-36-500;
 }
 %f-120-600 {
   font-weight: 600;
-  @include adaptiveValue("font-size", 120, 60);
   line-height: 120%;
   letter-spacing: -0.05em;
+  @include adaptiveValue("font-size", 120, 60);
 }
