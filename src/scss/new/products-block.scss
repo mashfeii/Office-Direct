@@ -1,0 +1,11 @@
+.products-block {
+  &__title {
+    font-weight: 600;
+    &:not(:last-child) {
+      margin-bottom: em(24, 40);
+    }
+  }
+  &__body {
+    row-gap: rem(40);
+  }
+}
