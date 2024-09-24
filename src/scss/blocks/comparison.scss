@@ -209,7 +209,6 @@
   &__image {
     position: relative;
     @extend %fl-a-ct;
-    flex: 0 1 rem(288);
     max-height: rem(288);
     background-color: rgba(255, 255, 255, 0.03);
 
@@ -264,12 +263,8 @@
 
   &__sizes {
     display: flex;
-    gap: rem(20);
-
-    //== 992px ==//
-    @media (max-width: $tb) {
-      gap: rem(8);
-    }
+    justify-content: space-between;
+    gap: rem(8);
 
     //== 768px ==//
     @media (max-width: $mb) {
@@ -367,7 +362,7 @@
     @include adaptiveValue("font-size", 14, 12);
   }
 
-  &__add {
+  &__add.button {
     position: absolute;
     z-index: 2;
     right: rem(10);
@@ -386,10 +381,92 @@
     transform: translateY(rem(6));
     transition: all 0.32s ease-in-out;
     @include adaptiveValue("font-size", 14, 12);
+
+    @media (max-width: $tb) {
+      padding: rem(8) rem(14);
+    }
   }
 
+  &__handling {
+    position: absolute;
+    top: rem(10);
+    right: rem(10);
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(rem(6));
+    transition: all 0.32s ease-in-out;
+
+    width: min-content;
+    @extend %fl-r-ct;
+    padding: rem(16) rem(12) rem(16) rem(14);
+    gap: rem(18);
+    background-color: var(--clr-white);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow:
+      0px 10px 10px rgba(0, 0, 0, 0.05),
+      0px 2px 2px rgba(0, 0, 0, 0.04);
+    border-radius: rem(8);
+  }
+  &__final {
+    flex: 0 0 rem(24);
+    width: rem(24);
+    height: rem(24);
+    @extend %bg-con;
+    background-image: url("@img/icons/cart-final.svg");
+  }
+
+  &__quantity.quantity {
+    flex: 0 0 rem(73);
+    width: rem(73);
+    height: rem(18);
+    flex-direction: row;
+    min-height: 0;
+    padding: 0;
+    .quantity__button {
+      flex: 0 0 rem(18);
+      width: rem(18);
+      height: rem(18);
+      border-radius: 100%;
+      border: none;
+      box-shadow: none;
+      position: relative;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .quantity__input input {
+      font-weight: 600;
+      font-size: rem(14);
+      line-height: 100%;
+      letter-spacing: -0.02em;
+      background-color: transparent;
+      color: var(--clr-black);
+    }
+    .quantity__button::before,
+    .quantity__button::after {
+      background-color: var(--clr-black);
+    }
+  }
+
+  &._handling .product-item__add {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(rem(6));
+  }
+  &._handling .product-item__handling {
+    visibility: visible;
+    opacity: 1;
+    transform: none;
+  }
+
+  @media (any-hover: none) {
+    .product-item__add {
+      visibility: visible;
+      opacity: 1;
+      transform: none;
+    }
+  }
   @media (any-hover: hover) {
-    &:hover {
+    &:not(._handling):hover {
       .product-item__add {
         visibility: visible;
         opacity: 1;

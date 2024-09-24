@@ -8,4 +8,27 @@
   &__body {
     row-gap: rem(40);
   }
+  &__item {
+    //== 1200px ==//
+    @media (max-width: $note-m) {
+      grid-column: span 4;
+    }
+    //== 768px ==//
+    @media (max-width: $mb) {
+      grid-column: span 2;
+    }
+    @media (max-width: em(669.98)) {
+      grid-column: span 3;
+    }
+    //== 440px ==//
+    @media (max-width: $mb-s) {
+      grid-column: span 6;
+
+      .product-item__sizes {
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: rem(20);
+      }
+    }
+  }
 }
