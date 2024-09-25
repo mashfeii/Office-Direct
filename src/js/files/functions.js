@@ -6,37 +6,43 @@ export function isWebp() {
   // Проверка поддержки webp
   function testWebP(callback) {
     let webP = new Image();
-    webP.onload = webP.onerror = function () {
+    webP.onload = webP.onerror = function() {
       callback(webP.height == 2);
     };
     webP.src =
       "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA";
   }
   // Добавление класса _webp или _no-webp для HTML
-  testWebP(function (support) {
+  testWebP(function(support) {
     let className = support === true ? "webp" : "no-webp";
     document.documentElement.classList.add(className);
   });
 }
 /* Проверка мобильного браузера */
 export let isMobile = {
-  Android: function () {
+  Android: function() {
     return navigator.userAgent.match(/Android/i);
   },
-  BlackBerry: function () {
+  BlackBerry: function() {
     return navigator.userAgent.match(/BlackBerry/i);
   },
-  iOS: function () {
+  iOS: function() {
     return navigator.userAgent.match(/iPhone|iPad|iPod/i);
   },
-  Opera: function () {
+  Opera: function() {
     return navigator.userAgent.match(/Opera Mini/i);
   },
-  Windows: function () {
+  Windows: function() {
     return navigator.userAgent.match(/IEMobile/i);
   },
-  any: function () {
-    return isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows();
+  any: function() {
+    return (
+      isMobile.Android() ||
+      isMobile.BlackBerry() ||
+      isMobile.iOS() ||
+      isMobile.Opera() ||
+      isMobile.Windows()
+    );
   },
 };
 /* Добавление класса touch для HTML если браузер мобильный */
@@ -46,8 +52,8 @@ export function addTouchClass() {
 }
 // Добавление loaded для HTML после полной загрузки страницы
 export function addLoadedClass() {
-  window.addEventListener("load", function () {
-    setTimeout(function () {
+  window.addEventListener("load", function() {
+    setTimeout(function() {
       document.documentElement.classList.add("loaded");
     }, 0);
   });
@@ -106,7 +112,7 @@ export let _slideUp = (target, duration = 500, showmore = 0) => {
           detail: {
             target: target,
           },
-        })
+        }),
       );
     }, duration);
   }
@@ -143,7 +149,7 @@ export let _slideDown = (target, duration = 500, showmore = 0) => {
           detail: {
             target: target,
           },
-        })
+        }),
       );
     }, duration);
   }
@@ -177,7 +183,7 @@ export let bodyUnlock = (delay = 500) => {
       document.documentElement.classList.remove("lock");
     }, delay);
     bodyLockStatus = false;
-    setTimeout(function () {
+    setTimeout(function() {
       bodyLockStatus = true;
     }, delay);
   }
@@ -188,13 +194,17 @@ export let bodyLock = (delay = 500) => {
     let lock_padding = document.querySelectorAll("[data-lp]");
     for (let index = 0; index < lock_padding.length; index++) {
       const el = lock_padding[index];
-      el.style.paddingRight = window.innerWidth - document.querySelector(".wrapper").offsetWidth + "px";
+      el.style.paddingRight =
+        window.innerWidth -
+        document.querySelector(".wrapper").offsetWidth +
+        "px";
     }
-    body.style.paddingRight = window.innerWidth - document.querySelector(".wrapper").offsetWidth + "px";
+    body.style.paddingRight =
+      window.innerWidth - document.querySelector(".wrapper").offsetWidth + "px";
     document.documentElement.classList.add("lock");
 
     bodyLockStatus = false;
-    setTimeout(function () {
+    setTimeout(function() {
       bodyLockStatus = true;
     }, delay);
   }
@@ -219,9 +229,11 @@ export function spollers() {
   const spollersArray = document.querySelectorAll("[data-spollers]");
   if (spollersArray.length > 0) {
     // Получение обычных слойлеров
-    const spollersRegular = Array.from(spollersArray).filter(function (item, index, self) {
-      return !item.dataset.spollers.split(",")[0];
-    });
+    const spollersRegular = Array.from(spollersArray).filter(
+      function(item, index, self) {
+        return !item.dataset.spollers.split(",")[0];
+      },
+    );
     // Инициализация обычных слойлеров
     if (spollersRegular.length) {
       initSpollers(spollersRegular);
@@ -231,7 +243,7 @@ export function spollers() {
     if (mdQueriesArray && mdQueriesArray.length) {
       mdQueriesArray.forEach((mdQueriesItem) => {
         // Событие
-        mdQueriesItem.matchMedia.addEventListener("change", function () {
+        mdQueriesItem.matchMedia.addEventListener("change", function() {
           initSpollers(mdQueriesItem.itemsArray, mdQueriesItem.matchMedia);
         });
         initSpollers(mdQueriesItem.itemsArray, mdQueriesItem.matchMedia);
@@ -256,7 +268,9 @@ export function spollers() {
     function initSpollerBody(spollersBlock, hideSpollerBody = true) {
       let spollerTitles = spollersBlock.querySelectorAll("[data-spoller]");
       if (spollerTitles.length) {
-        spollerTitles = Array.from(spollerTitles).filter((item) => item.closest("[data-spollers]") === spollersBlock);
+        spollerTitles = Array.from(spollerTitles).filter(
+          (item) => item.closest("[data-spollers]") === spollersBlock,
+        );
         spollerTitles.forEach((spollerTitle) => {
           if (hideSpollerBody) {
             spollerTitle.removeAttribute("tabindex");
@@ -276,9 +290,14 @@ export function spollers() {
         const spollerTitle = el.closest("[data-spoller]");
         const spollersBlock = spollerTitle.closest("[data-spollers]");
         const oneSpoller = spollersBlock.hasAttribute("data-one-spoller");
-        const spollerSpeed = spollersBlock.dataset.spollersSpeed ? parseInt(spollersBlock.dataset.spollersSpeed) : 500;
+        const spollerSpeed = spollersBlock.dataset.spollersSpeed
+          ? parseInt(spollersBlock.dataset.spollersSpeed)
+          : 500;
         if (!spollersBlock.querySelectorAll("._slide").length) {
-          if (oneSpoller && !spollerTitle.classList.contains("_spoller-active")) {
+          if (
+            oneSpoller &&
+            !spollerTitle.classList.contains("_spoller-active")
+          ) {
             hideSpollersBody(spollersBlock);
           }
           spollerTitle.classList.toggle("_spoller-active");
@@ -288,9 +307,16 @@ export function spollers() {
       }
     }
     function hideSpollersBody(spollersBlock) {
-      const spollerActiveTitle = spollersBlock.querySelector("[data-spoller]._spoller-active");
-      const spollerSpeed = spollersBlock.dataset.spollersSpeed ? parseInt(spollersBlock.dataset.spollersSpeed) : 500;
-      if (spollerActiveTitle && !spollersBlock.querySelectorAll("._slide").length) {
+      const spollerActiveTitle = spollersBlock.querySelector(
+        "[data-spoller]._spoller-active",
+      );
+      const spollerSpeed = spollersBlock.dataset.spollersSpeed
+        ? parseInt(spollersBlock.dataset.spollersSpeed)
+        : 500;
+      if (
+        spollerActiveTitle &&
+        !spollersBlock.querySelectorAll("._slide").length
+      ) {
         spollerActiveTitle.classList.remove("_spoller-active");
         _slideUp(spollerActiveTitle.nextElementSibling, spollerSpeed);
       }
@@ -298,7 +324,7 @@ export function spollers() {
     // Закрытие при клике вне спойлера
     const spollersClose = document.querySelectorAll("[data-spoller-close]");
     if (spollersClose.length) {
-      document.addEventListener("click", function (e) {
+      document.addEventListener("click", function(e) {
         const el = e.target;
         if (!el.closest("[data-spollers]")) {
           spollersClose.forEach((spollerClose) => {
@@ -350,7 +376,7 @@ export function tabs() {
     if (mdQueriesArray && mdQueriesArray.length) {
       mdQueriesArray.forEach((mdQueriesItem) => {
         // Событие
-        mdQueriesItem.matchMedia.addEventListener("change", function () {
+        mdQueriesItem.matchMedia.addEventListener("change", function() {
           setTitlePosition(mdQueriesItem.itemsArray, mdQueriesItem.matchMedia);
         });
         setTitlePosition(mdQueriesItem.itemsArray, mdQueriesItem.matchMedia);
@@ -365,8 +391,12 @@ export function tabs() {
       let tabsTitleItems = tabsMediaItem.querySelectorAll("[data-tabs-title]");
       let tabsContent = tabsMediaItem.querySelector("[data-tabs-body]");
       let tabsContentItems = tabsMediaItem.querySelectorAll("[data-tabs-item]");
-      tabsTitleItems = Array.from(tabsTitleItems).filter((item) => item.closest("[data-tabs]") === tabsMediaItem);
-      tabsContentItems = Array.from(tabsContentItems).filter((item) => item.closest("[data-tabs]") === tabsMediaItem);
+      tabsTitleItems = Array.from(tabsTitleItems).filter(
+        (item) => item.closest("[data-tabs]") === tabsMediaItem,
+      );
+      tabsContentItems = Array.from(tabsContentItems).filter(
+        (item) => item.closest("[data-tabs]") === tabsMediaItem,
+      );
       tabsContentItems.forEach((tabsContentItem, index) => {
         if (matchMedia.matches) {
           tabsContent.append(tabsTitleItems[index]);
@@ -387,12 +417,18 @@ export function tabs() {
     const tabsActiveHashBlock = tabsActiveHash[0] == tabsBlockIndex;
 
     if (tabsActiveHashBlock) {
-      const tabsActiveTitle = tabsBlock.querySelector("[data-tabs-titles]>._tab-active");
+      const tabsActiveTitle = tabsBlock.querySelector(
+        "[data-tabs-titles]>._tab-active",
+      );
       tabsActiveTitle ? tabsActiveTitle.classList.remove("_tab-active") : null;
     }
     if (tabsContent.length) {
-      tabsContent = Array.from(tabsContent).filter((item) => item.closest("[data-tabs]") === tabsBlock);
-      tabsTitles = Array.from(tabsTitles).filter((item) => item.closest("[data-tabs]") === tabsBlock);
+      tabsContent = Array.from(tabsContent).filter(
+        (item) => item.closest("[data-tabs]") === tabsBlock,
+      );
+      tabsTitles = Array.from(tabsTitles).filter(
+        (item) => item.closest("[data-tabs]") === tabsBlock,
+      );
       tabsContent.forEach((tabsContentItem, index) => {
         tabsTitles[index].setAttribute("data-tabs-title", "");
         tabsContentItem.setAttribute("data-tabs-item", "");
@@ -400,7 +436,8 @@ export function tabs() {
         if (tabsActiveHashBlock && index == tabsActiveHash[1]) {
           tabsTitles[index].classList.add("_tab-active");
         }
-        tabsContentItem.hidden = !tabsTitles[index].classList.contains("_tab-active");
+        tabsContentItem.hidden =
+          !tabsTitles[index].classList.contains("_tab-active");
       });
     }
   }
@@ -410,14 +447,20 @@ export function tabs() {
     const tabsBlockIndex = tabsBlock.dataset.tabsIndex;
     function isTabsAnamate(tabsBlock) {
       if (tabsBlock.hasAttribute("data-tabs-animate")) {
-        return tabsBlock.dataset.tabsAnimate > 0 ? Number(tabsBlock.dataset.tabsAnimate) : 500;
+        return tabsBlock.dataset.tabsAnimate > 0
+          ? Number(tabsBlock.dataset.tabsAnimate)
+          : 500;
       }
     }
     const tabsBlockAnimate = isTabsAnamate(tabsBlock);
     if (tabsContent.length > 0) {
       const isHash = tabsBlock.hasAttribute("data-tabs-hash");
-      tabsContent = Array.from(tabsContent).filter((item) => item.closest("[data-tabs]") === tabsBlock);
-      tabsTitles = Array.from(tabsTitles).filter((item) => item.closest("[data-tabs]") === tabsBlock);
+      tabsContent = Array.from(tabsContent).filter(
+        (item) => item.closest("[data-tabs]") === tabsBlock,
+      );
+      tabsTitles = Array.from(tabsTitles).filter(
+        (item) => item.closest("[data-tabs]") === tabsBlock,
+      );
       tabsContent.forEach((tabsContentItem, index) => {
         if (tabsTitles[index].classList.contains("_tab-active")) {
           if (tabsBlockAnimate) {
@@ -443,12 +486,21 @@ export function tabs() {
     if (el.closest("[data-tabs-title]")) {
       const tabTitle = el.closest("[data-tabs-title]");
       const tabsBlock = tabTitle.closest("[data-tabs]");
-      if (!tabTitle.classList.contains("_tab-active") && !tabsBlock.querySelector("._slide")) {
-        let tabActiveTitle = tabsBlock.querySelectorAll("[data-tabs-title]._tab-active");
+      if (
+        !tabTitle.classList.contains("_tab-active") &&
+        !tabsBlock.querySelector("._slide")
+      ) {
+        let tabActiveTitle = tabsBlock.querySelectorAll(
+          "[data-tabs-title]._tab-active",
+        );
         tabActiveTitle.length
-          ? (tabActiveTitle = Array.from(tabActiveTitle).filter((item) => item.closest("[data-tabs]") === tabsBlock))
+          ? (tabActiveTitle = Array.from(tabActiveTitle).filter(
+            (item) => item.closest("[data-tabs]") === tabsBlock,
+          ))
           : null;
-        tabActiveTitle.length ? tabActiveTitle[0].classList.remove("_tab-active") : null;
+        tabActiveTitle.length
+          ? tabActiveTitle[0].classList.remove("_tab-active")
+          : null;
         tabTitle.classList.add("_tab-active");
         setTabsStatus(tabsBlock);
       }
@@ -457,33 +509,67 @@ export function tabs() {
   }
 }
 // Модуль работы с меню (бургер) =======================================================================================================================================================================================================================
+export function moreInit() {
+  if (document.querySelector("[data-more-open]")) {
+    document.addEventListener("click", function(e) {
+      if (e.target.closest("[data-more-block]")) {
+        if (
+          e.target.closest("[data-more-content]") &&
+          !e.target.closest("[data-more-close]")
+        ) {
+          return;
+        }
+        document.documentElement.classList = "";
+        bodyUnlock();
+      }
+      if (bodyLockStatus && e.target.closest("[data-more-open]")) {
+        bodyLockToggle();
+        if (document.documentElement.classList.contains("more-show")) {
+          document.documentElement.classList = "";
+        } else {
+          document.documentElement.classList.add("more-show");
+        }
+      }
+    });
+  }
+}
 export function menuInit() {
   if (document.querySelector("[data-menu]")) {
-    document.addEventListener("click", function (e) {
+    document.addEventListener("click", function(e) {
       if (bodyLockStatus && e.target.closest("[data-menu]")) {
-        const menuBody = e.target.closest("[data-menu]").getAttribute("data-target");
+        const menuBody = e.target
+          .closest("[data-menu]")
+          .getAttribute("data-target");
         bodyLockToggle();
         if (document.documentElement.classList.contains("menu-open")) {
           document.documentElement.classList = "";
 
           e.target.closest(".general-navigation").classList.add("hidden");
-          document.querySelectorAll(".general-navigation__button").forEach((item) => {
-            setTimeout(() => {
-              item.style.display = "block";
-              e.target.closest(".general-navigation").classList.remove("hidden");
-            }, 400);
-          });
+          document
+            .querySelectorAll(".general-navigation__button")
+            .forEach((item) => {
+              setTimeout(() => {
+                item.style.display = "block";
+                e.target
+                  .closest(".general-navigation")
+                  .classList.remove("hidden");
+              }, 400);
+            });
         } else {
           document.documentElement.classList.add("menu-open");
           document.documentElement.classList.add(menuBody);
 
           e.target.closest(".general-navigation").classList.add("hidden");
-          document.querySelectorAll(".general-navigation__button").forEach((item) => {
-            setTimeout(() => {
-              item.style.display = "none";
-              e.target.closest(".general-navigation").classList.remove("hidden");
-            }, 400);
-          });
+          document
+            .querySelectorAll(".general-navigation__button")
+            .forEach((item) => {
+              setTimeout(() => {
+                item.style.display = "none";
+                e.target
+                  .closest(".general-navigation")
+                  .classList.remove("hidden");
+              }, 400);
+            });
         }
       }
     });
@@ -507,15 +593,17 @@ data-showmore-button="скорость"
 Сниппет (HTML): showmore
 */
 export function showMore() {
-  window.addEventListener("load", function (e) {
+  window.addEventListener("load", function(e) {
     const showMoreBlocks = document.querySelectorAll("[data-showmore]");
     let showMoreBlocksRegular;
     let mdQueriesArray;
     if (showMoreBlocks.length) {
       // Получение обычных объектов
-      showMoreBlocksRegular = Array.from(showMoreBlocks).filter(function (item, index, self) {
-        return !item.dataset.showmoreMedia;
-      });
+      showMoreBlocksRegular = Array.from(showMoreBlocks).filter(
+        function(item, index, self) {
+          return !item.dataset.showmoreMedia;
+        },
+      );
       // Инициализация обычных объектов
       showMoreBlocksRegular.length ? initItems(showMoreBlocksRegular) : null;
 
@@ -527,7 +615,7 @@ export function showMore() {
       if (mdQueriesArray && mdQueriesArray.length) {
         mdQueriesArray.forEach((mdQueriesItem) => {
           // Событие
-          mdQueriesItem.matchMedia.addEventListener("change", function () {
+          mdQueriesItem.matchMedia.addEventListener("change", function() {
             initItems(mdQueriesItem.itemsArray, mdQueriesItem.matchMedia);
           });
         });
@@ -546,13 +634,17 @@ export function showMore() {
     }
     function initItem(showMoreBlock, matchMedia = false) {
       showMoreBlock = matchMedia ? showMoreBlock.item : showMoreBlock;
-      let showMoreContent = showMoreBlock.querySelectorAll("[data-showmore-content]");
-      let showMoreButton = showMoreBlock.querySelectorAll("[data-showmore-button]");
+      let showMoreContent = showMoreBlock.querySelectorAll(
+        "[data-showmore-content]",
+      );
+      let showMoreButton = showMoreBlock.querySelectorAll(
+        "[data-showmore-button]",
+      );
       showMoreContent = Array.from(showMoreContent).filter(
-        (item) => item.closest("[data-showmore]") === showMoreBlock
+        (item) => item.closest("[data-showmore]") === showMoreBlock,
       )[0];
       showMoreButton = Array.from(showMoreButton).filter(
-        (item) => item.closest("[data-showmore]") === showMoreBlock
+        (item) => item.closest("[data-showmore]") === showMoreBlock,
       )[0];
       const hiddenHeight = getHeight(showMoreBlock, showMoreContent);
       if (matchMedia.matches || !matchMedia) {
@@ -570,9 +662,13 @@ export function showMore() {
     }
     function getHeight(showMoreBlock, showMoreContent) {
       let hiddenHeight = 0;
-      const showMoreType = showMoreBlock.dataset.showmore ? showMoreBlock.dataset.showmore : "size";
+      const showMoreType = showMoreBlock.dataset.showmore
+        ? showMoreBlock.dataset.showmore
+        : "size";
       if (showMoreType === "items") {
-        const showMoreTypeValue = showMoreContent.dataset.showmoreContent ? showMoreContent.dataset.showmoreContent : 3;
+        const showMoreTypeValue = showMoreContent.dataset.showmoreContent
+          ? showMoreContent.dataset.showmoreContent
+          : 3;
         const showMoreItems = showMoreContent.children;
         for (let index = 1; index < showMoreItems.length; index++) {
           const showMoreItem = showMoreItems[index - 1];
@@ -607,8 +703,12 @@ export function showMore() {
         if (targetEvent.closest("[data-showmore-button]")) {
           const showMoreButton = targetEvent.closest("[data-showmore-button]");
           const showMoreBlock = showMoreButton.closest("[data-showmore]");
-          const showMoreContent = showMoreBlock.querySelector("[data-showmore-content]");
-          const showMoreSpeed = showMoreBlock.dataset.showmoreButton ? showMoreBlock.dataset.showmoreButton : "500";
+          const showMoreContent = showMoreBlock.querySelector(
+            "[data-showmore-content]",
+          );
+          const showMoreSpeed = showMoreBlock.dataset.showmoreButton
+            ? showMoreBlock.dataset.showmoreButton
+            : "500";
           const hiddenHeight = getHeight(showMoreBlock, showMoreContent);
           if (!showMoreContent.classList.contains("_slide")) {
             showMoreBlock.classList.contains("_showmore-active")
@@ -618,8 +718,12 @@ export function showMore() {
           }
         }
       } else if (targetType === "resize") {
-        showMoreBlocksRegular && showMoreBlocksRegular.length ? initItems(showMoreBlocksRegular) : null;
-        mdQueriesArray && mdQueriesArray.length ? initItemsMedia(mdQueriesArray) : null;
+        showMoreBlocksRegular && showMoreBlocksRegular.length
+          ? initItems(showMoreBlocksRegular)
+          : null;
+        mdQueriesArray && mdQueriesArray.length
+          ? initItemsMedia(mdQueriesArray)
+          : null;
       }
     }
   });
@@ -652,7 +756,7 @@ export function removeClasses(array, className) {
 }
 // Уникализация массива
 export function uniqArray(array) {
-  return array.filter(function (item, index, self) {
+  return array.filter(function(item, index, self) {
     return self.indexOf(item) === index;
   });
 }
@@ -664,7 +768,7 @@ export function indexInParent(parent, element) {
 // Обработа медиа запросов из атрибутов
 export function dataMediaQueries(array, dataSetValue) {
   // Получение объектов с медиа запросами
-  const media = Array.from(array).filter(function (item, index, self) {
+  const media = Array.from(array).filter(function(item, index, self) {
     if (item.dataset[dataSetValue]) {
       return item.dataset[dataSetValue].split(",")[0];
     }
@@ -682,8 +786,17 @@ export function dataMediaQueries(array, dataSetValue) {
       breakpointsArray.push(breakpoint);
     });
     // Получаем уникальные брейкпоинты
-    let mdQueries = breakpointsArray.map(function (item) {
-      return "(" + item.type + "-width: " + item.value + "px)," + item.value + "," + item.type;
+    let mdQueries = breakpointsArray.map(function(item) {
+      return (
+        "(" +
+        item.type +
+        "-width: " +
+        item.value +
+        "px)," +
+        item.value +
+        "," +
+        item.type
+      );
     });
     mdQueries = uniqArray(mdQueries);
     const mdQueriesArray = [];
@@ -696,7 +809,7 @@ export function dataMediaQueries(array, dataSetValue) {
         const mediaType = paramsArray[2];
         const matchMedia = window.matchMedia(paramsArray[0]);
         // Объекты с нужными условиями
-        const itemsArray = breakpointsArray.filter(function (item) {
+        const itemsArray = breakpointsArray.filter(function(item) {
           if (item.value === mediaBreakpoint && item.type === mediaType) {
             return true;
           }

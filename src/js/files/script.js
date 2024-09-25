@@ -145,6 +145,39 @@ $(document).ready(function() {
       speed: 800,
     });
   });
+  $(".current-product_series").each(function() {
+    const mainSlider = $(this).find(".current-product__slider");
+    const thumbsSlider = $(this).find(".current-product__thumbs");
+    mainSlider.slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+      fade: true,
+      asNavFor: thumbsSlider,
+    });
+    thumbsSlider.slick({
+      slidesToShow: 5,
+      slidesToScroll: 1,
+      asNavFor: mainSlider,
+      dots: false,
+      arrows: false,
+      focusOnSelect: true,
+      responsive: [
+        {
+          breakpoint: 1360,
+          settings: {
+            slidesToShow: 4,
+          },
+        },
+        {
+          breakpoint: 992,
+          settings: {
+            slidesToShow: 3,
+          },
+        },
+      ],
+    });
+  });
 });
 
 // Tabs with colors
@@ -231,6 +264,6 @@ document.addEventListener("click", function(e) {
   const target = e.target;
   if (target.closest(".product-item__add")) {
     const item = target.closest(".product-item");
-    item.classList.add('_handling')
+    item.classList.add("_handling");
   }
 });
