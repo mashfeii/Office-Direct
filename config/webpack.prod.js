@@ -11,7 +11,9 @@ const srcFolder = "src";
 const builFolder = "dist";
 const rootFolder = path.basename(path.resolve());
 
-let pugPages = fs.readdirSync(srcFolder).filter((fileName) => fileName.endsWith(".pug"));
+let pugPages = fs
+  .readdirSync(srcFolder)
+  .filter((fileName) => fileName.endsWith(".pug"));
 let htmlPages = [];
 
 if (!pugPages.length) {
@@ -119,7 +121,7 @@ const config = {
           minify: false,
           template: `${srcFolder}/${pugPage}`,
           filename: `../${pugPage.replace(/\.pug/, ".html")}`,
-        })
+        }),
     ),
     new MiniCssExtractPlugin({
       filename: "../css/style.css",
@@ -128,11 +130,6 @@ const config = {
       patterns: [
         {
           from: `${paths.src}/files`,
-          to: `../files`,
-          noErrorOnMissing: true,
-        },
-        {
-          from: `${paths.src}/favicon.ico`,
           to: `../`,
           noErrorOnMissing: true,
         },
@@ -144,6 +141,7 @@ const config = {
       "@scss": `${paths.src}/scss`,
       "@js": `${paths.src}/js`,
       "@img": `${paths.src}/img`,
+      "@temp": `${paths.src}/temp`,
     },
   },
 };
