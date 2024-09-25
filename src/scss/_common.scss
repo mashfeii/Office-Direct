@@ -174,3 +174,10 @@ p._strong {
   background-size: rem(20);
   background-image: url("@img/icons/trash.svg");
 }
+
+.row-slider__header .row-slider__title:not(:last-child) {
+  margin-bottom: 0;
+}
+.row-slider__title span {
+  color: rgba(0, 0, 0, 0.4);
+}
