@@ -388,11 +388,28 @@
     @include adaptiveValue("font-size", 14, 12);
   }
 
-  &__add.button {
+  &__share-link {
+    flex: 0 0 rem(44);
+    width: rem(44);
+    height: rem(44);
+    background-color: var(--clr-white);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow:
+      0px 10px 10px rgba(0, 0, 0, 0.05),
+      0px 2px 2px rgba(0, 0, 0, 0.04);
+    border-radius: rem(8);
+  }
+
+  &__first {
+    @extend %fl-r-ct;
+    gap: rem(7);
     position: absolute;
     z-index: 2;
     right: rem(10);
     top: rem(10);
+  }
+
+  &__add.button {
     padding: rem(13) rem(16) rem(15);
     border: 1px solid rgba(0, 0, 0, 0.1);
     box-shadow:

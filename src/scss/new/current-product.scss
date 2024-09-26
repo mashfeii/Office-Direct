@@ -107,7 +107,7 @@
     @include adaptiveValue("font-size", 18, 16);
 
     &:not(:last-child) {
-      margin-bottom: em(5, 18);
+      margin-bottom: em(25, 18);
     }
   }
   &__subtitle {
@@ -144,7 +144,11 @@
     gap: rem(50);
 
     .current-product.current-product_series & {
-      grid-template-columns: 1fr rem(450);
+      grid-template-columns: 1fr rem(490);
+
+      @media (max-width: $pc) {
+        grid-template-columns: 1fr rem(460);
+      }
 
       //== 1360px ==//
       @media (max-width: $note-l) {
@@ -196,7 +200,7 @@
     @extend %f-35-600;
 
     &:not(:last-child) {
-      margin-bottom: em(33, 35);
+      margin-bottom: em(24, 35);
     }
   }
 
@@ -205,6 +209,9 @@
     flex-wrap: wrap;
     column-gap: rem(24);
     row-gap: rem(6);
+    &:first-child:not(:last-child) {
+      margin-bottom: rem(24);
+    }
     &:not(:last-child) {
       margin-bottom: rem(33);
     }
@@ -365,5 +372,58 @@
     box-shadow:
       0px 10px 10px rgba(0, 0, 0, 0.05),
       0px 2px 2px rgba(0, 0, 0, 0.04);
+  }
+}
+
+.share {
+  position: relative;
+
+  > button:hover ~ .share__body,
+  > button:focus-within ~ .share__body,
+  > button:focus ~ .share__body {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, 0);
+  }
+
+  &__body {
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    padding: rem(12) rem(24);
+    border-radius: rem(8);
+    background-color: var(--clr-white);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow:
+      0px 10px 10px rgba(0, 0, 0, 0.05),
+      0px 2px 2px rgba(0, 0, 0, 0.04);
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(-50%, rem(6));
+    transition: all 0.32s ease-in-out;
+
+    @media (any-hover: hover) {
+      &:hover {
+        opacity: 1;
+        visibility: visible;
+        transform: translate(-50%, 0);
+      }
+    }
+  }
+
+  &__row {
+    width: 100%;
+    @extend %fl-r-ct;
+    gap: rem(12);
+  }
+  &__row button {
+    flex: 0 0 rem(24);
+    width: rem(24);
+    height: rem(24);
+  }
+  &__row button img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
   }
 }
