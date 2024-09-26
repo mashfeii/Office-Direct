@@ -94,6 +94,18 @@ $(document).ready(function() {
             },
           },
           {
+            breakpoint: 1100,
+            settings: {
+              slidesToShow: 2,
+            },
+          },
+          {
+            breakpoint: 992,
+            settings: {
+              slidesToShow: 3,
+            },
+          },
+          {
             breakpoint: 768,
             settings: {
               slidesToShow: 2,
@@ -267,3 +279,16 @@ document.addEventListener("click", function(e) {
     item.classList.add("_handling");
   }
 });
+
+if (document.querySelector("[data-toggle]")) {
+  const element = document.querySelector("[data-toggle]");
+  const elements = element.querySelectorAll("[data-toggler]");
+
+  document.addEventListener("click", function(e) {
+    const target = e.target;
+    if (target.closest("[data-toggler]")) {
+      elements.forEach((el) => el.classList.remove("_selected"));
+      target.closest("[data-toggler]").classList.add("_selected");
+    }
+  });
+}
