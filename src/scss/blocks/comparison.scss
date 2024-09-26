@@ -48,7 +48,7 @@
   &__categories-item {
     cursor: pointer;
     position: relative;
-    flex: 0 0 rem(332);
+    flex: 1 0 rem(332);
     @extend %fl-r-ct;
     gap: rem(19);
     padding: rem(6);
@@ -60,6 +60,9 @@
       0px 2px 2px rgba(0, 0, 0, 0.04);
     transition: all 0.32s ease;
 
+    .remove-button {
+      transform: translateY(-50%);
+    }
     &._selected {
       border: 2px solid #1860cc;
       box-shadow:
@@ -222,7 +225,7 @@
 
   &__remove {
     position: absolute;
-    top: rem(30);
+    top: rem(10);
     right: rem(10);
   }
 
@@ -407,10 +410,14 @@
     z-index: 2;
     right: rem(10);
     top: rem(10);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(rem(6));
+    transition: all 0.32s ease-in-out;
   }
 
   &__add.button {
-    padding: rem(13) rem(16) rem(15);
+    padding: rem(10) rem(16) rem(12);
     border: 1px solid rgba(0, 0, 0, 0.1);
     box-shadow:
       0px 10px 10px rgba(0, 0, 0, 0.05),
@@ -419,10 +426,6 @@
     font-weight: 600;
     line-height: 100%;
     letter-spacing: -0.02em;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(rem(6));
-    transition: all 0.32s ease-in-out;
     @include adaptiveValue("font-size", 14, 12);
 
     @media (max-width: $tb) {
@@ -511,6 +514,30 @@
     }
   }
 
+  &__share {
+    .share__link {
+      flex: 0 0 rem(44);
+      width: rem(44);
+      height: rem(44);
+      background-color: var(--clr-white);
+      @extend %bg-con;
+      background-size: rem(16);
+      background-image: url("@img/icons/share-dark.svg");
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      box-shadow:
+        0px 10px 10px rgba(0, 0, 0, 0.05),
+        0px 2px 2px rgba(0, 0, 0, 0.04);
+      border-radius: rem(8);
+
+      //== 992px ==//
+      @media (max-width: $tb) {
+        flex: 0 0 rem(38);
+        width: rem(38);
+        height: rem(38);
+      }
+    }
+  }
+
   &__ready {
     position: absolute;
     top: rem(10);
@@ -548,7 +575,7 @@
     }
   }
 
-  &._handling .product-item__add {
+  &._handling .product-item__first {
     visibility: hidden;
     opacity: 0;
     transform: translateY(rem(6));
@@ -565,7 +592,7 @@
   }
 
   @media (any-hover: none) {
-    .product-item__add {
+    .product-item__first {
       visibility: visible;
       opacity: 1;
       transform: none;
@@ -573,7 +600,7 @@
   }
   @media (any-hover: hover) {
     &:not(._handling):hover {
-      .product-item__add {
+      .product-item__first {
         visibility: visible;
         opacity: 1;
         transform: none;
