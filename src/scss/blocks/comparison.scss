@@ -24,6 +24,10 @@
       margin-bottom: rem(30);
     }
 
+    &.comparison__categories_tripple {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(rem(360), 1fr));
+    }
     &.comparison__categories_inner {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(rem(320), 1fr));

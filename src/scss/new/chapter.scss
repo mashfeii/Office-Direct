@@ -1,0 +1,230 @@
+.page__chapter:not(:last-child) {
+  //== 768px ==//
+  @media (min-width: $mb) {
+    margin-bottom: rem(50);
+  }
+}
+.chapter {
+  &__container {
+    display: flex;
+    column-gap: rem(38);
+  }
+
+  &__slider {
+    flex: 1 1 auto;
+    height: 100%;
+
+    .slick-list,
+    .slick-track {
+      height: 100%;
+    }
+
+    .slick-dots {
+      position: absolute;
+      left: rem(36);
+      bottom: rem(24);
+      display: flex;
+      gap: rem(8);
+    }
+    .slick-dots li {
+      cursor: pointer;
+      font-size: 0;
+      width: rem(6);
+      height: rem(6);
+      background-color: rgba(255, 255, 255, 0.5);
+      border-radius: 100%;
+      transition: background-color 0.3s ease;
+    }
+    .slick-dots li.slick-active {
+      background-color: var(--clr-white);
+    }
+  }
+
+  &__slider-cover {
+    position: relative;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__slide-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: rem(5);
+  }
+
+  &__navigation {
+    position: absolute;
+    right: rem(23);
+    bottom: rem(23);
+    display: flex;
+    gap: rem(6);
+  }
+
+  &__button {
+    @extend %fl-a-ct;
+    flex: 0 0 rem(38);
+    width: rem(38);
+    height: rem(38);
+    padding: rem(12);
+    background-color: var(--clr-white);
+    box-shadow:
+      0px 10px 10px rgba(0, 0, 0, 0.05),
+      0px 2px 2px rgba(0, 0, 0, 0.04);
+    border-radius: rem(8);
+  }
+  &__button svg {
+    max-width: 100%;
+  }
+
+  &__content {
+    flex: 0 0 rem(560);
+  }
+
+  &__header {
+    @extend %fl-r-ct;
+    gap: rem(10);
+
+    &:not(:last-child) {
+      margin-bottom: rem(20);
+    }
+  }
+
+  &__title {
+    @extend %f-36-500;
+  }
+
+  &__share {
+    flex: 0 0 rem(31);
+    .share__link {
+      display: block;
+      width: rem(31);
+      height: rem(31);
+      background-color: #ebebeb;
+      @extend %bg-con;
+      background-size: rem(18);
+      background-image: url("@img/icons/share.svg");
+      border-radius: rem(8);
+    }
+  }
+
+  &__label {
+    @extend %fl-r-ct;
+    gap: rem(6);
+    padding: rem(7) rem(10) rem(8);
+    background-color: #f75f44;
+    border-radius: rem(8);
+
+    font-weight: 600;
+    line-height: 100%;
+    letter-spacing: -0.02em;
+    color: var(--clr-white);
+    &::before {
+      content: "";
+      flex: 0 0 rem(16);
+      width: rem(16);
+      height: rem(16);
+      @extend %bg-con;
+      background-image: url("@img/icons/thumbs.svg");
+    }
+    @include adaptiveValue("font-size", 14, 12);
+  }
+
+  &__colors {
+    @extend %fl-r-ct;
+    gap: rem(5);
+
+    &:not(:last-child) {
+      margin-bottom: rem(24);
+    }
+  }
+
+  &__color {
+    flex: 0 0 rem(35);
+    width: rem(35);
+    height: rem(35);
+    @extend %bg-con;
+  }
+
+  &__color-add {
+    flex: 0 0 rem(35);
+    width: rem(35);
+    height: rem(35);
+    border-radius: rem(4);
+    background-color: #ebebeb;
+    @extend %bg-con;
+    background-size: rem(20);
+    background-image: url("@img/icons/plus.svg");
+  }
+
+  &__color-text {
+    font-weight: 400;
+    line-height: 140%;
+    letter-spacing: -0.02em;
+    color: rgba(0, 0, 0, 0.7);
+    @include adaptiveValue("font-size", 17, 15);
+  }
+
+  &__examples {
+    display: flex;
+    gap: rem(15);
+    overflow-y: hidden;
+    overflow-x: auto;
+  }
+
+  &__examples-item {
+    flex: 0 0 rem(140);
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__examples-image {
+    flex: 0 0 rem(140);
+    width: rem(140);
+    height: rem(140);
+
+    &:not(:last-child) {
+      margin-bottom: rem(10);
+    }
+  }
+
+  &__examples-title {
+    font-weight: 400;
+    line-height: 130%;
+    @include adaptiveValue("font-size", 15, 13);
+    &:not(:last-child) {
+      margin-bottom: rem(7);
+    }
+  }
+
+  &__examples-price {
+    font-weight: 600;
+    line-height: 110%;
+    letter-spacing: -0.02em;
+    @include adaptiveValue("font-size", 16, 14);
+  }
+
+  &__more {
+    display: inline-block;
+    font-weight: 500;
+    line-height: 140%;
+    letter-spacing: -0.02em;
+    color: #1860cc;
+    padding-bottom: rem(6);
+    border-bottom: 2px solid rgba(24, 96, 204, 0.2);
+    transition: border-color 0.3s ease;
+
+    @media (any-hover: hover) {
+      &:hover {
+        border-color: rgba(24, 96, 204, 1);
+      }
+    }
+
+    &:not(:first-child) {
+      margin-top: rem(38);
+    }
+
+    @include adaptiveValue("font-size", 22, 18);
+  }
+}

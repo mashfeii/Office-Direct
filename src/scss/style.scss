@@ -117,6 +117,13 @@ body {
       margin-bottom: rem(60);
     }
   }
+  > *._small:not(:last-child) {
+    margin-bottom: rem(70);
+    //== 576px ==//
+    @media (max-width: $mb-m) {
+      margin-bottom: rem(60);
+    }
+  }
 }
 
 .container_mb {
@@ -213,5 +220,7 @@ body {
 @import "new/current-product";
 @import "new/products-block";
 @import "new/series-block";
+@import "new/chapter";
+@import "base/forms/range";
 
 @import "media";
