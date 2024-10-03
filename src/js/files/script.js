@@ -1,6 +1,21 @@
 import { removeClasses } from "./functions.js";
 
 $(document).ready(function() {
+  $(".chapter__slider").each(function() {
+    $(this).slick({
+      prevArrow: this.closest(".chapter__slider-cover").querySelector(
+        ".chapter__button_prev",
+      ),
+      nextArrow: this.closest(".chapter__slider-cover").querySelector(
+        ".chapter__button_next",
+      ),
+      speed: 800,
+      lazyLoad: "progressive",
+      infinite: true,
+      slidesToShow: 1,
+      dots: true,
+    });
+  });
   $(".comparison__slider").each(function() {
     $(this).slick({
       prevArrow: this.closest(".comparison__body").querySelector(
@@ -289,6 +304,30 @@ if (document.querySelector("[data-toggle]")) {
     if (target.closest("[data-toggler]")) {
       elements.forEach((el) => el.classList.remove("_selected"));
       target.closest("[data-toggler]").classList.add("_selected");
+    }
+  });
+}
+
+if (document.querySelectorAll("[ data-filter-product]")) {
+  const elements = Array.from(
+    document.querySelectorAll("[data-filter-product]"),
+  );
+
+  document.addEventListener("click", function(e) {
+    const target = e.target;
+    if (
+      target.closest("[data-filter-product]") &&
+      !target.closest("[data-filter-item]")
+    ) {
+      target.closest("[data-filter-product]").classList.toggle("_selected");
+    } else if (target.closest("[data-filter-item]")) {
+      target.closest("[data-filter-item]").classList.toggle("_active");
+    } else {
+      elements
+        .filter((item) => item.classList.contains("_selected"))
+        ?.forEach((element) => {
+          element.classList.remove("_selected");
+        });
     }
   });
 }
