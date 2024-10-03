@@ -9,14 +9,10 @@
         <div class="page__breadcrumbs breadcrumbs container_ml">
           <ul class="breadcrumbs__list container">
             <li class="breadcrumbs__item">
-              <a href="javascript:void(0);" class="breadcrumbs__link"
-                >Главная
-              </a>
+              <a href="javascript:void(0);" class="breadcrumbs__link">Главная </a>
             </li>
             <li class="breadcrumbs__item">
-              <a href="javascript:void(0);" class="breadcrumbs__link">
-                Сотрудникам
-              </a>
+              <a href="javascript:void(0);" class="breadcrumbs__link"> Сотрудникам </a>
             </li>
             <li class="breadcrumbs__item">
               <span class="breadcrumbs__link">Столы</span>
@@ -27,28 +23,162 @@
           <div class="products-block__container container">
             <h1 class="products-block__title inner-header">Столы</h1>
             <div class="products-block__filters">
-              <button class="products-block__filters-item">
+              <button class="products-block__filters-item" data-filter-product>
                 <span class="products-block__filters-quantity">0</span>
                 <span class="products-block__filters-text">Форма</span>
+                <div class="products-block__filters-body filters-product">
+                  <ul class="filters-product__list">
+                    <li class="filters-product__item" data-filter-item>
+                      <img src="@img/new/filter-1.png" alt="" class="filters-product__image" />
+                      <span class="filters-product__text">Прямые</span>
+                    </li>
+                    <li class="filters-product__item" data-filter-item>
+                      <img src="@img/new/filter-2.png" alt="" class="filters-product__image" />
+                      <span class="filters-product__text">Эргономичные</span>
+                    </li>
+                    <li class="filters-product__item" data-filter-item>
+                      <img src="@img/new/filter-3.png" alt="" class="filters-product__image" />
+                      <span class="filters-product__text">Симметричные</span>
+                    </li>
+                    <li class="filters-product__item" data-filter-item>
+                      <img src="@img/new/filter-4.png" alt="" class="filters-product__image" />
+                      <span class="filters-product__text">Вогнутые</span>
+                    </li>
+                    <li class="filters-product__item" data-filter-item>
+                      <img src="@img/new/filter-5.png" alt="" class="filters-product__image" />
+                      <span class="filters-product__text">Рабочие станции</span>
+                    </li>
+                    <li class="filters-product__item" data-filter-item>
+                      <img src="@img/new/filter-6.png" alt="" class="filters-product__image" />
+                      <span class="filters-product__text">Бенч-системы</span>
+                    </li>
+                  </ul>
+                </div>
               </button>
               <div class="products-block__filters-toggle" data-toggle>
-                <button class="products-block__filters-toggler" data-toggler>
-                  ЛДСП
-                </button>
-                <button
-                  class="products-block__filters-toggler _selected"
-                  data-toggler
-                >
-                  Металлокаркас
-                </button>
+                <button class="products-block__filters-toggler" data-toggler>ЛДСП</button>
+                <button class="products-block__filters-toggler _selected" data-toggler>Металлокаркас</button>
               </div>
-              <button class="products-block__filters-item _multiple">
+              <button class="products-block__filters-item _multiple" data-filter-product>
                 <span class="products-block__filters-quantity">6</span>
-                <span class="products-block__filters-text">Цвет</span>
+                <span class="products-block__filters-text">Цвета</span>
+                <div class="products-block__filters-body filters-product">
+                  <ul class="filters-product__list">
+                    <li class="filters-product__item" data-filter-item>
+                      <img src="@img/colors/01.jpg" alt="" class="filters-product__image" />
+                      <span class="filters-product__text">Ясень Навара </span>
+                    </li>
+                    <li class="filters-product__item" data-filter-item>
+                      <img src="@img/colors/02.jpg" alt="" class="filters-product__image" />
+                      <span class="filters-product__text">Грецкий орех</span>
+                    </li>
+                    <li class="filters-product__item" data-filter-item>
+                      <img src="@img/colors/03.jpg" alt="" class="filters-product__image" />
+                      <span class="filters-product__text">Дуб Термо</span>
+                    </li>
+                  </ul>
+                </div>
               </button>
-              <button class="products-block__filters-item _active">
+              <button class="products-block__filters-item _active" data-filter-product>
                 <span class="products-block__filters-quantity">3</span>
                 <span class="products-block__filters-text">Размеры</span>
+                <div class="products-block__filters-body filters-product _range">
+                  <div class="filters-product__size" data-filter-item>
+                    <span class="filters-product__size-text">Длина, см</span>
+                    <div class="filters-product__slider-cover">
+                      <div class="filters-products__slider" data-range-slider data-from="120" data-to="240">
+                    </div>
+                    </div>
+                  </div>
+                  <div class="filters-product__size" data-filter-item>
+                    <span class="filters-product__size-text">Ширина, см</span>
+                    <div class="filters-product__slider-cover">
+                      <div class="filters-products__slider" data-range-slider data-from="120" data-to="240">
+                    </div>
+                    </div>
+                  </div>
+                  <div class="filters-product__size" data-filter-item>
+                    <span class="filters-product__size-text">Высота, см</span>
+                    <div class="filters-product__slider-cover">
+                      <div class="filters-products__slider" data-range-slider data-from="120" data-to="240">
+                    </div>
+                    </div>
+                  </div>
+                </div>
+              </button>
+              <button class="products-block__filters-item _active" data-filter-product>
+                <span class="products-block__filters-quantity">1</span>
+                <span class="products-block__filters-text">Серия</span>
+                <div class="products-block__filters-body filters-product _height">
+                  <ul class="filters-product__list">
+                    <li class="checkbox">
+                      <input id="filter-0" type="checkbox" class="checkbox__input" value="1" name="form[]" />
+                      <label for="filter-0" class="checkbox__label">
+                        <span class="checkbox__text">Ergo Office</span>
+                      </label>
+                    </li>
+                    <li class="checkbox">
+                      <input id="filter-1" type="checkbox" class="checkbox__input" value="1" name="form[]" />
+                      <label for="filter-1" class="checkbox__label">
+                        <span class="checkbox__text">Berlin Office</span>
+                      </label>
+                    </li>
+                    <li class="checkbox">
+                      <input id="filter-2" type="checkbox" class="checkbox__input" value="1" name="form[]" />
+                      <label for="filter-2" class="checkbox__label">
+                        <span class="checkbox__text">Public comfort</span>
+                      </label>
+                    </li>
+                    <li class="checkbox">
+                      <input id="filter-3" type="checkbox" class="checkbox__input" value="1" name="form[]" />
+                      <label for="filter-3" class="checkbox__label">
+                        <span class="checkbox__text">Prime Wood</span>
+                      </label>
+                    </li>
+                    <li class="checkbox">
+                      <input id="filter-4" type="checkbox" class="checkbox__input" value="1" name="form[]" />
+                      <label for="filter-4" class="checkbox__label">
+                        <span class="checkbox__text">Public comfort</span>
+                      </label>
+                    </li>
+                    <li class="checkbox">
+                      <input id="filter-5" type="checkbox" class="checkbox__input" value="1" name="form[]" />
+                      <label for="filter-5" class="checkbox__label">
+                        <span class="checkbox__text">Prime Wood</span>
+                      </label>
+                    </li>
+                    <li class="checkbox">
+                      <input id="filter-6" type="checkbox" class="checkbox__input" value="1" name="form[]" />
+                      <label for="filter-6" class="checkbox__label">
+                        <span class="checkbox__text">Sitara</span>
+                      </label>
+                    </li>
+                    <li class="checkbox">
+                      <input id="filter-7" type="checkbox" class="checkbox__input" value="1" name="form[]" />
+                      <label for="filter-7" class="checkbox__label">
+                        <span class="checkbox__text">Riva</span>
+                      </label>
+                    </li>
+                    <li class="checkbox">
+                      <input id="filter-8" type="checkbox" class="checkbox__input" value="1" name="form[]" />
+                      <label for="filter-8" class="checkbox__label">
+                        <span class="checkbox__text">Ergo Office</span>
+                      </label>
+                    </li>
+                    <li class="checkbox">
+                      <input id="filter-9" type="checkbox" class="checkbox__input" value="1" name="form[]" />
+                      <label for="filter-9" class="checkbox__label">
+                        <span class="checkbox__text">Ergo Office</span>
+                      </label>
+                    </li>
+                    <li class="checkbox">
+                      <input id="filter-10" type="checkbox" class="checkbox__input" value="1" name="form[]" />
+                      <label for="filter-10" class="checkbox__label">
+                        <span class="checkbox__text">Ergo Office</span>
+                      </label>
+                    </li>
+                  </ul>
+                </div>
               </button>
             </div>
             <div class="products-block__body grid-container">
@@ -87,52 +217,30 @@
                   </div>
                   <div class="product-item__handling">
                     <div class="product-item__quantity quantity">
-                      <div
-                        class="quantity__button quantity__button_minus _icon-minus"
-                      ></div>
+                      <div class="quantity__button quantity__button_minus _icon-minus"></div>
                       <div class="quantity__input">
-                        <input
-                          autocomplete="off"
-                          type="text"
-                          name="form[]"
-                          value="1"
-                        />
+                        <input autocomplete="off" type="text" name="form[]" value="1" />
                       </div>
-                      <div
-                        class="quantity__button quantity__button_plus _icon-plus"
-                      ></div>
+                      <div class="quantity__button quantity__button_plus _icon-plus"></div>
                     </div>
                     <button class="product-item__final"></button>
                   </div>
                   <div class="product-item__ready">Готово!</div>
                 </a>
-                <a href="javascript:void(0);" class="product-item__series">
-                  Серия Artwood
-                </a>
+                <a href="javascript:void(0);" class="product-item__series"> Серия Artwood </a>
                 <h2 class="product-item__title">
-                  <a href="javascript:void(0);">
-                    Стол квадратный Тандем универсальный Маувелла
-                  </a>
+                  <a href="javascript:void(0);"> Стол квадратный Тандем универсальный Маувелла </a>
                 </h2>
                 <div class="product-item__colors">
                   <span
                     class="product-item__color"
-                    style="
-                      background-image: url(&quot;@img/colors/color-01.png&quot;);
-                    "
-                  ></span>
+                    style="background-image: url(&quot;@img/colors/color-01.png&quot;)"></span>
                   <span
                     class="product-item__color"
-                    style="
-                      background-image: url(&quot;@img/colors/color-02.png&quot;);
-                    "
-                  ></span>
+                    style="background-image: url(&quot;@img/colors/color-02.png&quot;)"></span>
                   <span
                     class="product-item__color"
-                    style="
-                      background-image: url(&quot;@img/colors/color-03.png&quot;);
-                    "
-                  ></span>
+                    style="background-image: url(&quot;@img/colors/color-03.png&quot;)"></span>
                 </div>
                 <div class="product-item__sizes">
                   <span class="product-item__size">
@@ -185,52 +293,30 @@
                   </div>
                   <div class="product-item__handling">
                     <div class="product-item__quantity quantity">
-                      <div
-                        class="quantity__button quantity__button_minus _icon-minus"
-                      ></div>
+                      <div class="quantity__button quantity__button_minus _icon-minus"></div>
                       <div class="quantity__input">
-                        <input
-                          autocomplete="off"
-                          type="text"
-                          name="form[]"
-                          value="1"
-                        />
+                        <input autocomplete="off" type="text" name="form[]" value="1" />
                       </div>
-                      <div
-                        class="quantity__button quantity__button_plus _icon-plus"
-                      ></div>
+                      <div class="quantity__button quantity__button_plus _icon-plus"></div>
                     </div>
                     <button class="product-item__final"></button>
                   </div>
                   <div class="product-item__ready">Готово!</div>
                 </a>
-                <a href="javascript:void(0);" class="product-item__series">
-                  Серия Artwood
-                </a>
+                <a href="javascript:void(0);" class="product-item__series"> Серия Artwood </a>
                 <h2 class="product-item__title">
-                  <a href="javascript:void(0);">
-                    Стол квадратный Тандем универсальный Маувелла
-                  </a>
+                  <a href="javascript:void(0);"> Стол квадратный Тандем универсальный Маувелла </a>
                 </h2>
                 <div class="product-item__colors">
                   <span
                     class="product-item__color"
-                    style="
-                      background-image: url(&quot;@img/colors/color-01.png&quot;);
-                    "
-                  ></span>
+                    style="background-image: url(&quot;@img/colors/color-01.png&quot;)"></span>
                   <span
                     class="product-item__color"
-                    style="
-                      background-image: url(&quot;@img/colors/color-02.png&quot;);
-                    "
-                  ></span>
+                    style="background-image: url(&quot;@img/colors/color-02.png&quot;)"></span>
                   <span
                     class="product-item__color"
-                    style="
-                      background-image: url(&quot;@img/colors/color-03.png&quot;);
-                    "
-                  ></span>
+                    style="background-image: url(&quot;@img/colors/color-03.png&quot;)"></span>
                 </div>
                 <div class="product-item__sizes">
                   <span class="product-item__size">
@@ -283,52 +369,30 @@
                   </div>
                   <div class="product-item__handling">
                     <div class="product-item__quantity quantity">
-                      <div
-                        class="quantity__button quantity__button_minus _icon-minus"
-                      ></div>
+                      <div class="quantity__button quantity__button_minus _icon-minus"></div>
                       <div class="quantity__input">
-                        <input
-                          autocomplete="off"
-                          type="text"
-                          name="form[]"
-                          value="1"
-                        />
+                        <input autocomplete="off" type="text" name="form[]" value="1" />
                       </div>
-                      <div
-                        class="quantity__button quantity__button_plus _icon-plus"
-                      ></div>
+                      <div class="quantity__button quantity__button_plus _icon-plus"></div>
                     </div>
                     <button class="product-item__final"></button>
                   </div>
                   <div class="product-item__ready">Готово!</div>
                 </a>
-                <a href="javascript:void(0);" class="product-item__series">
-                  Серия Artwood
-                </a>
+                <a href="javascript:void(0);" class="product-item__series"> Серия Artwood </a>
                 <h2 class="product-item__title">
-                  <a href="javascript:void(0);">
-                    Стол квадратный Тандем универсальный Маувелла
-                  </a>
+                  <a href="javascript:void(0);"> Стол квадратный Тандем универсальный Маувелла </a>
                 </h2>
                 <div class="product-item__colors">
                   <span
                     class="product-item__color"
-                    style="
-                      background-image: url(&quot;@img/colors/color-01.png&quot;);
-                    "
-                  ></span>
+                    style="background-image: url(&quot;@img/colors/color-01.png&quot;)"></span>
                   <span
                     class="product-item__color"
-                    style="
-                      background-image: url(&quot;@img/colors/color-02.png&quot;);
-                    "
-                  ></span>
+                    style="background-image: url(&quot;@img/colors/color-02.png&quot;)"></span>
                   <span
                     class="product-item__color"
-                    style="
-                      background-image: url(&quot;@img/colors/color-03.png&quot;);
-                    "
-                  ></span>
+                    style="background-image: url(&quot;@img/colors/color-03.png&quot;)"></span>
                 </div>
                 <div class="product-item__sizes">
                   <span class="product-item__size">
@@ -381,52 +445,30 @@
                   </div>
                   <div class="product-item__handling">
                     <div class="product-item__quantity quantity">
-                      <div
-                        class="quantity__button quantity__button_minus _icon-minus"
-                      ></div>
+                      <div class="quantity__button quantity__button_minus _icon-minus"></div>
                       <div class="quantity__input">
-                        <input
-                          autocomplete="off"
-                          type="text"
-                          name="form[]"
-                          value="1"
-                        />
+                        <input autocomplete="off" type="text" name="form[]" value="1" />
                       </div>
-                      <div
-                        class="quantity__button quantity__button_plus _icon-plus"
-                      ></div>
+                      <div class="quantity__button quantity__button_plus _icon-plus"></div>
                     </div>
                     <button class="product-item__final"></button>
                   </div>
                   <div class="product-item__ready">Готово!</div>
                 </a>
-                <a href="javascript:void(0);" class="product-item__series">
-                  Серия Artwood
-                </a>
+                <a href="javascript:void(0);" class="product-item__series"> Серия Artwood </a>
                 <h2 class="product-item__title">
-                  <a href="javascript:void(0);">
-                    Стол квадратный Тандем универсальный Маувелла
-                  </a>
+                  <a href="javascript:void(0);"> Стол квадратный Тандем универсальный Маувелла </a>
                 </h2>
                 <div class="product-item__colors">
                   <span
                     class="product-item__color"
-                    style="
-                      background-image: url(&quot;@img/colors/color-01.png&quot;);
-                    "
-                  ></span>
+                    style="background-image: url(&quot;@img/colors/color-01.png&quot;)"></span>
                   <span
                     class="product-item__color"
-                    style="
-                      background-image: url(&quot;@img/colors/color-02.png&quot;);
-                    "
-                  ></span>
+                    style="background-image: url(&quot;@img/colors/color-02.png&quot;)"></span>
                   <span
                     class="product-item__color"
-                    style="
-                      background-image: url(&quot;@img/colors/color-03.png&quot;);
-                    "
-                  ></span>
+                    style="background-image: url(&quot;@img/colors/color-03.png&quot;)"></span>
                 </div>
                 <div class="product-item__sizes">
                   <span class="product-item__size">
@@ -479,52 +521,30 @@
                   </div>
                   <div class="product-item__handling">
                     <div class="product-item__quantity quantity">
-                      <div
-                        class="quantity__button quantity__button_minus _icon-minus"
-                      ></div>
+                      <div class="quantity__button quantity__button_minus _icon-minus"></div>
                       <div class="quantity__input">
-                        <input
-                          autocomplete="off"
-                          type="text"
-                          name="form[]"
-                          value="1"
-                        />
+                        <input autocomplete="off" type="text" name="form[]" value="1" />
                       </div>
-                      <div
-                        class="quantity__button quantity__button_plus _icon-plus"
-                      ></div>
+                      <div class="quantity__button quantity__button_plus _icon-plus"></div>
                     </div>
                     <button class="product-item__final"></button>
                   </div>
                   <div class="product-item__ready">Готово!</div>
                 </a>
-                <a href="javascript:void(0);" class="product-item__series">
-                  Серия Artwood
-                </a>
+                <a href="javascript:void(0);" class="product-item__series"> Серия Artwood </a>
                 <h2 class="product-item__title">
-                  <a href="javascript:void(0);">
-                    Стол квадратный Тандем универсальный Маувелла
-                  </a>
+                  <a href="javascript:void(0);"> Стол квадратный Тандем универсальный Маувелла </a>
                 </h2>
                 <div class="product-item__colors">
                   <span
                     class="product-item__color"
-                    style="
-                      background-image: url(&quot;@img/colors/color-01.png&quot;);
-                    "
-                  ></span>
+                    style="background-image: url(&quot;@img/colors/color-01.png&quot;)"></span>
                   <span
                     class="product-item__color"
-                    style="
-                      background-image: url(&quot;@img/colors/color-02.png&quot;);
-                    "
-                  ></span>
+                    style="background-image: url(&quot;@img/colors/color-02.png&quot;)"></span>
                   <span
                     class="product-item__color"
-                    style="
-                      background-image: url(&quot;@img/colors/color-03.png&quot;);
-                    "
-                  ></span>
+                    style="background-image: url(&quot;@img/colors/color-03.png&quot;)"></span>
                 </div>
                 <div class="product-item__sizes">
                   <span class="product-item__size">
@@ -577,52 +597,30 @@
                   </div>
                   <div class="product-item__handling">
                     <div class="product-item__quantity quantity">
-                      <div
-                        class="quantity__button quantity__button_minus _icon-minus"
-                      ></div>
+                      <div class="quantity__button quantity__button_minus _icon-minus"></div>
                       <div class="quantity__input">
-                        <input
-                          autocomplete="off"
-                          type="text"
-                          name="form[]"
-                          value="1"
-                        />
+                        <input autocomplete="off" type="text" name="form[]" value="1" />
                       </div>
-                      <div
-                        class="quantity__button quantity__button_plus _icon-plus"
-                      ></div>
+                      <div class="quantity__button quantity__button_plus _icon-plus"></div>
                     </div>
                     <button class="product-item__final"></button>
                   </div>
                   <div class="product-item__ready">Готово!</div>
                 </a>
-                <a href="javascript:void(0);" class="product-item__series">
-                  Серия Artwood
-                </a>
+                <a href="javascript:void(0);" class="product-item__series"> Серия Artwood </a>
                 <h2 class="product-item__title">
-                  <a href="javascript:void(0);">
-                    Стол квадратный Тандем универсальный Маувелла
-                  </a>
+                  <a href="javascript:void(0);"> Стол квадратный Тандем универсальный Маувелла </a>
                 </h2>
                 <div class="product-item__colors">
                   <span
                     class="product-item__color"
-                    style="
-                      background-image: url(&quot;@img/colors/color-01.png&quot;);
-                    "
-                  ></span>
+                    style="background-image: url(&quot;@img/colors/color-01.png&quot;)"></span>
                   <span
                     class="product-item__color"
-                    style="
-                      background-image: url(&quot;@img/colors/color-02.png&quot;);
-                    "
-                  ></span>
+                    style="background-image: url(&quot;@img/colors/color-02.png&quot;)"></span>
                   <span
                     class="product-item__color"
-                    style="
-                      background-image: url(&quot;@img/colors/color-03.png&quot;);
-                    "
-                  ></span>
+                    style="background-image: url(&quot;@img/colors/color-03.png&quot;)"></span>
                 </div>
                 <div class="product-item__sizes">
                   <span class="product-item__size">
@@ -675,52 +673,30 @@
                   </div>
                   <div class="product-item__handling">
                     <div class="product-item__quantity quantity">
-                      <div
-                        class="quantity__button quantity__button_minus _icon-minus"
-                      ></div>
+                      <div class="quantity__button quantity__button_minus _icon-minus"></div>
                       <div class="quantity__input">
-                        <input
-                          autocomplete="off"
-                          type="text"
-                          name="form[]"
-                          value="1"
-                        />
+                        <input autocomplete="off" type="text" name="form[]" value="1" />
                       </div>
-                      <div
-                        class="quantity__button quantity__button_plus _icon-plus"
-                      ></div>
+                      <div class="quantity__button quantity__button_plus _icon-plus"></div>
                     </div>
                     <button class="product-item__final"></button>
                   </div>
                   <div class="product-item__ready">Готово!</div>
                 </a>
-                <a href="javascript:void(0);" class="product-item__series">
-                  Серия Artwood
-                </a>
+                <a href="javascript:void(0);" class="product-item__series"> Серия Artwood </a>
                 <h2 class="product-item__title">
-                  <a href="javascript:void(0);">
-                    Стол квадратный Тандем универсальный Маувелла
-                  </a>
+                  <a href="javascript:void(0);"> Стол квадратный Тандем универсальный Маувелла </a>
                 </h2>
                 <div class="product-item__colors">
                   <span
                     class="product-item__color"
-                    style="
-                      background-image: url(&quot;@img/colors/color-01.png&quot;);
-                    "
-                  ></span>
+                    style="background-image: url(&quot;@img/colors/color-01.png&quot;)"></span>
                   <span
                     class="product-item__color"
-                    style="
-                      background-image: url(&quot;@img/colors/color-02.png&quot;);
-                    "
-                  ></span>
+                    style="background-image: url(&quot;@img/colors/color-02.png&quot;)"></span>
                   <span
                     class="product-item__color"
-                    style="
-                      background-image: url(&quot;@img/colors/color-03.png&quot;);
-                    "
-                  ></span>
+                    style="background-image: url(&quot;@img/colors/color-03.png&quot;)"></span>
                 </div>
                 <div class="product-item__sizes">
                   <span class="product-item__size">
@@ -773,52 +749,30 @@
                   </div>
                   <div class="product-item__handling">
                     <div class="product-item__quantity quantity">
-                      <div
-                        class="quantity__button quantity__button_minus _icon-minus"
-                      ></div>
+                      <div class="quantity__button quantity__button_minus _icon-minus"></div>
                       <div class="quantity__input">
-                        <input
-                          autocomplete="off"
-                          type="text"
-                          name="form[]"
-                          value="1"
-                        />
+                        <input autocomplete="off" type="text" name="form[]" value="1" />
                       </div>
-                      <div
-                        class="quantity__button quantity__button_plus _icon-plus"
-                      ></div>
+                      <div class="quantity__button quantity__button_plus _icon-plus"></div>
                     </div>
                     <button class="product-item__final"></button>
                   </div>
                   <div class="product-item__ready">Готово!</div>
                 </a>
-                <a href="javascript:void(0);" class="product-item__series">
-                  Серия Artwood
-                </a>
+                <a href="javascript:void(0);" class="product-item__series"> Серия Artwood </a>
                 <h2 class="product-item__title">
-                  <a href="javascript:void(0);">
-                    Стол квадратный Тандем универсальный Маувелла
-                  </a>
+                  <a href="javascript:void(0);"> Стол квадратный Тандем универсальный Маувелла </a>
                 </h2>
                 <div class="product-item__colors">
                   <span
                     class="product-item__color"
-                    style="
-                      background-image: url(&quot;@img/colors/color-01.png&quot;);
-                    "
-                  ></span>
+                    style="background-image: url(&quot;@img/colors/color-01.png&quot;)"></span>
                   <span
                     class="product-item__color"
-                    style="
-                      background-image: url(&quot;@img/colors/color-02.png&quot;);
-                    "
-                  ></span>
+                    style="background-image: url(&quot;@img/colors/color-02.png&quot;)"></span>
                   <span
                     class="product-item__color"
-                    style="
-                      background-image: url(&quot;@img/colors/color-03.png&quot;);
-                    "
-                  ></span>
+                    style="background-image: url(&quot;@img/colors/color-03.png&quot;)"></span>
                 </div>
                 <div class="product-item__sizes">
                   <span class="product-item__size">
@@ -871,52 +825,30 @@
                   </div>
                   <div class="product-item__handling">
                     <div class="product-item__quantity quantity">
-                      <div
-                        class="quantity__button quantity__button_minus _icon-minus"
-                      ></div>
+                      <div class="quantity__button quantity__button_minus _icon-minus"></div>
                       <div class="quantity__input">
-                        <input
-                          autocomplete="off"
-                          type="text"
-                          name="form[]"
-                          value="1"
-                        />
+                        <input autocomplete="off" type="text" name="form[]" value="1" />
                       </div>
-                      <div
-                        class="quantity__button quantity__button_plus _icon-plus"
-                      ></div>
+                      <div class="quantity__button quantity__button_plus _icon-plus"></div>
                     </div>
                     <button class="product-item__final"></button>
                   </div>
                   <div class="product-item__ready">Готово!</div>
                 </a>
-                <a href="javascript:void(0);" class="product-item__series">
-                  Серия Artwood
-                </a>
+                <a href="javascript:void(0);" class="product-item__series"> Серия Artwood </a>
                 <h2 class="product-item__title">
-                  <a href="javascript:void(0);">
-                    Стол квадратный Тандем универсальный Маувелла
-                  </a>
+                  <a href="javascript:void(0);"> Стол квадратный Тандем универсальный Маувелла </a>
                 </h2>
                 <div class="product-item__colors">
                   <span
                     class="product-item__color"
-                    style="
-                      background-image: url(&quot;@img/colors/color-01.png&quot;);
-                    "
-                  ></span>
+                    style="background-image: url(&quot;@img/colors/color-01.png&quot;)"></span>
                   <span
                     class="product-item__color"
-                    style="
-                      background-image: url(&quot;@img/colors/color-02.png&quot;);
-                    "
-                  ></span>
+                    style="background-image: url(&quot;@img/colors/color-02.png&quot;)"></span>
                   <span
                     class="product-item__color"
-                    style="
-                      background-image: url(&quot;@img/colors/color-03.png&quot;);
-                    "
-                  ></span>
+                    style="background-image: url(&quot;@img/colors/color-03.png&quot;)"></span>
                 </div>
                 <div class="product-item__sizes">
                   <span class="product-item__size">
@@ -969,52 +901,30 @@
                   </div>
                   <div class="product-item__handling">
                     <div class="product-item__quantity quantity">
-                      <div
-                        class="quantity__button quantity__button_minus _icon-minus"
-                      ></div>
+                      <div class="quantity__button quantity__button_minus _icon-minus"></div>
                       <div class="quantity__input">
-                        <input
-                          autocomplete="off"
-                          type="text"
-                          name="form[]"
-                          value="1"
-                        />
+                        <input autocomplete="off" type="text" name="form[]" value="1" />
                       </div>
-                      <div
-                        class="quantity__button quantity__button_plus _icon-plus"
-                      ></div>
+                      <div class="quantity__button quantity__button_plus _icon-plus"></div>
                     </div>
                     <button class="product-item__final"></button>
                   </div>
                   <div class="product-item__ready">Готово!</div>
                 </a>
-                <a href="javascript:void(0);" class="product-item__series">
-                  Серия Artwood
-                </a>
+                <a href="javascript:void(0);" class="product-item__series"> Серия Artwood </a>
                 <h2 class="product-item__title">
-                  <a href="javascript:void(0);">
-                    Стол квадратный Тандем универсальный Маувелла
-                  </a>
+                  <a href="javascript:void(0);"> Стол квадратный Тандем универсальный Маувелла </a>
                 </h2>
                 <div class="product-item__colors">
                   <span
                     class="product-item__color"
-                    style="
-                      background-image: url(&quot;@img/colors/color-01.png&quot;);
-                    "
-                  ></span>
+                    style="background-image: url(&quot;@img/colors/color-01.png&quot;)"></span>
                   <span
                     class="product-item__color"
-                    style="
-                      background-image: url(&quot;@img/colors/color-02.png&quot;);
-                    "
-                  ></span>
+                    style="background-image: url(&quot;@img/colors/color-02.png&quot;)"></span>
                   <span
                     class="product-item__color"
-                    style="
-                      background-image: url(&quot;@img/colors/color-03.png&quot;);
-                    "
-                  ></span>
+                    style="background-image: url(&quot;@img/colors/color-03.png&quot;)"></span>
                 </div>
                 <div class="product-item__sizes">
                   <span class="product-item__size">
@@ -1067,52 +977,30 @@
                   </div>
                   <div class="product-item__handling">
                     <div class="product-item__quantity quantity">
-                      <div
-                        class="quantity__button quantity__button_minus _icon-minus"
-                      ></div>
+                      <div class="quantity__button quantity__button_minus _icon-minus"></div>
                       <div class="quantity__input">
-                        <input
-                          autocomplete="off"
-                          type="text"
-                          name="form[]"
-                          value="1"
-                        />
+                        <input autocomplete="off" type="text" name="form[]" value="1" />
                       </div>
-                      <div
-                        class="quantity__button quantity__button_plus _icon-plus"
-                      ></div>
+                      <div class="quantity__button quantity__button_plus _icon-plus"></div>
                     </div>
                     <button class="product-item__final"></button>
                   </div>
                   <div class="product-item__ready">Готово!</div>
                 </a>
-                <a href="javascript:void(0);" class="product-item__series">
-                  Серия Artwood
-                </a>
+                <a href="javascript:void(0);" class="product-item__series"> Серия Artwood </a>
                 <h2 class="product-item__title">
-                  <a href="javascript:void(0);">
-                    Стол квадратный Тандем универсальный Маувелла
-                  </a>
+                  <a href="javascript:void(0);"> Стол квадратный Тандем универсальный Маувелла </a>
                 </h2>
                 <div class="product-item__colors">
                   <span
                     class="product-item__color"
-                    style="
-                      background-image: url(&quot;@img/colors/color-01.png&quot;);
-                    "
-                  ></span>
+                    style="background-image: url(&quot;@img/colors/color-01.png&quot;)"></span>
                   <span
                     class="product-item__color"
-                    style="
-                      background-image: url(&quot;@img/colors/color-02.png&quot;);
-                    "
-                  ></span>
+                    style="background-image: url(&quot;@img/colors/color-02.png&quot;)"></span>
                   <span
                     class="product-item__color"
-                    style="
-                      background-image: url(&quot;@img/colors/color-03.png&quot;);
-                    "
-                  ></span>
+                    style="background-image: url(&quot;@img/colors/color-03.png&quot;)"></span>
                 </div>
                 <div class="product-item__sizes">
                   <span class="product-item__size">
@@ -1165,52 +1053,30 @@
                   </div>
                   <div class="product-item__handling">
                     <div class="product-item__quantity quantity">
-                      <div
-                        class="quantity__button quantity__button_minus _icon-minus"
-                      ></div>
+                      <div class="quantity__button quantity__button_minus _icon-minus"></div>
                       <div class="quantity__input">
-                        <input
-                          autocomplete="off"
-                          type="text"
-                          name="form[]"
-                          value="1"
-                        />
+                        <input autocomplete="off" type="text" name="form[]" value="1" />
                       </div>
-                      <div
-                        class="quantity__button quantity__button_plus _icon-plus"
-                      ></div>
+                      <div class="quantity__button quantity__button_plus _icon-plus"></div>
                     </div>
                     <button class="product-item__final"></button>
                   </div>
                   <div class="product-item__ready">Готово!</div>
                 </a>
-                <a href="javascript:void(0);" class="product-item__series">
-                  Серия Artwood
-                </a>
+                <a href="javascript:void(0);" class="product-item__series"> Серия Artwood </a>
                 <h2 class="product-item__title">
-                  <a href="javascript:void(0);">
-                    Стол квадратный Тандем универсальный Маувелла
-                  </a>
+                  <a href="javascript:void(0);"> Стол квадратный Тандем универсальный Маувелла </a>
                 </h2>
                 <div class="product-item__colors">
                   <span
                     class="product-item__color"
-                    style="
-                      background-image: url(&quot;@img/colors/color-01.png&quot;);
-                    "
-                  ></span>
+                    style="background-image: url(&quot;@img/colors/color-01.png&quot;)"></span>
                   <span
                     class="product-item__color"
-                    style="
-                      background-image: url(&quot;@img/colors/color-02.png&quot;);
-                    "
-                  ></span>
+                    style="background-image: url(&quot;@img/colors/color-02.png&quot;)"></span>
                   <span
                     class="product-item__color"
-                    style="
-                      background-image: url(&quot;@img/colors/color-03.png&quot;);
-                    "
-                  ></span>
+                    style="background-image: url(&quot;@img/colors/color-03.png&quot;)"></span>
                 </div>
                 <div class="product-item__sizes">
                   <span class="product-item__size">
@@ -1234,8 +1100,7 @@
             </button>
           </div>
         </section>
-        @@include('html/new/_series-block.htm', {})
-        @@include('html/_request.htm', {})
+        @@include('html/new/_series-block.htm', {}) @@include('html/_request.htm', {})
       </main>
       @@include('html/_footer.htm',{})
     </div>

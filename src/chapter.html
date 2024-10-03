@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="ru">
+  @@include('html/_head.htm',{ "title":"Столы" })
+  <body>
+    <div class="wrapper">
+      @@include('html/_navigation.htm', {})
+      <main class="page">
+        @@include('html/_aside.htm', {})
+        <div class="page__breadcrumbs breadcrumbs container_ml">
+          <ul class="breadcrumbs__list container">
+            <li class="breadcrumbs__item">
+              <a href="javascript:void(0);" class="breadcrumbs__link"
+                >Главная
+              </a>
+            </li>
+            <li class="breadcrumbs__item">
+              <span class="breadcrumbs__link"> Сотрудникам </span>
+            </li>
+          </ul>
+        </div>
+        <section class="page__products-block products-block _small">
+          <div class="products-block__container container">
+            <h1 class="products-block__title inner-header">
+              Мебель для персонала
+            </h1>
+            <p class="products-block__description">
+              Создайте эргономичное и красивое рабочее пространство с помощью
+              нашей высококачественной мебели для персонала
+            </p>
+            <ul class="comparison__categories comparison__categories_tripple">
+              <li class="comparison__categories-item">
+                <img
+                  src="@img/comparison/category-01.png"
+                  alt=""
+                  class="comparison__categories-image"
+                />
+                <div class="comparison__categories-content">
+                  <strong class="comparison__categories-name">Столы</strong>
+                  <span class="comparison__categories-quantity">7 товаров</span>
+                </div>
+              </li>
+              <li class="comparison__categories-item">
+                <img
+                  src="@img/comparison/category-02.png"
+                  alt=""
+                  class="comparison__categories-image"
+                />
+                <div class="comparison__categories-content">
+                  <strong class="comparison__categories-name">Тумбы</strong>
+                  <span class="comparison__categories-quantity">7 товаров</span>
+                </div>
+              </li>
+              <li class="comparison__categories-item">
+                <img
+                  src="@img/comparison/category-03.png"
+                  alt=""
+                  class="comparison__categories-image"
+                />
+                <div class="comparison__categories-content">
+                  <strong class="comparison__categories-name"
+                    >Шкафы и стеллажи</strong
+                  >
+                  <span class="comparison__categories-quantity">7 товаров</span>
+                </div>
+              </li>
+              <li class="comparison__categories-item">
+                <img
+                  src="@img/comparison/category-01.png"
+                  alt=""
+                  class="comparison__categories-image"
+                />
+                <div class="comparison__categories-content">
+                  <strong class="comparison__categories-name">Столы</strong>
+                  <span class="comparison__categories-quantity">7 товаров</span>
+                </div>
+              </li>
+              <li class="comparison__categories-item">
+                <img
+                  src="@img/comparison/category-02.png"
+                  alt=""
+                  class="comparison__categories-image"
+                />
+                <div class="comparison__categories-content">
+                  <strong class="comparison__categories-name">Тумбы</strong>
+                  <span class="comparison__categories-quantity">7 товаров</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+        @@include('html/new/_chapter.htm', {})
+        @@include('html/new/_chapter.htm', {})
+        @@include('html/new/_chapter.htm', {})
+        @@include('html/new/_chapter.htm', {})
+        @@include('html/new/_series-block.htm', {})
+        @@include('html/_request.htm', {})
+      </main>
+      @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_popup.htm',{}) @@include('html/_js.htm',{})
+  </body>
+</html>
